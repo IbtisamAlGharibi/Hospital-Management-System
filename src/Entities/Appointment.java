@@ -132,6 +132,13 @@ public class Appointment {
         setNotes(newNotes);
     }
     public void cancel(){
-
+        System.out.println("Are you sure you want to cancel? YES/NO");
+        String confirm = scanner.nextLine();
+        if(confirm.equalsIgnoreCase("YES")){
+         setStatus("Cancelled");
+         System.out.println("CANCELLED SUCCESSFULLY");
+        }else {
+            System.out.println("Cancel REJECTED");
+        }
     }
 }
