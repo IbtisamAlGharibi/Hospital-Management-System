@@ -121,6 +121,8 @@ public class Doctor extends Person{
         }else {
             System.out.println("No patient with this name");
         }
+    }
+    public void removePatient(){
 
     }
 }
