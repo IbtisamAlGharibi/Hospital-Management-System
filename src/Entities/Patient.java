@@ -16,6 +16,10 @@ public class Patient extends Person{
     private static List<String > appointments = new ArrayList<>();
     static Scanner scanner = new Scanner(System.in);
 
+    public Patient() {
+        super();
+    }
+
     public String getPatientId() {
         return patientId;
     }
