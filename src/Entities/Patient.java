@@ -137,4 +137,15 @@ public class Patient extends Person{
         appointments.add(newAppointment);
         System.out.println("The appointment is added");
     }
+    public void updateInsurance(){
+        System.out.println("Please enter the insurance Id you want to update");
+        String insuranceToUpdate = scanner.nextLine();
+        String oldInsurance = getInsuranceId();
+         if (insuranceToUpdate.equalsIgnoreCase(oldInsurance)){
+            setInsuranceId(insuranceToUpdate);
+            System.out.println("Insurance Updated Successfully");
+         }else{
+             System.out.println("This ID is not found");
+         }
+    }
 }
