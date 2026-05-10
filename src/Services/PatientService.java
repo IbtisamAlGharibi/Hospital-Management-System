@@ -65,6 +65,7 @@ public class PatientService {
 
     public void editPatient(){
         System.out.println("UPDATING PATIENT");
+        System.out.println("-------------------------------------");
         System.out.println("Please enter patient ID you want to update");
         String patientIDToSearch = scanner.nextLine();
         for (int i =0; i< patients.size();i++){
@@ -103,6 +104,14 @@ public class PatientService {
             }else {
                 System.out.println("NOT FOUND");
             }
+        }
+    }
+
+    public void displayAllPatients(){
+        System.out.println("DISPLAYING ALL PATIENTS");
+        System.out.println("--------------------------------");
+        for (int i =0;i<patients.size();i++){
+            patient.displayInfo();
         }
     }
 }
