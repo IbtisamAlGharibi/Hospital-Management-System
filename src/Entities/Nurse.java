@@ -3,6 +3,7 @@ package Entities;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Nurse extends Person {
     private String nurseId;
@@ -10,6 +11,8 @@ public class Nurse extends Person {
     private String shift;
     private String qualification;
     private List<String > assignedPatients = new ArrayList<>();
+    static Scanner scanner = new Scanner(System.in);
+    Patient patient = new Patient();
 
     public Nurse(String ID, String firstName, String lastName, LocalDate dateOfBirth, String gender, String phoneNumber, String email, String address, String nurseId, String departmentId, String shift, String qualification, List<String> assignedPatients) {
         super(ID, firstName, lastName, dateOfBirth, gender, phoneNumber, email, address);
@@ -83,5 +86,17 @@ public class Nurse extends Person {
         System.out.println("qualification : " + getQualification() );
         System.out.println("shift: " + getShift() );
         System.out.println("assigned Patients : " + getAssignedPatients());
+    }
+
+    public void assignPatient(){
+        System.out.println("Please enter the patient full name to be assigned");
+        String patientNameToAssign = scanner.nextLine();
+        String patientFullName = patient.getFirstName() + " "+ patient.getLastName();
+        if (patientNameToAssign.equalsIgnoreCase(patientFullName)){
+            assignedPatients.add(patientNameToAssign);
+            System.out.println(patientNameToAssign + "Added to assigned Patients list SUCCESSFULLY");
+        }else {
+            System.out.println("No patient with this name");
+        }
     }
 }
