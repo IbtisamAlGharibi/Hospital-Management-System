@@ -76,6 +76,21 @@ public class PatientService {
     }
 
     public void removePatient(String patientId){
-
+        System.out.println("Please enter the patient Id you want to remove");
+        String patientIdToRemove = scanner.nextLine();
+        for (int i =0; i < patients.size();i++){
+            String searchedId = String.valueOf(patients.get(i));
+            if (patientIdToRemove.equalsIgnoreCase(searchedId)){
+                System.out.println("Are you sure you want to remove?Yes/No");
+                String confirm = scanner.nextLine();
+                if (confirm.equalsIgnoreCase("Yes")){
+                    patients.remove(patientIdToRemove);
+                }else {
+                    System.out.println("REMOVING REJECTED");
+                }
+            }else {
+                System.out.println("NOT FOUND");
+            }
+        }
     }
 }
