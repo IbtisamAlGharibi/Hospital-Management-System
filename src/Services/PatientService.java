@@ -74,4 +74,8 @@ public class PatientService {
            }
         }
     }
+
+    public void removePatient(String patientId){
+
+    }
 }
