@@ -11,7 +11,7 @@ public class DoctorService {
     static List<Doctor> doctors = new ArrayList<>();
     static Scanner scanner = new Scanner(System.in);
 
-    public void addDoctor(){
+    public Doctor addDoctor(){
         System.out.println("ADDING NEW DOCTOR");
         System.out.println("----------------------------");
 
@@ -46,5 +46,18 @@ public class DoctorService {
         System.out.println("Please enter consultation Fee: ");
         String consultationFee = scanner.nextLine();
         doctor.setConsultationFee(Double.parseDouble(consultationFee));
+        return null;
+    }
+
+    public void addNewDoctor(){
+        boolean flag = true;
+        while (flag){
+            doctors.add(addDoctor());
+            System.out.println("Please enter E to Stop");
+            String input = scanner.nextLine();
+            if (input.equalsIgnoreCase("E")){
+                flag = false;
+            }
+        }
     }
 }
