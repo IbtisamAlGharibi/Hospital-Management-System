@@ -13,7 +13,7 @@ public class Patient extends Person{
     private LocalDate registrationDate;
     private String insuranceId;
     private static List<String > medicalRecords = new ArrayList<>();
-    private List<String > appointments = new ArrayList<>();
+    private static List<String > appointments = new ArrayList<>();
     static Scanner scanner = new Scanner(System.in);
 
     public String getPatientId() {
@@ -130,5 +130,8 @@ public class Patient extends Person{
         String medRecord = scanner.nextLine();
         medicalRecords.add(medRecord);
         System.out.println("Record add Done");
+    }
+    public static void addAppointment(){
+
     }
 }
