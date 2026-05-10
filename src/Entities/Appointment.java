@@ -141,4 +141,7 @@ public class Appointment {
             System.out.println("Cancel REJECTED");
         }
     }
+    public void complete(){
+
+    }
 }
