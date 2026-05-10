@@ -93,4 +93,16 @@ public class PatientService {
             }
         }
     }
+    public void getPatientById(String patientId){
+        System.out.println("Please enter the patient Id you want to find");
+        String patientIdToFind = scanner.nextLine();
+        for (int i =0; i < patients.size();i++){
+            String searchedId = String.valueOf(patients.get(i));
+            if (patientIdToFind.equalsIgnoreCase(searchedId)){
+               patient.displayInfo();
+            }else {
+                System.out.println("NOT FOUND");
+            }
+        }
+    }
 }
