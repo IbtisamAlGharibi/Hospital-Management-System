@@ -67,4 +67,21 @@ public class Nurse extends Person {
     public void setAssignedPatients(List<String> assignedPatients) {
         this.assignedPatients = assignedPatients;
     }
+
+    @Override
+    public void displayInfo(){
+        System.out.println("ID : " + getID() );
+        System.out.println("First Name: " + getFirstName() );
+        System.out.println("Last Name: " + getLastName() );
+        System.out.println("Date of birth: " + getDateOfBirth() );
+        System.out.println("Gender: " + getGender() );
+        System.out.println("Phone Number: " + getPhoneNumber() );
+        System.out.println("Email: " + getEmail() );
+        System.out.println("Address: " + getAddress());
+        System.out.println("nurse Id : " + getNurseId() );
+        System.out.println("department Id : " + getDepartmentId() );
+        System.out.println("qualification : " + getQualification() );
+        System.out.println("shift: " + getShift() );
+        System.out.println("assigned Patients : " + getAssignedPatients());
+    }
 }
