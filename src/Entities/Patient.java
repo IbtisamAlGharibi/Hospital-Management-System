@@ -132,6 +132,9 @@ public class Patient extends Person{
         System.out.println("Record add Done");
     }
     public static void addAppointment(){
-
+        System.out.println("Please enter the new appointment");
+        String newAppointment = scanner.nextLine();
+        appointments.add(newAppointment);
+        System.out.println("The appointment is added");
     }
 }
