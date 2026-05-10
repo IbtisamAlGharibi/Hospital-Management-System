@@ -3,7 +3,6 @@ package Entities;
 import java.time.LocalDate;
 import java.util.Objects;
 
-import static sun.net.InetAddressCachePolicy.get;
 
 public class Person {
     private String ID;
