@@ -3,6 +3,7 @@ package Entities;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Patient extends Person{
     private String patientId;
@@ -13,6 +14,7 @@ public class Patient extends Person{
     private String insuranceId;
     private List<String > medicalRecords = new ArrayList<>();
     private List<String > appointments = new ArrayList<>();
+    static Scanner scanner = new Scanner(System.in);
 
     public String getPatientId() {
         return patientId;
@@ -122,5 +124,8 @@ public class Patient extends Person{
         System.out.println("insurance Id : " + getInsuranceId());
         System.out.println("medical Records : " + getMedicalRecords());
         System.out.println("appointments : " + getAppointments());
+    }
+    public static void addMedicalRecord(){
+
     }
 }
