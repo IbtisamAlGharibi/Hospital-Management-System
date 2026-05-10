@@ -104,4 +104,23 @@ public class Patient extends Person{
                 ", appointments=" + appointments +
                 '}';
     }
+
+    @Override
+    public void displayInfo(){
+        System.out.println("ID : " + getID() );
+        System.out.println("First Name: " + getFirstName() );
+        System.out.println("Last Name: " + getLastName() );
+        System.out.println("Date of birth: " + getDateOfBirth() );
+        System.out.println("Gender: " + getGender() );
+        System.out.println("Phone Number: " + getPhoneNumber() );
+        System.out.println("Email: " + getEmail() );
+        System.out.println("Address: " + getAddress());
+        System.out.println("patient Id : " + getPatientId() );
+        System.out.println("blood Group : " + getBloodGroup() );
+        System.out.println("allergies : " + getAllergies() );
+        System.out.println("registrationDate : " + getRegistrationDate() );
+        System.out.println("insurance Id : " + getInsuranceId());
+        System.out.println("medical Records : " + getMedicalRecords());
+        System.out.println("appointments : " + getAppointments());
+    }
 }
