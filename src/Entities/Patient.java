@@ -90,4 +90,18 @@ public class Patient extends Person{
         this.appointments = appointments;
 
     }
+
+    @Override
+    public String toString() {
+        return "Patient{" +
+                "patientId='" + patientId + '\'' +
+                ", bloodGroup='" + bloodGroup + '\'' +
+                ", allergies=" + allergies +
+                ", emergencyContact='" + emergencyContact + '\'' +
+                ", registrationDate=" + registrationDate +
+                ", insuranceId='" + insuranceId + '\'' +
+                ", medicalRecords=" + medicalRecords +
+                ", appointments=" + appointments +
+                '}';
+    }
 }
