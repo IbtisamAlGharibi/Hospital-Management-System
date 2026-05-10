@@ -123,6 +123,16 @@ public class Doctor extends Person{
         }
     }
     public void removePatient(){
-
+        System.out.println("Please enter the patient full name you want to remove");
+        String patientNameToRemove = scanner.nextLine();
+        for (int i =0; i<assignedPatients.size();i++){
+            String patientFullName = assignedPatients.get(i);
+            if (patientNameToRemove.equalsIgnoreCase(patientFullName)) {
+                assignedPatients.remove(patientNameToRemove);
+                System.out.println(patientNameToRemove + " " + "REMOVED SUCCESSFULLY");
+            }else{
+                System.out.println("This patient not in the list");
+            }
+        }
     }
 }
