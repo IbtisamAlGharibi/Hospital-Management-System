@@ -14,6 +14,70 @@ public class Patient extends Person{
     private List<String > medicalRecords = new ArrayList<>();
     private List<String > appointments = new ArrayList<>();
 
+    public String getPatientId() {
+        return patientId;
+    }
+
+    public void setPatientId(String patientId) {
+        this.patientId = patientId;
+    }
+
+    public String getBloodGroup() {
+        return bloodGroup;
+    }
+
+    public void setBloodGroup(String bloodGroup) {
+        this.bloodGroup = bloodGroup;
+    }
+
+    public List<String> getAllergies() {
+        return allergies;
+    }
+
+    public void setAllergies(List<String> allergies) {
+        this.allergies = allergies;
+    }
+
+    public String getEmergencyContact() {
+        return emergencyContact;
+    }
+
+    public void setEmergencyContact(String emergencyContact) {
+        this.emergencyContact = emergencyContact;
+    }
+
+    public LocalDate getRegistrationDate() {
+        return registrationDate;
+    }
+
+    public void setRegistrationDate(LocalDate registrationDate) {
+        this.registrationDate = registrationDate;
+    }
+
+    public String getInsuranceId() {
+        return insuranceId;
+    }
+
+    public void setInsuranceId(String insuranceId) {
+        this.insuranceId = insuranceId;
+    }
+
+    public List<String> getMedicalRecords() {
+        return medicalRecords;
+    }
+
+    public void setMedicalRecords(List<String> medicalRecords) {
+        this.medicalRecords = medicalRecords;
+    }
+
+    public List<String> getAppointments() {
+        return appointments;
+    }
+
+    public void setAppointments(List<String> appointments) {
+        this.appointments = appointments;
+    }
+
     public Patient(String ID, String firstName, String lastName, LocalDate dateOfBirth, String gender, String phoneNumber, String email, String address, String patientId, String bloodGroup, List<String> allergies, String emergencyContact, LocalDate registrationDate, String insuranceId, List<String> medicalRecords, List<String> appointments) {
         super(ID, firstName, lastName, dateOfBirth, gender, phoneNumber, email, address);
         this.patientId = patientId;
@@ -24,5 +88,6 @@ public class Patient extends Person{
         this.insuranceId = insuranceId;
         this.medicalRecords = medicalRecords;
         this.appointments = appointments;
+
     }
 }
