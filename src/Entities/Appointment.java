@@ -1,6 +1,7 @@
 package Entities;
 
 import java.time.LocalDate;
+import java.util.Scanner;
 
 public class Appointment {
     private String appointmentId;
@@ -11,7 +12,7 @@ public class Appointment {
     private String status;
     private String reason;
     private String notes;
-
+    static Scanner scanner = new Scanner(System.in);
     public Appointment(String appointmentId, String patientId, String doctorId, LocalDate appointmentDate, String appointmentTime, String status, String reason, String notes) {
         this.appointmentId = appointmentId;
         this.patientId = patientId;
@@ -97,6 +98,37 @@ public class Appointment {
         System.out.println("notes: " + getNotes());
     }
     public void reschedule(){
+    System.out.println("RESCHEDULING");
+        System.out.println("Please enter appointment Id ");
+        String newID = scanner.nextLine();
+        setAppointmentId(newID);
 
+        System.out.println("Please enter patient Id ");
+        String newPatientID = scanner.nextLine();
+        setPatientId(newPatientID);
+
+        System.out.println("Please enter doctor Id ");
+        String newDoctorID = scanner.nextLine();
+        setDoctorId(newDoctorID);
+
+        System.out.println("Please enter appointment Date ");
+        String newAppointmentDate = scanner.nextLine();
+        setAppointmentDate(LocalDate.parse(newAppointmentDate));
+
+        System.out.println("Please enter appointment Time ");
+        String newAppointmentTime = scanner.nextLine();
+        setAppointmentTime(newAppointmentTime);
+
+        System.out.println("Please enter status ");
+        String newStatus = scanner.nextLine();
+        setStatus(newStatus);
+
+        System.out.println("Please enter reason ");
+        String newReason = scanner.nextLine();
+        setReason(newReason);
+
+        System.out.println("Please enter notes ");
+        String newNotes= scanner.nextLine();
+        setNotes(newNotes);
     }
 }
