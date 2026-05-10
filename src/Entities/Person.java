@@ -3,15 +3,17 @@ package Entities;
 import java.time.LocalDate;
 import java.util.Objects;
 
+import static sun.net.InetAddressCachePolicy.get;
+
 public class Person {
-    String ID;
-    String firstName;
-    String lastName;
-    LocalDate dateOfBirth;
-    String gender;
-    String phoneNumber;
-    String email;
-    String address;
+    private String ID;
+    private String firstName;
+    private String lastName;
+    private LocalDate dateOfBirth;
+    private String gender;
+    private String phoneNumber;
+    private String email;
+    private String address;
 
     public Person(String ID, String firstName, String lastName, LocalDate dateOfBirth, String gender, String phoneNumber, String email, String address) {
         this.ID = ID;
@@ -114,4 +116,14 @@ public class Person {
         return Objects.hash(ID, firstName, lastName, dateOfBirth, gender, phoneNumber, email, address);
     }
 
+    public void displayInfo(){
+        System.out.println("ID: " + getID() );
+        System.out.println("First Name: " + getFirstName() );
+        System.out.println("Last Name: " + getLastName() );
+        System.out.println("Date of birth: " + getDateOfBirth() );
+        System.out.println("Gender: " + getGender() );
+        System.out.println("Phone Number: " + getPhoneNumber() );
+        System.out.println("Email: " + getEmail() );
+        System.out.println("Address: " + getAddress());
+    }
 }
