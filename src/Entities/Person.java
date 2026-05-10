@@ -1,6 +1,7 @@
 package Entities;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Person {
     String ID;
@@ -99,6 +100,18 @@ public class Person {
                 ", email='" + email + '\'' +
                 ", address='" + address + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return Objects.equals(ID, person.ID) && Objects.equals(firstName, person.firstName) && Objects.equals(lastName, person.lastName) && Objects.equals(dateOfBirth, person.dateOfBirth) && Objects.equals(gender, person.gender) && Objects.equals(phoneNumber, person.phoneNumber) && Objects.equals(email, person.email) && Objects.equals(address, person.address);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(ID, firstName, lastName, dateOfBirth, gender, phoneNumber, email, address);
     }
 
 }
