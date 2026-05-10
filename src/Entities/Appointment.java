@@ -131,4 +131,7 @@ public class Appointment {
         String newNotes= scanner.nextLine();
         setNotes(newNotes);
     }
+    public void cancel(){
+
+    }
 }
