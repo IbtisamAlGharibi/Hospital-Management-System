@@ -142,6 +142,7 @@ public class Appointment {
         }
     }
     public void complete(){
-
+        setStatus("Complete");
+        System.out.println("COMPLETED");
     }
 }
