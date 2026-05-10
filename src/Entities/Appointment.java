@@ -96,4 +96,7 @@ public class Appointment {
         System.out.println("reason: " + getReason() );
         System.out.println("notes: " + getNotes());
     }
+    public void reschedule(){
+
+    }
 }
