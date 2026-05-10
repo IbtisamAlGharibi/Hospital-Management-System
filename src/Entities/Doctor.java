@@ -12,12 +12,12 @@ public class Doctor extends Person{
     private int experienceYears;
     private String departmentId;
     private double consultationFee;
-    private List<Integer> availableSlots = new ArrayList<>();
+    private List<String > availableSlots = new ArrayList<>();
     private List<String > assignedPatients = new ArrayList<>();
     static Scanner scanner = new Scanner(System.in);
      static Patient patient =new Patient();
 
-    public Doctor(String ID, String firstName, String lastName, LocalDate dateOfBirth, String gender, String phoneNumber, String email, String address, String doctorId, String specialization, String qualification, int experienceYears, String departmentId, double consultationFee, List<Integer> availableSlots, List<String> assignedPatients) {
+    public Doctor(String ID, String firstName, String lastName, LocalDate dateOfBirth, String gender, String phoneNumber, String email, String address, String doctorId, String specialization, String qualification, int experienceYears, String departmentId, double consultationFee, List<String > availableSlots, List<String> assignedPatients) {
         super(ID, firstName, lastName, dateOfBirth, gender, phoneNumber, email, address);
         this.doctorId = doctorId;
         this.specialization = specialization;
@@ -77,11 +77,11 @@ public class Doctor extends Person{
         this.consultationFee = consultationFee;
     }
 
-    public List<Integer> getAvailableSlots() {
+    public List<String> getAvailableSlots() {
         return availableSlots;
     }
 
-    public void setAvailableSlots(List<Integer> availableSlots) {
+    public void setAvailableSlots(List<String > availableSlots) {
         this.availableSlots = availableSlots;
     }
 
@@ -132,6 +132,23 @@ public class Doctor extends Person{
                 System.out.println(patientNameToRemove + " " + "REMOVED SUCCESSFULLY");
             }else{
                 System.out.println("This patient not in the list");
+            }
+        }
+    }
+    public void updateAvailability(){
+        System.out.println("Please enter the availability you want to update");
+        String availabilityToUpdate = scanner.nextLine();
+        System.out.println("Please enter the new availability");
+        String newAvailability = scanner.nextLine();
+
+        for (int i =0;i<availableSlots.size();i++){
+            String availability = availableSlots.get(i);
+            if (availabilityToUpdate.equalsIgnoreCase(availability)){
+                availability = newAvailability;
+                availableSlots.add(availability);
+                System.out.println("AVAILABILITY UPDATED SUCCESSFULLY");
+            }else {
+                System.out.println("NOT FOUND");
             }
         }
     }
