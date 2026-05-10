@@ -87,6 +87,9 @@ public class Department {
         System.out.println("Doctor assigned SUCCESSFULLY");
     }
     public void assignNurse(){
-
+        System.out.println("Please enter the nurse name you want to assign");
+        String nurseTOBeAssigned = scanner.nextLine();
+        nurses.add(nurseTOBeAssigned);
+        System.out.println("Nurse assigned SUCCESSFULLY");
     }
 }
