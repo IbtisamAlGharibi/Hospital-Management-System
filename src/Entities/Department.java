@@ -81,6 +81,9 @@ public class Department {
     }
 
     public void assignDoctor(){
-
+        System.out.println("Please enter the doctor name you want to assign");
+        String doctorTOBeAssigned = scanner.nextLine();
+        doctors.add(doctorTOBeAssigned);
+        System.out.println("Doctor assigned SUCCESSFULLY");
     }
 }
