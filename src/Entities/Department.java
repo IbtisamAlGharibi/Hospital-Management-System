@@ -86,4 +86,7 @@ public class Department {
         doctors.add(doctorTOBeAssigned);
         System.out.println("Doctor assigned SUCCESSFULLY");
     }
+    public void assignNurse(){
+
+    }
 }
