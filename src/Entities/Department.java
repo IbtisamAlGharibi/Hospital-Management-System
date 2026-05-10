@@ -92,4 +92,10 @@ public class Department {
         nurses.add(nurseTOBeAssigned);
         System.out.println("Nurse assigned SUCCESSFULLY");
     }
+    public void updateBedAvailability(){
+        System.out.println("Please enter the number of available bed");
+        String newAvailabile = scanner.nextLine();
+        setAvailableBeds(Integer.parseInt(newAvailabile));
+        System.out.println("number of beds updated SUCCESSFULLY");
+    }
 }
