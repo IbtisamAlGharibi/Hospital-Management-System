@@ -62,4 +62,16 @@ public class PatientService {
             }
         }
     }
+
+    public void editPatient(){
+        System.out.println("UPDATING PATIENT");
+        System.out.println("Please enter patient ID you want to update");
+        String patientIDToSearch = scanner.nextLine();
+        for (int i =0; i< patients.size();i++){
+           String oldId = String.valueOf(patients.get(i));
+           if (patientIDToSearch.equalsIgnoreCase(oldId)){
+                addNewPatient();
+           }
+        }
+    }
 }
