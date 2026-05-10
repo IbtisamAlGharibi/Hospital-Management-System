@@ -108,4 +108,7 @@ public class Doctor extends Person{
         System.out.println("available Slots : " + getAvailableSlots());
         System.out.println("assigned Patients : " + getAssignedPatients());
     }
+    public void assignPatient(){
+
+    }
 }
