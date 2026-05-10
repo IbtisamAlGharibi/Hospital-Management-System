@@ -1,6 +1,7 @@
 package Services;
 
 import Entities.Patient;
+import com.sun.source.tree.WhileLoopTree;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -13,7 +14,7 @@ public class PatientService {
     static Patient patient = new Patient();
     static Scanner scanner= new Scanner(System.in);
 
-    public void addPatient(Patient patient){
+    public Patient addPatient(){
         System.out.println("ADDING NEW PATIENT");
         System.out.println("----------------------------");
 
@@ -48,5 +49,17 @@ public class PatientService {
         System.out.println("Please enter registrationDate: ");
         String patientRegistrationDate = scanner.nextLine();
         patient.setRegistrationDate(LocalDate.parse(patientRegistrationDate));
+        return null;
+    }
+    public void addNewPatient(){
+        boolean flag = true;
+        while (flag){
+        patients.add(addPatient());
+            System.out.println("Please enter E to Stop");
+            String input = scanner.nextLine();
+            if (input.equalsIgnoreCase("E")){
+                flag = false;
+            }
+        }
     }
 }
