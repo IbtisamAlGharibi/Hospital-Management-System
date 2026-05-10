@@ -2,6 +2,7 @@ package Entities;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Department {
     private String departmentId;
@@ -11,6 +12,7 @@ public class Department {
     private List<String > nurses = new ArrayList<>();
     private int bedCapacity ;
     private int availableBeds;
+    static Scanner scanner = new Scanner(System.in);
 
     public Department(String departmentId, String departmentName, String headDoctorId, List<String> doctors, List<String> nurses, int availableBeds, int bedCapacity) {
         this.departmentId = departmentId;
@@ -76,5 +78,9 @@ public class Department {
 
     public void setAvailableBeds(int availableBeds) {
         this.availableBeds = availableBeds;
+    }
+
+    public void assignDoctor(){
+
     }
 }
