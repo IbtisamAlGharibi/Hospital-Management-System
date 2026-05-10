@@ -86,4 +86,14 @@ public class Appointment {
     public void setNotes(String notes) {
         this.notes = notes;
     }
+    public void displayInfo(){
+        System.out.println("appointment Id: " + getAppointmentId() );
+        System.out.println("patient Id: " + getPatientId() );
+        System.out.println("doctor Id: " + getDoctorId() );
+        System.out.println("appointment Date: " + getAppointmentDate() );
+        System.out.println("appointment Time: " + getAppointmentTime() );
+        System.out.println("status: " + getStatus() );
+        System.out.println("reason: " + getReason() );
+        System.out.println("notes: " + getNotes());
+    }
 }
