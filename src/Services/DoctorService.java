@@ -60,4 +60,17 @@ public class DoctorService {
             }
         }
     }
+
+    public void editDoctor(){
+        System.out.println("UPDATING DOCTOR");
+        System.out.println("-------------------------------------");
+        System.out.println("Please enter doctor ID you want to update");
+        String doctorIDToSearch = scanner.nextLine();
+        for (int i =0; i< doctors.size();i++){
+            String oldId = String.valueOf(doctors.get(i));
+            if (doctorIDToSearch.equalsIgnoreCase(oldId)){
+                addNewDoctor();
+            }
+        }
+    }
 }
