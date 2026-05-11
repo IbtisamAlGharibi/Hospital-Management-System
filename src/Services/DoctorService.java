@@ -114,4 +114,7 @@ public class DoctorService {
             doctor.displayInfo();
         }
     }
+    public void getDoctorsBySpecialization(String specialization){
+
+    }
 }
