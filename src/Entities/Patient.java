@@ -19,6 +19,7 @@ public class Patient extends Person{
     public Patient() {
         super();
     }
+    static Appointment appointment = new Appointment();
 
     public String getPatientId() {
         return patientId;
@@ -179,10 +180,39 @@ public class Patient extends Person{
         }
     }
     public static void addAppointment(){
-        System.out.println("Please enter the new appointment");
-        String newAppointment = scanner.nextLine();
-        appointments.add(newAppointment);
-        System.out.println("The appointment is added");
+        System.out.println("ADDING NEW APPOINTMENT");
+
+        System.out.println("Please enter appointment Id ");
+        String newID = scanner.nextLine();
+        appointment.setAppointmentId(newID);
+
+        System.out.println("Please enter patient Id ");
+        String newPatientID = scanner.nextLine();
+        appointment.setPatientId(newPatientID);
+
+        System.out.println("Please enter doctor Id ");
+        String newDoctorID = scanner.nextLine();
+        appointment.setDoctorId(newDoctorID);
+
+        System.out.println("Please enter appointment Date ");
+        String newAppointmentDate = scanner.nextLine();
+        appointment.setAppointmentDate(LocalDate.parse(newAppointmentDate));
+
+        System.out.println("Please enter appointment Time ");
+        String newAppointmentTime = scanner.nextLine();
+        appointment.setAppointmentTime(newAppointmentTime);
+
+        System.out.println("Please enter status ");
+        String newStatus = scanner.nextLine();
+        appointment.setStatus(newStatus);
+
+        System.out.println("Please enter reason ");
+        String newReason = scanner.nextLine();
+        appointment.setReason(newReason);
+
+        System.out.println("Please enter notes ");
+        String newNotes= scanner.nextLine();
+        appointment.setNotes(newNotes);
     }
     public void updateInsurance(){
         System.out.println("Please enter the insurance Id you want to update");

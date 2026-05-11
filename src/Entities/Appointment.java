@@ -24,6 +24,10 @@ public class Appointment {
         this.notes = notes;
     }
 
+    public Appointment() {
+
+    }
+
     public String getAppointmentId() {
         return appointmentId;
     }
