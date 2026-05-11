@@ -63,4 +63,22 @@ public class GeneralPractitioner extends Doctor{
         System.out.println("available Slots : " + getAvailableSlots());
         System.out.println("assigned Patients : " + getAssignedPatients());
     }
+    public void scheduleHomeVisit(){
+        System.out.println("SCHEDULING HOME VISIT");
+        System.out.println("-------------------------------");
+        if (homeVisitAvailable){
+            System.out.println("Please enter the location");
+            String location = scanner.nextLine();
+           // System.out.println("location of the visit" + " "+ location);
+            System.out.println("Please enter the duration");
+            String duration = scanner.nextLine();
+
+            System.out.println("Please enter Doctor Name");
+            String doctorName = scanner.nextLine();
+
+            System.out.println("Home visit details: " + "Location->" +location+ "Duration->" + duration + "Doctor Name->" + doctorName);
+        }
+    }
+
+
 }
