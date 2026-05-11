@@ -32,4 +32,12 @@ public class DepartmentService {
         }
     }
 
+    public void displayAllDepartments(){
+        System.out.println("DISPLAYING ALL DEPARTMENTS");
+        System.out.println("--------------------------------");
+        for (int i =0;i<departments.size();i++){
+            department.displayInfo();
+        }
+    }
+
 }
