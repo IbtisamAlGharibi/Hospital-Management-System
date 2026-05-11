@@ -2,13 +2,14 @@ package Services;
 
 import Entities.Nurse;
 
-import java.time.LocalDate;
-import java.util.Collections;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class NurseService {
     static Scanner scanner = new Scanner(System.in);
     static Nurse nurse = new Nurse();
+    static List<Nurse> nurses = new ArrayList<>();
 
     public Nurse addNurse(){
         System.out.println("ADDING NEW NURSE");
@@ -41,4 +42,15 @@ public class NurseService {
         return nurse;
     }
 
+    public void addNewNurse(){
+        boolean flag = true;
+        while (flag){
+            nurses.add(addNurse());
+            System.out.println("Please enter E to Stop");
+            String input = scanner.nextLine();
+            if (input.equalsIgnoreCase("E")){
+                flag = false;
+            }
+        }
+    }
 }
