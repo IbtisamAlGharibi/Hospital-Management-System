@@ -40,4 +40,16 @@ public class DepartmentService {
         }
     }
 
+    public void assignDoctorToDepartment(){
+        System.out.println("Please enter the doctor full name to be assigned");
+        String doctorNameToAssign = scanner.nextLine();
+        String doctorFullName = doctor.getFirstName() + " "+ doctor.getLastName();
+        if (doctorNameToAssign.equalsIgnoreCase(doctorFullName)){
+            departments.add(doctorNameToAssign);
+            System.out.println(doctorNameToAssign + "Added to department list SUCCESSFULLY");
+        }else {
+            System.out.println("No doctor with this name");
+        }
+    }
+
 }
