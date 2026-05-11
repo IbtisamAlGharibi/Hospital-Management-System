@@ -57,4 +57,8 @@ public class AppointmentService {
             }
         }
     }
+
+    public void rescheduleAppointment(){
+        appointment.reschedule();
+    }
 }
