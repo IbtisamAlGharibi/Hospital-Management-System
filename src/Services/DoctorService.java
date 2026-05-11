@@ -73,7 +73,7 @@ public class DoctorService {
             }
         }
     }
-    public void removeDoctor(String doctorId){
+    public void removeDoctor(){
         System.out.println("REMOVING DOCTOR");
         System.out.println("-------------------------------------");
         System.out.println("Please enter the Doctor Id you want to remove");
@@ -114,7 +114,7 @@ public class DoctorService {
             doctor.displayInfo();
         }
     }
-    public void getDoctorsBySpecialization(String specialization){
+    public void getDoctorsBySpecialization(){
         System.out.println("Please enter the doctor specialization you want to find");
         String doctorSpecializationToFind = scanner.nextLine();
         for (int i =0; i < doctors.size();i++){
@@ -139,7 +139,7 @@ public class DoctorService {
 
         switch (doctorOption) {
             case  "2.1" -> {
-
+                doctorService.addNewDoctor();
             }
             case "2.2" -> {
 
@@ -152,17 +152,17 @@ public class DoctorService {
 
             }
             case "2.5" -> {
-
+                doctorService.displayAllDoctors();
             }case "2.6" -> {
-
+                doctorService.getDoctorsBySpecialization();
             }case "2.7"-> {
-
+                doctorService.getAvailableDoctors();
             }case "2.8" -> {
-
+                doctor.assignPatient();
             }case "2.9" -> {
-
+                doctorService.editDoctor();
             }case "2.10" -> {
-
+                doctorService.removeDoctor();
             }
 
             case "2.11" -> {
