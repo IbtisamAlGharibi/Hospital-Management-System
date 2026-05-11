@@ -72,4 +72,9 @@ public class OutPatient extends Patient{
         appointment.reschedule();
     }
 
+    public void updateVisitCount(){
+        visitCount++;
+        System.out.println(visitCount + " " + "has been visited");
+    }
+
 }
