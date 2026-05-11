@@ -121,6 +121,15 @@ public class NurseService {
         }
     }
     public void getNursesByShift(){
-
+        System.out.println("Please enter the nurse shift you want to find");
+        String nurseShiftToFind = scanner.nextLine();
+        for (int i =0; i < nurses.size();i++){
+            String searchedShift = String.valueOf(nurses.get(i));
+            if (nurseShiftToFind.equalsIgnoreCase(searchedShift)){
+                nurse.displayInfo();
+            }else {
+                System.out.println("NOT FOUND");
+            }
+        }
     }
 }
