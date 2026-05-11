@@ -188,4 +188,26 @@ public class PatientService {
        phone = scanner.nextLine();
        patient.setPhoneNumber(phone);
    }
+   public void addPatient(String firstName, String lastName, String phone, String bloodGroup, String email){
+       System.out.println("Please enter patient first name: ");
+       firstName = scanner.nextLine();
+       patient.setFirstName(firstName);
+
+       System.out.println("Please enter patient last name: ");
+       lastName = scanner.nextLine();
+       patient.setLastName(lastName);
+
+       System.out.println("Please enter patient phone: ");
+       phone = scanner.nextLine();
+       patient.setPhoneNumber(phone);
+
+       System.out.println("Please enter blood Group: ");
+       bloodGroup= scanner.nextLine();
+       patient.setBloodGroup(bloodGroup);
+
+
+       System.out.println("Please enter Email: ");
+       email= scanner.nextLine();
+       patient.setEmail(email);
+   }
 }
