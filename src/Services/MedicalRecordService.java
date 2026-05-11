@@ -41,4 +41,17 @@ public class MedicalRecordService {
             }
         }
     }
+
+    public void displayPatientHistory(){
+        System.out.println("Please enter the patient name");
+        String patientName = scanner.nextLine();
+        for (int i =0; i < patients.size();i++){
+            String searchedName = String.valueOf(patients.get(i));
+            if (patientName.equalsIgnoreCase(searchedName)){
+                medicalRecord.displayInfo();
+            }else {
+                System.out.println("NOT FOUND");
+            }
+        }
+    }
 }
