@@ -120,4 +120,7 @@ public class NurseService {
             }
         }
     }
+    public void getNursesByShift(){
+
+    }
 }
