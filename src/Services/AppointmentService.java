@@ -44,4 +44,17 @@ public class AppointmentService {
             }
         }
     }
+
+    public void getAppointmentsByDate(){
+        System.out.println("Please enter the date:");
+        String date = scanner.nextLine();
+        for (int i =0; i < doctors.size();i++){
+            String searchedDate = String.valueOf(doctors.get(i));
+            if (date.equalsIgnoreCase(searchedDate)){
+                appointment.displayInfo();
+            }else {
+                System.out.println("NOT FOUND");
+            }
+        }
+    }
 }
