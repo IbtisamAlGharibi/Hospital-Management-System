@@ -15,8 +15,7 @@ public class Patient extends Person{
     private static List<String > medicalRecords = new ArrayList<>();
     private static List<String > appointments = new ArrayList<>();
     static Scanner scanner = new Scanner(System.in);
-    static MedicalRecord medicalRecord = new MedicalRecord();
-
+     static MedicalRecord medicalRecord = new MedicalRecord();
     public Patient() {
         super();
     }
