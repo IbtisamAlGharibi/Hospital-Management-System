@@ -106,4 +106,12 @@ public class DoctorService {
             }
         }
     }
+
+    public void displayAllDoctors(){
+        System.out.println("DISPLAYING ALL DOCTORS");
+        System.out.println("--------------------------------");
+        for (int i =0;i<doctors.size();i++){
+            doctor.displayInfo();
+        }
+    }
 }
