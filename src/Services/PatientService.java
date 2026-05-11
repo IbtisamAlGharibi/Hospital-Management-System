@@ -210,4 +210,8 @@ public class PatientService {
        email= scanner.nextLine();
        patient.setEmail(email);
    }
+    public void addPatient(Patient patient){
+        patients.add(patient);
+        addNewPatient();
+    }
 }
