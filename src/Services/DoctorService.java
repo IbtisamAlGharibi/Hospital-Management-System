@@ -74,6 +74,8 @@ public class DoctorService {
         }
     }
     public void removeDoctor(String doctorId){
+        System.out.println("REMOVING DOCTOR");
+        System.out.println("-------------------------------------");
         System.out.println("Please enter the Doctor Id you want to remove");
         String doctorIdToRemove = scanner.nextLine();
         for (int i =0; i < doctors.size();i++){
@@ -86,6 +88,19 @@ public class DoctorService {
                 }else {
                     System.out.println("REMOVING REJECTED");
                 }
+            }else {
+                System.out.println("NOT FOUND");
+            }
+        }
+    }
+
+    public void getDoctorById(String doctorId){
+        System.out.println("Please enter the doctor Id you want to find");
+        String doctorIdToFind = scanner.nextLine();
+        for (int i =0; i < doctors.size();i++){
+            String searchedId = String.valueOf(doctors.get(i));
+            if (doctorIdToFind.equalsIgnoreCase(searchedId)){
+                doctor.displayInfo();
             }else {
                 System.out.println("NOT FOUND");
             }
