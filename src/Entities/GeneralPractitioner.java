@@ -80,5 +80,20 @@ public class GeneralPractitioner extends Doctor{
         }
     }
 
+    public void administerVaccine(){
+        System.out.println("ADMINISTER VACCINE");
+        System.out.println("-------------------------------");
 
+        if (vaccinationCertified){
+            System.out.println("Enter patient ID:");
+            String patientId = scanner.nextLine();
+
+             System.out.println("Enter vaccine name:");
+             String vaccineName = scanner.nextLine();
+
+            System.out.println("Vaccine " + vaccineName + " administered to patient " + patientId);
+        }else {
+            System.out.println("NOT Certified");
+        }
+    }
 }
