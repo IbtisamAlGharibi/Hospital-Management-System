@@ -133,4 +133,43 @@ public class DoctorService {
             doctor.displayInfo();
         }
     }
+
+    public boolean HandleDoctorMenu(String  doctorOption){
+       DoctorService doctorService = new DoctorService();
+
+        switch (doctorOption) {
+            case  "2.1" -> {
+
+            }
+            case "2.2" -> {
+
+            }
+            case "2.3" -> {
+
+            }
+
+            case  "2.4" -> {
+
+            }
+            case "2.5" -> {
+
+            }case "2.6" -> {
+
+            }case "2.7"-> {
+
+            }case "2.8" -> {
+
+            }case "2.9" -> {
+
+            }case "2.10" -> {
+
+            }
+
+            case "2.11" -> {
+                return false;
+            }
+        }
+        return true;
+    }
+
 }

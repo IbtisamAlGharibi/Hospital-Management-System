@@ -26,6 +26,6 @@ public class MenuMessages {
                     "2.7 View Available Doctors \n" +
                     "2.8 Assign Patient to Doctor \n" +
                     "2.9 Update Doctor Information \n" +
-                    "2.10 Remove Doctor";
+                    "2.10 Remove Doctor\n"+"2.11 Exit";
 
 }
