@@ -1,5 +1,6 @@
 package Entities;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -23,6 +24,7 @@ public class Department {
         this.availableBeds = availableBeds;
         this.bedCapacity = bedCapacity;
     }
+
 
     public String getDepartmentId() {
         return departmentId;
@@ -104,5 +106,30 @@ public class Department {
         System.out.println("head Doctor Id: " + getHeadDoctorId() );
         System.out.println("bed Capacity: " + getBedCapacity() );
         System.out.println("available Beds: " + getAvailableBeds());
+    }
+
+    public String addDepartment(){
+        System.out.println("ADDING NEW DEPARTMENT");
+        System.out.println("----------------------------");
+        System.out.println("Please enter department Id");
+        String newID = scanner.nextLine();
+        setDepartmentId(newID);
+
+        System.out.println("Please enter department Name ");
+        String deptName = scanner.nextLine();
+        setDepartmentName(deptName);
+
+        System.out.println("Please enter head Doctor Id ");
+        String doctorID = scanner.nextLine();
+        setHeadDoctorId(doctorID);
+
+        System.out.println("Please enter bed Capacity ");
+        String bedCapacity = scanner.nextLine();
+        setBedCapacity(Integer.parseInt(bedCapacity));
+
+        System.out.println("Please enter available Beds ");
+        String availableBeds = scanner.nextLine();
+        setAvailableBeds(Integer.parseInt(availableBeds));
+        return newID;
     }
 }
