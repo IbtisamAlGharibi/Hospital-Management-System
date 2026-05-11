@@ -127,6 +127,10 @@ public class DoctorService {
         }
     }
     public void getAvailableDoctors(){
-
+        System.out.println("AVAILABLE DOCTORS");
+        System.out.println("--------------------------------");
+        if (doctor.getAvailableSlots() !=null && !(doctor.getAvailableSlots().isEmpty())){
+            doctor.displayInfo();
+        }
     }
 }
