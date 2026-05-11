@@ -109,6 +109,15 @@ public class NurseService {
     }
 
     public void getNursesByDepartment(){
-
+        System.out.println("Please enter the nurse department you want to find");
+        String nurseDepartmentToFind = scanner.nextLine();
+        for (int i =0; i < nurses.size();i++){
+            String searchedDepartment = String.valueOf(nurses.get(i));
+            if (nurseDepartmentToFind.equalsIgnoreCase(searchedDepartment)){
+                nurse.displayInfo();
+            }else {
+                System.out.println("NOT FOUND");
+            }
+        }
     }
 }
