@@ -2,12 +2,16 @@ package Entities;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
 
 public class Consultant extends Doctor{
     private List<String > consultationTypes = new ArrayList<>();
     private boolean onlineConsultationAvailable;
     private int consultationDuration;
+    static Scanner scanner = new Scanner(System.in);
+
 
     public Consultant(String ID, String firstName, String lastName, LocalDate dateOfBirth, String gender, String phoneNumber, String email, String address, String doctorId, String specialization, String qualification, int experienceYears, String departmentId, double consultationFee, List<String> availableSlots, List<String> assignedPatients, List<String> consultationTypes, boolean onlineConsultationAvailable, int consultationDuration) {
         super(ID, firstName, lastName, dateOfBirth, gender, phoneNumber, email, address, doctorId, specialization, qualification, experienceYears, departmentId, consultationFee, availableSlots, assignedPatients);
@@ -65,5 +69,21 @@ public class Consultant extends Doctor{
         System.out.println("assigned Patients : " + getAssignedPatients());
         System.out.println("consultation Types : " + getConsultationTypes());
         System.out.println("consultation Duration : " + getConsultationDuration());
+    }
+    public void scheduleConsultation(){
+        System.out.println("SCHEDULING CONSULTATION");
+        System.out.println("-------------------------------");
+
+        if (onlineConsultationAvailable){
+        System.out.println("Please enter consultation Types:");
+        String consultationTypes = scanner.nextLine();
+        setConsultationTypes(Collections.singletonList(consultationTypes));
+
+        System.out.println("Please enter consultation Duration:");
+        String consultationDuration = scanner.nextLine();
+         setConsultationDuration(Integer.parseInt(consultationDuration));
+        }else {
+            System.out.println("Online consultation is not available ");
+        }
     }
 }
