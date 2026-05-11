@@ -86,4 +86,17 @@ public class NurseService {
             }
         }
     }
+
+    public void getNurseById(){
+        System.out.println("Please enter the nurse Id you want to find");
+        String nurseIdToFind = scanner.nextLine();
+        for (int i =0; i < nurses.size();i++){
+            String searchedId = String.valueOf(nurses.get(i));
+            if (nurseIdToFind.equalsIgnoreCase(searchedId)){
+                nurse.displayInfo();
+            }else {
+                System.out.println("NOT FOUND");
+            }
+        }
+    }
 }
