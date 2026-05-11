@@ -7,6 +7,7 @@ public class OutPatient extends Patient{
     private int visitCount;
     private LocalDate lastVisitDate;
     private String preferredDoctorId;
+    static Appointment appointment = new Appointment();
 
     public OutPatient(int visitCount, LocalDate lastVisitDate, String preferredDoctorId) {
         this.visitCount = visitCount;
@@ -67,4 +68,8 @@ public class OutPatient extends Patient{
         System.out.println("last Visit Date : " + getLastVisitDate());
         System.out.println("preferred Doctor Id : " + getPreferredDoctorId());
     }
+    public void scheduleFollowUp(){
+        appointment.reschedule();
+    }
+
 }
