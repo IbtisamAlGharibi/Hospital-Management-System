@@ -179,9 +179,9 @@ public class Patient extends Person{
             }
         }
     }
-    public static void addAppointment(){
+    public static String addAppointment(){
         System.out.println("ADDING NEW APPOINTMENT");
-
+        System.out.println("----------------------------");
         System.out.println("Please enter appointment Id ");
         String newID = scanner.nextLine();
         appointment.setAppointmentId(newID);
@@ -213,6 +213,19 @@ public class Patient extends Person{
         System.out.println("Please enter notes ");
         String newNotes= scanner.nextLine();
         appointment.setNotes(newNotes);
+        return newID;
+    }
+
+    public void addNewAppointment(){
+        boolean flag = true;
+        while (flag){
+           appointments.add(addAppointment());
+            System.out.println("Please enter E to Stop");
+            String input = scanner.nextLine();
+            if (input.equalsIgnoreCase("E")){
+                flag = false;
+            }
+        }
     }
     public void updateInsurance(){
         System.out.println("Please enter the insurance Id you want to update");
