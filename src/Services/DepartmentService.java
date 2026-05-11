@@ -16,4 +16,5 @@ public class DepartmentService {
     static Nurse nurse = new Nurse();
     static Doctor doctor = new Doctor();
 
+
 }

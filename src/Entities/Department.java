@@ -98,4 +98,11 @@ public class Department {
         setAvailableBeds(Integer.parseInt(newAvailabile));
         System.out.println("number of beds updated SUCCESSFULLY");
     }
+    public void displayInfo(){
+        System.out.println("department Id : " + getDepartmentId() );
+        System.out.println("department Name: " + getDepartmentName() );
+        System.out.println("head Doctor Id: " + getHeadDoctorId() );
+        System.out.println("bed Capacity: " + getBedCapacity() );
+        System.out.println("available Beds: " + getAvailableBeds());
+    }
 }
