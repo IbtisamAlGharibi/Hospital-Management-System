@@ -53,4 +53,16 @@ public class NurseService {
             }
         }
     }
+    public void editNurse(){
+        System.out.println("UPDATING NURSE");
+        System.out.println("-------------------------------------");
+        System.out.println("Please enter nurse ID you want to update");
+        String nurseIDToSearch = scanner.nextLine();
+        for (int i =0; i< nurses.size();i++){
+            String oldId = String.valueOf(nurses.get(i));
+            if (nurseIDToSearch.equalsIgnoreCase(oldId)){
+                addNewNurse();
+            }
+        }
+    }
 }
