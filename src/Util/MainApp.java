@@ -13,7 +13,9 @@ public class MainApp {
     static PatientService patientService = new PatientService();
     static Patient patient = new Patient();
     static Doctor doctor = new Doctor();
+
     public static void main(String[] args){
+        System.out.println(MenuMessages.MAIN_MENU_MESSAGE);
 
     }
 }

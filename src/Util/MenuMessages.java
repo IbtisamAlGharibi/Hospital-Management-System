@@ -10,7 +10,7 @@ public class MenuMessages {
             "1.6 Search Patient \n" +
             "1.7 Update Patient Information \n" +
             "1.8 Remove Patient \n" +
-            "1.9 View Patient Medical History" +
+            "1.9 View Patient Medical History\n" +"---------------------------------------------\n"+
             "2. Doctor Management \n" +
             "2.1 Add Doctor \n" +
             "2.2 Add Surgeon \n" +
