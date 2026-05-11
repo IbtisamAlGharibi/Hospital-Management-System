@@ -44,4 +44,23 @@ public class GeneralPractitioner extends Doctor{
     public void setVaccinationCertified(boolean vaccinationCertified) {
         this.vaccinationCertified = vaccinationCertified;
     }
+    @Override
+    public void displayInfo(){
+        System.out.println("ID : " + getID() );
+        System.out.println("First Name: " + getFirstName() );
+        System.out.println("Last Name: " + getLastName() );
+        System.out.println("Date of birth: " + getDateOfBirth() );
+        System.out.println("Gender: " + getGender() );
+        System.out.println("Phone Number: " + getPhoneNumber() );
+        System.out.println("Email: " + getEmail() );
+        System.out.println("Address: " + getAddress());
+        System.out.println("doctor Id : " + getDoctorId() );
+        System.out.println("specialization : " + getSpecialization() );
+        System.out.println("qualification : " + getQualification() );
+        System.out.println("experience Years: " + getExperienceYears() );
+        System.out.println("department Id : " + getDepartmentId());
+        System.out.println("consultation Fee: " + getConsultationFee());
+        System.out.println("available Slots : " + getAvailableSlots());
+        System.out.println("assigned Patients : " + getAssignedPatients());
+    }
 }
