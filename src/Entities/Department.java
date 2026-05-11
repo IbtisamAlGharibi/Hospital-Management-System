@@ -26,6 +26,10 @@ public class Department {
         this.bedCapacity = bedCapacity;
     }
 
+    public Department() {
+
+    }
+
 
     public String getDepartmentId() {
         return departmentId;

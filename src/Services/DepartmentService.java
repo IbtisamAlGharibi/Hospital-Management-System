@@ -1,6 +1,6 @@
 package Services;
 
-import Entities.Appointment;
+import Entities.Department;
 import Entities.Doctor;
 import Entities.Nurse;
 import Entities.Patient;
@@ -15,6 +15,21 @@ public class DepartmentService {
     static List<Doctor> doctors = new ArrayList<>();
     static Nurse nurse = new Nurse();
     static Doctor doctor = new Doctor();
+    static List<String > departments = new ArrayList<>();
+    static Department department = new Department();
 
+
+    public void getDepartmentById(){
+        System.out.println("Please enter the department Id:");
+        String departmentId = scanner.nextLine();
+        for (int i =0; i < departments.size();i++){
+            String searchedId = String.valueOf(departments.get(i));
+            if (departmentId.equalsIgnoreCase(searchedId)){
+                department.displayInfo();
+            }else {
+                System.out.println("NOT FOUND");
+            }
+        }
+    }
 
 }
