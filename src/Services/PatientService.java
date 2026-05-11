@@ -75,7 +75,7 @@ public class PatientService {
         }
     }
 
-    public void removePatient(String patientId){
+    public void removePatient(){
         System.out.println("Please enter the patient Id you want to remove");
         String patientIdToRemove = scanner.nextLine();
         for (int i =0; i < patients.size();i++){
@@ -114,7 +114,7 @@ public class PatientService {
         }
     }
 
-    public void searchPatientsByName(String name){
+    public void searchPatientsByName(){
         System.out.println("Please enter the patient name you want to find");
         String patientNameToFind = scanner.nextLine();
         for (int i =0; i < patients.size();i++){
@@ -147,11 +147,18 @@ public class PatientService {
             case "1.5" -> {
                 patientService.displayAllPatients();
             }case "1.6" -> {
+                System.out.println("Do you want to search by Name or Id?");
+                String confirm = scanner.nextLine();
+                if (confirm.equalsIgnoreCase("Name")){
+                    patientService.searchPatientsByName();
+                }else {
                 patientService.getPatientById();
+                }
             }case "1.7"-> {
+                patientService.editPatient();
 
             }case "1.8" -> {
-
+                patientService.removePatient();
             }case "1.9" -> {
 
             }
