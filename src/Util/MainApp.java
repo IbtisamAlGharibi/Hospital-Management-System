@@ -1,6 +1,7 @@
 package Util;
 
 import Entities.Doctor;
+import Entities.InPatient;
 import Entities.Patient;
 import Services.DoctorService;
 import Services.PatientService;
@@ -41,6 +42,8 @@ public class MainApp {
                         }
                     }
                 }
+
+
 }
 }
 }

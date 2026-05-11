@@ -1,6 +1,7 @@
 package Entities;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.List;
 
 public class InPatient extends  Patient{
@@ -28,6 +29,10 @@ public class InPatient extends  Patient{
         this.bedNumber = bedNumber;
         this.admittingDoctorId = admittingDoctorId;
         this.dailyCharges = dailyCharges;
+    }
+
+    public InPatient() {
+
     }
 
     public LocalDate getAdmissionDate() {
@@ -102,6 +107,20 @@ public class InPatient extends  Patient{
         System.out.println("bedNumber : " + getBedNumber());
         System.out.println("admitting Doctor Id : " + getAdmittingDoctorId());
         System.out.println("dailyCharges : " + getDailyCharges());
+
+    }
+    public void calculateStayDuration(){
+        System.out.println("CALCULATING STAY DURATION");
+        System.out.println("-------------------------------");
+
+        System.out.println("Please  enter admissionDate ");
+        LocalDate admissionDate = LocalDate.parse(scanner.nextLine());
+        System.out.println("Please  enter dischargeDate ");
+        LocalDate dischargeDate = LocalDate.parse(scanner.nextLine());
+
+        Period period = Period.between(admissionDate ,dischargeDate);
+        int days = period.getDays();
+        System.out.println(days);
 
     }
 }
