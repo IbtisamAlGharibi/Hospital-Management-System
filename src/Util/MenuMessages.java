@@ -13,7 +13,8 @@ public class MenuMessages {
             "1.6 Search Patient \n" +
             "1.7 Update Patient Information \n" +
             "1.8 Remove Patient \n" +
-            "1.9 View Patient Medical History\n";
+            "1.9 View Patient Medical History\n"+
+            "1.10 Exit";
 
     public static String DOCTOR_MENU_MESSAGE =
                     "2.1 Add Doctor \n" +
