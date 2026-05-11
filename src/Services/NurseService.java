@@ -99,4 +99,12 @@ public class NurseService {
             }
         }
     }
+
+    public void displayAllNurses(){
+        System.out.println("DISPLAYING ALL NURSES");
+        System.out.println("--------------------------------");
+        for (int i =0;i<nurses.size();i++){
+           nurse.displayInfo();
+        }
+    }
 }
