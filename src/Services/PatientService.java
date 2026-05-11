@@ -48,7 +48,7 @@ public class PatientService {
         System.out.println("Please enter registrationDate: ");
         String patientRegistrationDate = scanner.nextLine();
         patient.setRegistrationDate(LocalDate.parse(patientRegistrationDate));
-        return null;
+        return patient;
     }
     public void addNewPatient(){
         boolean flag = true;
@@ -93,12 +93,12 @@ public class PatientService {
             }
         }
     }
-    public void getPatientById(String patientId){
+    public void getPatientById(){
         System.out.println("Please enter the patient Id you want to find");
-        String patientIdToFind = scanner.nextLine();
+        String  patientId = scanner.nextLine();
         for (int i =0; i < patients.size();i++){
             String searchedId = String.valueOf(patients.get(i));
-            if (patientIdToFind.equalsIgnoreCase(searchedId)){
+            if (patientId.equalsIgnoreCase(searchedId)){
                patient.displayInfo();
             }else {
                 System.out.println("NOT FOUND");
@@ -145,9 +145,9 @@ public class PatientService {
 
             }
             case "1.5" -> {
-
+                patientService.displayAllPatients();
             }case "1.6" -> {
-
+                patientService.getPatientById();
             }case "1.7"-> {
 
             }case "1.8" -> {
