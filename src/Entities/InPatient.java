@@ -1,6 +1,7 @@
 package Entities;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class InPatient extends  Patient{
     private LocalDate admissionDate;
@@ -10,4 +11,22 @@ public class InPatient extends  Patient{
     private String admittingDoctorId;
     private double dailyCharges;
 
+    public InPatient(LocalDate admissionDate, LocalDate dischargeDate, String roomNumber, String bedNumber, String admittingDoctorId, double dailyCharges) {
+        this.admissionDate = admissionDate;
+        this.dischargeDate = dischargeDate;
+        this.roomNumber = roomNumber;
+        this.bedNumber = bedNumber;
+        this.admittingDoctorId = admittingDoctorId;
+        this.dailyCharges = dailyCharges;
+    }
+
+    public InPatient(String ID, String firstName, String lastName, LocalDate dateOfBirth, String gender, String phoneNumber, String email, String address, String patientId, String bloodGroup, List<String> allergies, String emergencyContact, LocalDate registrationDate, String insuranceId, List<String> medicalRecords, List<String> appointments, LocalDate admissionDate, LocalDate dischargeDate, String roomNumber, String bedNumber, String admittingDoctorId, double dailyCharges) {
+        super(ID, firstName, lastName, dateOfBirth, gender, phoneNumber, email, address, patientId, bloodGroup, allergies, emergencyContact, registrationDate, insuranceId, medicalRecords, appointments);
+        this.admissionDate = admissionDate;
+        this.dischargeDate = dischargeDate;
+        this.roomNumber = roomNumber;
+        this.bedNumber = bedNumber;
+        this.admittingDoctorId = admittingDoctorId;
+        this.dailyCharges = dailyCharges;
+    }
 }
