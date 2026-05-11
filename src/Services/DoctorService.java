@@ -115,6 +115,15 @@ public class DoctorService {
         }
     }
     public void getDoctorsBySpecialization(String specialization){
-
+        System.out.println("Please enter the doctor specialization you want to find");
+        String doctorSpecializationToFind = scanner.nextLine();
+        for (int i =0; i < doctors.size();i++){
+            String searchedSpecialization = String.valueOf(doctors.get(i));
+            if (doctorSpecializationToFind.equalsIgnoreCase(searchedSpecialization)){
+                doctor.displayInfo();
+            }else {
+                System.out.println("NOT FOUND");
+            }
+        }
     }
 }
