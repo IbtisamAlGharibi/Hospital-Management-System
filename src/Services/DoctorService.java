@@ -1,6 +1,7 @@
 package Services;
 
 import Entities.Doctor;
+import Util.MenuMessages;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +11,7 @@ public class DoctorService {
     static Doctor doctor = new Doctor();
     static List<Doctor> doctors = new ArrayList<>();
     static Scanner scanner = new Scanner(System.in);
-
+ static MenuMessages menuMessages = new MenuMessages();
     public Doctor addDoctor(){
         System.out.println("ADDING NEW DOCTOR");
         System.out.println("----------------------------");
@@ -134,9 +135,11 @@ public class DoctorService {
         }
     }
 
-    public boolean HandleDoctorMenu(String  doctorOption){
+    public boolean HandleDoctorMenu(){
        DoctorService doctorService = new DoctorService();
-
+        System.out.println(menuMessages.DOCTOR_MENU_MESSAGE);
+        System.out.println("Please enter number");
+        String doctorOption = scanner.nextLine();
         switch (doctorOption) {
             case  "2.1" -> {
                 doctorService.addNewDoctor();

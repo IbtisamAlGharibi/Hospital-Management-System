@@ -1,6 +1,7 @@
 package Services;
 
 import Entities.Patient;
+import Util.MenuMessages;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -12,6 +13,7 @@ public class PatientService {
     static List<Patient> patients = new ArrayList<>();
     static Patient patient = new Patient();
     static Scanner scanner= new Scanner(System.in);
+    MenuMessages menuMessages = new MenuMessages();
 
     public Patient addPatient(){
         System.out.println("ADDING NEW PATIENT");
@@ -126,8 +128,11 @@ public class PatientService {
             }
         }
     }
-    public boolean HandlePatientMenu(String  patientOption){
+    public boolean HandlePatientMenu(){
         PatientService patientService = new PatientService();
+        System.out.println(menuMessages.PATIENT_MENU_MESSAGE);
+        System.out.println("Please enter number");
+        String patientOption = scanner.nextLine();
 
         switch (patientOption) {
             case  "1.1" -> {
@@ -152,7 +157,7 @@ public class PatientService {
                 if (confirm.equalsIgnoreCase("Name")){
                     patientService.searchPatientsByName();
                 }else {
-                patientService.getPatientById();
+                    patientService.getPatientById();
                 }
             }case "1.7"-> {
                 patientService.editPatient();
@@ -169,5 +174,4 @@ public class PatientService {
         }
         return true;
     }
-
 }

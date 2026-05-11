@@ -17,5 +17,30 @@ public class MainApp {
     public static void main(String[] args){
         System.out.println(MenuMessages.MAIN_MENU_MESSAGE);
 
+        boolean mainMenuContinue = true;
+        while (mainMenuContinue) {
+            int option = scanner.nextInt();
+
+            switch (option){
+                case 1 -> {
+                    boolean first = true;
+                    while (first){
+                        patientService.HandlePatientMenu();
+                        System.out.println("Enter E to exit");
+                        if (scanner.nextLine().equalsIgnoreCase("e")) {
+                            first = false;
+                        }
+                    }
+                }
+                case 2 ->{
+                    boolean second = true;
+                    doctorService.HandleDoctorMenu();
+                        System.out.println("Enter E to exit");
+                        if (scanner.nextLine().equalsIgnoreCase("e")) {
+                            second = false;
+                        }
+                    }
+                }
+}
 }
 }
