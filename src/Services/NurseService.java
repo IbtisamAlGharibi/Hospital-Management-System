@@ -65,4 +65,25 @@ public class NurseService {
             }
         }
     }
+
+    public void removeNurse(){
+        System.out.println("REMOVING NURSE");
+        System.out.println("-------------------------------------");
+        System.out.println("Please enter the nurse Id you want to remove");
+        String nurseIdToRemove = scanner.nextLine();
+        for (int i =0; i < nurses.size();i++){
+            String searchedId = String.valueOf(nurses.get(i));
+            if (nurseIdToRemove.equalsIgnoreCase(searchedId)){
+                System.out.println("Are you sure you want to remove?Yes/No");
+                String confirm = scanner.nextLine();
+                if (confirm.equalsIgnoreCase("Yes")){
+                    nurses.remove(nurseIdToRemove);
+                }else {
+                    System.out.println("REMOVING REJECTED");
+                }
+            }else {
+                System.out.println("NOT FOUND");
+            }
+        }
+    }
 }
