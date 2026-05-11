@@ -214,4 +214,14 @@ public class PatientService {
         patients.add(patient);
         addNewPatient();
     }
+
+    public void searchPatients(String keyword){
+        System.out.println("You can search patient by any field:");
+        keyword = scanner.nextLine();
+        for (int i = 0; i<patients.size();i++){
+            if (patients.get(i).equals(keyword)){
+                patient.displayInfo();
+            }
+        }
+    }
 }
