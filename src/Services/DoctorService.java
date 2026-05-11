@@ -47,7 +47,7 @@ public class DoctorService {
         System.out.println("Please enter consultation Fee: ");
         String consultationFee = scanner.nextLine();
         doctor.setConsultationFee(Double.parseDouble(consultationFee));
-        return null;
+        return doctor;
     }
 
     public void addNewDoctor(){
