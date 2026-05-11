@@ -15,6 +15,7 @@ public class Patient extends Person{
     private static List<String > medicalRecords = new ArrayList<>();
     private static List<String > appointments = new ArrayList<>();
     static Scanner scanner = new Scanner(System.in);
+    static MedicalRecord medicalRecord = new MedicalRecord();
 
     public Patient() {
         super();
@@ -130,10 +131,40 @@ public class Patient extends Person{
         System.out.println("appointments : " + getAppointments());
     }
     public static void addMedicalRecord(){
-        System.out.println("Please enter the medical record");
-        String medRecord = scanner.nextLine();
-        medicalRecords.add(medRecord);
-        System.out.println("Record add Done");
+        System.out.println("ADDING NEW MEDICAL RECORD");
+        System.out.println("----------------------------");
+
+        System.out.println("Please enter record Id: ");
+        String recordId = scanner.nextLine();
+        medicalRecord.setRecordId(recordId);
+
+        System.out.println("Please enter patient ID: ");
+        String patientID = scanner.nextLine();
+        medicalRecord.setPatientId(patientID);
+
+        System.out.println("Please enter Doctor ID: ");
+        String doctorID = scanner.nextLine();
+        medicalRecord.setDoctorId(doctorID);
+
+        System.out.println("Please enter visit date: ");
+        String visitDate = scanner.nextLine();
+        medicalRecord.setVisitDate(LocalDate.parse(visitDate));
+
+        System.out.println("Please enter diagnosis: ");
+        String diagnosis = scanner.nextLine();
+        medicalRecord.setDiagnosis(diagnosis);
+
+        System.out.println("Please enter prescription: ");
+        String prescription = scanner.nextLine();
+        medicalRecord.setPrescription(prescription);
+
+        System.out.println("Please enter test result: ");
+        String testResult = scanner.nextLine();
+        medicalRecord.setTestResults(testResult);
+
+        System.out.println("Please enter notes: ");
+        String notes = scanner.nextLine();
+        medicalRecord.setNotes(notes);
     }
     public static void addAppointment(){
         System.out.println("Please enter the new appointment");
