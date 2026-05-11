@@ -11,6 +11,7 @@ public class Department {
     private String headDoctorId;
     private List<String > doctors =new ArrayList<>();
     private List<String > nurses = new ArrayList<>();
+    private List<String > departments = new ArrayList<>();
     private int bedCapacity ;
     private int availableBeds;
     static Scanner scanner = new Scanner(System.in);
@@ -131,5 +132,25 @@ public class Department {
         String availableBeds = scanner.nextLine();
         setAvailableBeds(Integer.parseInt(availableBeds));
         return newID;
+    }
+
+    public void addNewDepartment(){
+        boolean flag = true;
+        while (flag){
+            departments.add(addDepartment());
+            System.out.println("Please enter E to Stop");
+            String input = scanner.nextLine();
+            if (input.equalsIgnoreCase("E")){
+                flag = false;
+            }
+        }
+    }
+
+    public List<String> getDepartments() {
+        return departments;
+    }
+
+    public void setDepartments(List<String> departments) {
+        this.departments = departments;
     }
 }
