@@ -174,4 +174,18 @@ public class PatientService {
         }
         return true;
     }
+
+   public void addPatient(String firstName, String lastName, String phone){
+       System.out.println("Please enter patient first name: ");
+         firstName = scanner.nextLine();
+       patient.setFirstName(firstName);
+
+       System.out.println("Please enter patient last name: ");
+       lastName = scanner.nextLine();
+       patient.setLastName(lastName);
+
+       System.out.println("Please enter patient phone: ");
+       phone = scanner.nextLine();
+       patient.setPhoneNumber(phone);
+   }
 }
