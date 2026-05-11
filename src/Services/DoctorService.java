@@ -73,4 +73,22 @@ public class DoctorService {
             }
         }
     }
+    public void removeDoctor(String doctorId){
+        System.out.println("Please enter the Doctor Id you want to remove");
+        String doctorIdToRemove = scanner.nextLine();
+        for (int i =0; i < doctors.size();i++){
+            String searchedId = String.valueOf(doctors.get(i));
+            if (doctorIdToRemove.equalsIgnoreCase(searchedId)){
+                System.out.println("Are you sure you want to remove?Yes/No");
+                String confirm = scanner.nextLine();
+                if (confirm.equalsIgnoreCase("Yes")){
+                    doctors.remove(doctorIdToRemove);
+                }else {
+                    System.out.println("REMOVING REJECTED");
+                }
+            }else {
+                System.out.println("NOT FOUND");
+            }
+        }
+    }
 }
