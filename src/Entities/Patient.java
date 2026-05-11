@@ -129,7 +129,7 @@ public class Patient extends Person{
         System.out.println("medical Records : " + getMedicalRecords());
         System.out.println("appointments : " + getAppointments());
     }
-    public static void addMedicalRecord(){
+    public static String addMedicalRecord(){
         System.out.println("ADDING NEW MEDICAL RECORD");
         System.out.println("----------------------------");
 
@@ -164,6 +164,19 @@ public class Patient extends Person{
         System.out.println("Please enter notes: ");
         String notes = scanner.nextLine();
         medicalRecord.setNotes(notes);
+        return recordId;
+    }
+
+    public void addNewMedicalRecord(){
+        boolean flag = true;
+        while (flag){
+            medicalRecords.add(addMedicalRecord());
+            System.out.println("Please enter E to Stop");
+            String input = scanner.nextLine();
+            if (input.equalsIgnoreCase("E")){
+                flag = false;
+            }
+        }
     }
     public static void addAppointment(){
         System.out.println("Please enter the new appointment");
