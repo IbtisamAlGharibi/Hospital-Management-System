@@ -31,6 +31,10 @@ public class Nurse extends Person {
         this.assignedPatients = assignedPatients;
     }
 
+    public Nurse() {
+
+    }
+
     public String getNurseId() {
         return nurseId;
     }
