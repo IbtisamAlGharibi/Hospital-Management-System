@@ -107,4 +107,8 @@ public class NurseService {
            nurse.displayInfo();
         }
     }
+
+    public void getNursesByDepartment(){
+
+    }
 }
