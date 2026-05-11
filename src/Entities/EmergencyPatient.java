@@ -13,6 +13,10 @@ public class EmergencyPatient extends Patient {
         this.admittedViaER = admittedViaER;
     }
 
+    public EmergencyPatient() {
+
+    }
+
     public String getEmergencyType() {
         return emergencyType;
     }

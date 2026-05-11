@@ -1,5 +1,8 @@
 package Services;
 
+import Entities.EmergencyPatient;
+import Entities.InPatient;
+import Entities.OutPatient;
 import Entities.Patient;
 import Util.MenuMessages;
 
@@ -14,6 +17,10 @@ public class PatientService {
     static Patient patient = new Patient();
     static Scanner scanner= new Scanner(System.in);
     MenuMessages menuMessages = new MenuMessages();
+    static InPatient inPatient = new InPatient();
+    static OutPatient outPatient = new OutPatient();
+    static EmergencyPatient emergencyPatient = new EmergencyPatient();
+
 
     public Patient addPatient(){
         System.out.println("ADDING NEW PATIENT");
@@ -230,5 +237,16 @@ public class PatientService {
     }
     public void displayPatients(){
         displayAllPatients();
+    }
+    public void displayPatients(String filter){
+        System.out.println("Please enter the type of patient you want to display(InPatient/OutPatient/EmergencyPatient)");
+        filter = scanner.nextLine();
+        if (filter.equalsIgnoreCase("InPatient")){
+            inPatient.displayInfo();
+        } else if (filter.equalsIgnoreCase("OutPatient")) {
+            outPatient.displayInfo();
+        }else{
+            emergencyPatient.displayInfo();
+        }
     }
 }
