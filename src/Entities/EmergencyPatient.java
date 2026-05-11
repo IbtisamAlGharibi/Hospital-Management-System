@@ -1,6 +1,6 @@
 package Entities;
 
-public class EmergencyPatient {
+public class EmergencyPatient extends Patient {
     private String emergencyType;
     private String arrivalMode;
     private int triageLevel;
@@ -43,5 +43,27 @@ public class EmergencyPatient {
 
     public void setAdmittedViaER(boolean admittedViaER) {
         this.admittedViaER = admittedViaER;
+    }
+    @Override
+    public void displayInfo(){
+        System.out.println("ID : " + getID() );
+        System.out.println("First Name: " + getFirstName() );
+        System.out.println("Last Name: " + getLastName() );
+        System.out.println("Date of birth: " + getDateOfBirth() );
+        System.out.println("Gender: " + getGender() );
+        System.out.println("Phone Number: " + getPhoneNumber() );
+        System.out.println("Email: " + getEmail() );
+        System.out.println("Address: " + getAddress());
+        System.out.println("patient Id : " + getPatientId() );
+        System.out.println("blood Group : " + getBloodGroup() );
+        System.out.println("allergies : " + getAllergies() );
+        System.out.println("registrationDate : " + getRegistrationDate() );
+        System.out.println("insurance Id : " + getInsuranceId());
+        System.out.println("medical Records : " + getMedicalRecords());
+        System.out.println("appointments : " + getAppointments());
+
+        System.out.println("emergencyType : " + getEmergencyType());
+        System.out.println("arrival Mode(Ambulance/Walk-in): " + getArrivalMode());
+        System.out.println("triage Level(1-5) : " + getTriageLevel());
     }
 }
