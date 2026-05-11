@@ -81,4 +81,14 @@ public class Surgeon extends Doctor{
             surgeryTypes.add(surgeryType);
         }
     }
+    public void updateSurgeryCount(){
+        System.out.println("UPDATE SURGERY COUNT");
+        System.out.println("-------------------------------");
+
+        System.out.println("Please enter surgery type:");
+        String surgeryType = scanner.nextLine();
+        System.out.println(surgeryType + " " + "Surgery performed");
+        surgeriesPerformed++;
+        System.out.println(surgeriesPerformed +" "+ "Surgeries Done");
+    }
 }
