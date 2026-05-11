@@ -32,4 +32,16 @@ public class AppointmentService {
         }
     }
 
+    public void getAppointmentsByDoctor(){
+        System.out.println("Please enter the doctor Id:");
+        String doctorId = scanner.nextLine();
+        for (int i =0; i < doctors.size();i++){
+            String searchedId = String.valueOf(doctors.get(i));
+            if (doctorId.equalsIgnoreCase(searchedId)){
+                appointment.displayInfo();
+            }else {
+                System.out.println("NOT FOUND");
+            }
+        }
+    }
 }
