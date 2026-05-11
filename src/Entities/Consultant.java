@@ -86,4 +86,23 @@ public class Consultant extends Doctor{
             System.out.println("Online consultation is not available ");
         }
     }
+    public void  provideSecondOpinion(){
+        System.out.println("Do you want the consultation online or offline please select ");
+        String option = scanner.nextLine();
+        if (option.equalsIgnoreCase("offline")){
+            System.out.println("Please come and meet the doctor in the hospital");
+        }else {
+            if (onlineConsultationAvailable){
+                System.out.println("Please enter consultation Types:");
+                String consultationTypes = scanner.nextLine();
+                setConsultationTypes(Collections.singletonList(consultationTypes));
+
+                System.out.println("Please enter consultation Duration:");
+                String consultationDuration = scanner.nextLine();
+                setConsultationDuration(Integer.parseInt(consultationDuration));
+            }else {
+                System.out.println("Online consultation is not available ");
+            }
+        }
+    }
 }
