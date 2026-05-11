@@ -61,4 +61,8 @@ public class AppointmentService {
     public void rescheduleAppointment(){
         appointment.reschedule();
     }
+
+    public void cancelAppointment(){
+        appointment.cancel();
+    }
 }
