@@ -237,4 +237,7 @@ public class PatientService {
             }
         }
     }
+    public void displayPatients(){
+        displayAllPatients();
+    }
 }
