@@ -224,4 +224,17 @@ public class PatientService {
             }
         }
     }
+
+    public void searchPatients(String firstName, String lastName){
+        System.out.println("Please enter the patient name you want to find");
+        String patientNameToFind = scanner.nextLine();
+        for (int i =0; i < patients.size();i++){
+            String searchedName = String.valueOf(patients.get(i));
+            if (patientNameToFind.equalsIgnoreCase(searchedName)){
+                patient.displayInfo();
+            }else {
+                System.out.println("NOT FOUND");
+            }
+        }
+    }
 }
