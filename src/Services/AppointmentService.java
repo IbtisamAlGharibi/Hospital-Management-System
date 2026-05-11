@@ -1,5 +1,6 @@
 package Services;
 
+import Entities.Appointment;
 import Entities.Doctor;
 import Entities.MedicalRecord;
 import Entities.Patient;
@@ -15,4 +16,20 @@ public class AppointmentService {
     static Scanner scanner = new Scanner(System.in);
     static List<Patient> patients = new ArrayList<>();
     static List<Doctor> doctors = new ArrayList<>();
+    static Appointment appointment =new Appointment();
+
+
+    public void getAppointmentsByPatient(){
+        System.out.println("Please enter the patient Id");
+        String  patientId = scanner.nextLine();
+        for (int i =0; i < patients.size();i++){
+            String searchedId = String.valueOf(patients.get(i));
+            if (patientId.equalsIgnoreCase(searchedId)){
+                appointment.displayInfo();
+            }else {
+                System.out.println("NOT FOUND");
+            }
+        }
+    }
+
 }
