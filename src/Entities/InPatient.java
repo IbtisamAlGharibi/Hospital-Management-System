@@ -109,7 +109,7 @@ public class InPatient extends  Patient{
         System.out.println("dailyCharges : " + getDailyCharges());
 
     }
-    public void calculateStayDuration(){
+    public int calculateStayDuration(){
         System.out.println("CALCULATING STAY DURATION");
         System.out.println("-------------------------------");
 
@@ -122,5 +122,15 @@ public class InPatient extends  Patient{
         int days = period.getDays();
         System.out.println(days);
 
+        return days;
+    }
+
+    public void calculateTotalCharges(){
+        System.out.println("CALCULATING TOTAL CHARGES");
+        System.out.println("-------------------------------");
+
+        int totalStay = calculateStayDuration();
+        double totalAmount = getDailyCharges() * totalStay;
+        System.out.println(totalAmount);
     }
 }
