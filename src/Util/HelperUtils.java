@@ -14,4 +14,11 @@ public class HelperUtils {
        }
        return false;
    }
+
+   public boolean isNotNull(Object obj){
+       if (!(obj == null)){
+           return true;
+       }
+       return false;
+   }
 }
