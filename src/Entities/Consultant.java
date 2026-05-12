@@ -31,6 +31,10 @@ public class Consultant extends Doctor implements DisplayableInterface {
         this.consultationDuration = consultationDuration;
     }
 
+    public Consultant() {
+
+    }
+
     public List<String> getConsultationTypes() {
         return consultationTypes;
     }

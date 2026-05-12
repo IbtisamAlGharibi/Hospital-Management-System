@@ -2,6 +2,7 @@ package Services;
 
 import Behaviours.ManageableInterface;
 import Behaviours.SearchableInterface;
+import Entities.Consultant;
 import Entities.Doctor;
 import Entities.Patient;
 import Entities.Surgeon;
@@ -19,6 +20,7 @@ public class DoctorService implements ManageableInterface, SearchableInterface {
            return null;
        }
    };
+   static Consultant consultant = new Consultant();
    static Surgeon surgeon = new Surgeon();
     public static List<Doctor> doctors = new ArrayList<>();
     static Scanner scanner = new Scanner(System.in);
@@ -163,7 +165,7 @@ public class DoctorService implements ManageableInterface, SearchableInterface {
             }
             case "2.3" -> {
                 System.out.println("ADDING CONSULTANT");
-
+                consultant.addNewDoctor();
             }
 
             case  "2.4" -> {
