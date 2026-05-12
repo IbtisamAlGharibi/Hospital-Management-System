@@ -113,4 +113,10 @@ public class HelperUtils {
 
         return inputDate.equals(todayDate);
     }
+    public boolean isValidNumber(int num, int min, int max){
+       if (num >= min && num <= max){
+           return true;
+       }
+       return false;
+   }
 }
