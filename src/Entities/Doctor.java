@@ -186,4 +186,13 @@ public class Doctor extends Person{
         slot= scanner.nextLine();
         setAvailableSlots(Collections.singletonList(slot));
     }
+
+    public void addAvailability(List<String> slots){
+        System.out.println("ADDING AVAILABILITY");
+        System.out.println("------------------------");
+
+        System.out.println("Please enter the slot: ");
+        String  newSlot= scanner.nextLine();
+        slots.add(newSlot);
+    }
 }
