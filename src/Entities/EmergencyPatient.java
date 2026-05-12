@@ -1,6 +1,8 @@
 package Entities;
 
-public class EmergencyPatient extends Patient {
+import Behaviours.DisplayableInterface;
+
+public class EmergencyPatient extends Patient implements DisplayableInterface {
     private String emergencyType;
     private String arrivalMode;
     private int triageLevel;
@@ -69,5 +71,10 @@ public class EmergencyPatient extends Patient {
         System.out.println("emergencyType : " + getEmergencyType());
         System.out.println("arrival Mode(Ambulance/Walk-in): " + getArrivalMode());
         System.out.println("triage Level(1-5) : " + getTriageLevel());
+    }
+
+    @Override
+    public void displaySummary() {
+
     }
 }
