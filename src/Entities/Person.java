@@ -1,10 +1,12 @@
 package Entities;
 
+import Behaviours.DisplayableInterface;
+
 import java.time.LocalDate;
 import java.util.Objects;
 
 
-public class Person {
+public class Person implements DisplayableInterface {
     private String ID;
     private String firstName;
     private String lastName;
@@ -128,5 +130,10 @@ public class Person {
         System.out.println("Phone Number: " + getPhoneNumber() );
         System.out.println("Email: " + getEmail() );
         System.out.println("Address: " + getAddress());
+    }
+
+    @Override
+    public void displaySummary() {
+
     }
 }
