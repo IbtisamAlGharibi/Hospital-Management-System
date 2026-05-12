@@ -102,4 +102,7 @@ public class HelperUtils {
     public static boolean isFutureDate(Date date) {
         return date.compareTo(new Date()) > 0;
     }
+    public static boolean isPastDate(Date date) {
+        return date.compareTo(new Date()) < 0;
+    }
 }
