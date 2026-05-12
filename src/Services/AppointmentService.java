@@ -150,5 +150,9 @@ public class AppointmentService {
     public void displayAppointments(LocalDate date){
         getAppointmentsByDate();
     }
+    public void displayAppointments(String doctorId, LocalDate startDate, LocalDate endDate){
+        System.out.println("Doctor Id: " + appointment.getDoctorId());
+        System.out.println("Start Date: " + appointment.getAppointmentDate());
+    }
 }
 
