@@ -154,12 +154,15 @@ public class DoctorService implements ManageableInterface, SearchableInterface {
         String doctorOption = scanner.nextLine();
         switch (doctorOption) {
             case  "2.1" -> {
+                System.out.println("ADDING DOCTOR");
                 doctorService.addNewDoctor();
             }
             case "2.2" -> {
+                System.out.println("ADDING SURGEON");
                 surgeon.addNewDoctor();
             }
             case "2.3" -> {
+                System.out.println("ADDING CONSULTANT");
 
             }
 
