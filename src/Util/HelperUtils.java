@@ -47,4 +47,10 @@ public class HelperUtils {
         }
         return false;
     }
+    public boolean isValidString(String str, String regex){
+        if (str.equals(regex)){
+            return true;
+        }
+        return false;
+    }
 }
