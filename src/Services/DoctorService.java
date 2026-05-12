@@ -257,4 +257,18 @@ public class DoctorService {
     public void displayDoctors(String specialization){
         getDoctorsBySpecialization();
     }
+
+    public void displayDoctors(String departmentId, boolean showAvailableOnly){
+        System.out.println("Please enter department id: ");
+        departmentId = scanner.nextLine();
+        for (int i =0; i < doctors.size();i++){
+            String searchedId = String.valueOf(doctors.get(i));
+            if (departmentId.equalsIgnoreCase(searchedId)){
+                doctor.displayInfo();
+            }else {
+                System.out.println("NOT FOUND");
+            }
+        }
+        getAvailableDoctors();
+    }
 }
