@@ -1,6 +1,7 @@
 package Entities;
 
 import Behaviours.DisplayableInterface;
+import Util.HelperUtils;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -10,6 +11,8 @@ public class OutPatient extends Patient implements DisplayableInterface {
     private LocalDate lastVisitDate;
     private String preferredDoctorId;
     static Appointment appointment = new Appointment();
+    static HelperUtils helperUtils = new HelperUtils();
+
 
     public OutPatient(int visitCount, LocalDate lastVisitDate, String preferredDoctorId) {
         this.visitCount = visitCount;
