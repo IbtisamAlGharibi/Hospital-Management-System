@@ -1,5 +1,7 @@
 package Services;
 
+import Behaviours.ManageableInterface;
+import Behaviours.SearchableInterface;
 import Entities.EmergencyPatient;
 import Entities.InPatient;
 import Entities.OutPatient;
@@ -12,7 +14,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-public class PatientService {
+public class PatientService implements ManageableInterface, SearchableInterface {
     static List<Patient> patients = new ArrayList<>();
     static Patient patient = new Patient();
     static Scanner scanner = new Scanner(System.in);
@@ -271,5 +273,30 @@ public class PatientService {
         for (int i = 0; i < limit && i < patients.size(); i++) {
             displayPatients();
         }
+    }
+
+    @Override
+    public void add(Object entity) {
+
+    }
+
+    @Override
+    public void remove(String id) {
+
+    }
+
+    @Override
+    public void getAll() {
+
+    }
+
+    @Override
+    public void search(String keyword) {
+
+    }
+
+    @Override
+    public void searchById(String id) {
+
     }
 }
