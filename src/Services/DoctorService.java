@@ -1,6 +1,7 @@
 package Services;
 
 import Entities.Doctor;
+import Entities.Patient;
 import Util.MenuMessages;
 
 import java.util.ArrayList;
@@ -204,5 +205,9 @@ public class DoctorService {
         System.out.println("Please enter consultation Fee: ");
         consultationFee = Double.parseDouble(scanner.nextLine());
         doctor.setConsultationFee(consultationFee);
+    }
+    public void addDoctor(Doctor doctor)  {
+        doctors.add(doctor);
+        addNewDoctor();
     }
 }
