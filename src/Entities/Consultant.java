@@ -78,6 +78,11 @@ public class Consultant extends Doctor implements DisplayableInterface {
 
     }
 
+    @Override
+    public Doctor addDoctor() {
+        return null;
+    }
+
     public void scheduleConsultation(){
         System.out.println("SCHEDULING CONSULTATION");
         System.out.println("-------------------------------");

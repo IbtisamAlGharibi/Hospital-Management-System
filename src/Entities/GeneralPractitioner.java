@@ -65,6 +65,12 @@ public class GeneralPractitioner extends Doctor implements DisplayableInterface 
         System.out.println("available Slots : " + getAvailableSlots());
         System.out.println("assigned Patients : " + getAssignedPatients());
     }
+
+    @Override
+    public Doctor addDoctor() {
+        return null;
+    }
+
     public void scheduleHomeVisit(){
         System.out.println("SCHEDULING HOME VISIT");
         System.out.println("-------------------------------");

@@ -157,7 +157,7 @@ public class DoctorService implements ManageableInterface, SearchableInterface {
                 doctorService.addNewDoctor();
             }
             case "2.2" -> {
-
+                surgeon.addNewDoctor();
             }
             case "2.3" -> {
 

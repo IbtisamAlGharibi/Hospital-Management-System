@@ -16,7 +16,12 @@ public class DepartmentService implements ManageableInterface, SearchableInterfa
     static List<Patient> patients = new ArrayList<>();
     static List<Doctor> doctors = new ArrayList<>();
     static Nurse nurse = new Nurse();
-    static Doctor doctor = new Doctor();
+    static Doctor doctor = new Doctor() {
+        @Override
+        public Doctor addDoctor() {
+            return null;
+        }
+    };
     static List<String > departments = new ArrayList<>();
     static Department department = new Department();
 

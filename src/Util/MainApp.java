@@ -18,7 +18,12 @@ public class MainApp {
             return null;
         }
     };
-    static Doctor doctor = new Doctor();
+    static Doctor doctor = new Doctor() {
+        @Override
+        public Doctor addDoctor() {
+            return null;
+        }
+    };
 
     public static void main(String[] args){
         System.out.println(MenuMessages.MAIN_MENU_MESSAGE);

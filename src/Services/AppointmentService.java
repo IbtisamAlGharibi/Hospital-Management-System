@@ -27,7 +27,12 @@ public class AppointmentService implements ManageableInterface, SearchableInterf
             return null;
         }
     };
-    static  Doctor doctor = new Doctor();
+  static Doctor doctor = new Doctor() {
+      @Override
+      public Doctor addDoctor() {
+          return null;
+      }
+  };
 
 
     public void getAppointmentsByPatient(){
