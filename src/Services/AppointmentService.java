@@ -86,5 +86,26 @@ public class AppointmentService {
         date = LocalDate.parse(scanner.nextLine());
         appointment.setAppointmentDate(date);
     }
+
+    public void createAppointment(String patientId, String doctorId, LocalDate date, String time){
+        System.out.println("CREATING APPOINTMENT");
+        System.out.println("--------------------------------");
+
+        System.out.println("Please enter patient ID: ");
+        patientId = scanner.nextLine();
+        patient.setPatientId(patientId);
+
+        System.out.println("Please enter Doctor ID: ");
+        doctorId = scanner.nextLine();
+        doctor.setDoctorId(doctorId);
+
+        System.out.println("Please enter appointment Date ");
+        date = LocalDate.parse(scanner.nextLine());
+        appointment.setAppointmentDate(date);
+
+        System.out.println("Please enter appointment time ");
+        time = scanner.nextLine();
+        appointment.setAppointmentTime(time);
+    }
 }
 
