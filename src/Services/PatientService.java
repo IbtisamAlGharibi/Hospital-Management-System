@@ -166,7 +166,8 @@ public class PatientService implements ManageableInterface, SearchableInterface 
             }
 
             case "1.4" -> {
-
+                System.out.println("Register Emergency Patient");
+                emergencyPatient.addNewPatient();
             }
             case "1.5" -> {
                 patientService.displayAllPatients();
