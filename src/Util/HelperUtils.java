@@ -75,4 +75,8 @@ public class HelperUtils {
 
         return prefix + "-" + number;
     }
+
+    public static String generateId(String prefix, String suffix) {
+        return prefix + "-" + suffix;
+    }
 }
