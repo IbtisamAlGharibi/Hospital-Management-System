@@ -210,4 +210,18 @@ public class DoctorService {
         doctors.add(doctor);
         addNewDoctor();
     }
+
+    public  void assignPatient(String doctorId, String patientId){
+        System.out.println("ASSIGNING PATIENT");
+        System.out.println("--------------------------------");
+
+        System.out.println("Please enter the doctor Id: ");
+        doctorId = scanner.nextLine();
+
+        System.out.println("Please enter the patient Id: ");
+        patientId= scanner.nextLine();
+
+        doctor.assignPatient();
+        System.out.println(patientId + "This patient is assigned to "+ " "+ doctorId);
+    }
 }
