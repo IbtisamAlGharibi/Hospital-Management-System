@@ -5,6 +5,7 @@ import Entities.Doctor;
 import Entities.MedicalRecord;
 import Entities.Patient;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -17,6 +18,8 @@ public class AppointmentService {
     static List<Patient> patients = new ArrayList<>();
     static List<Doctor> doctors = new ArrayList<>();
     static Appointment appointment =new Appointment();
+    static Patient patient = new Patient();
+    static  Doctor doctor = new Doctor();
 
 
     public void getAppointmentsByPatient(){
@@ -63,6 +66,25 @@ public class AppointmentService {
     }
 
     public void cancelAppointment(){
+
         appointment.cancel();
     }
+
+    public void  createAppointment(String patientId, String doctorId, LocalDate date){
+        System.out.println("CREATING APPOINTMENT");
+        System.out.println("--------------------------------");
+
+        System.out.println("Please enter patient ID: ");
+        patientId = scanner.nextLine();
+        patient.setPatientId(patientId);
+
+        System.out.println("Please enter Doctor ID: ");
+         doctorId = scanner.nextLine();
+         doctor.setDoctorId(doctorId);
+
+        System.out.println("Please enter appointment Date ");
+        date = LocalDate.parse(scanner.nextLine());
+        appointment.setAppointmentDate(date);
+    }
 }
+
