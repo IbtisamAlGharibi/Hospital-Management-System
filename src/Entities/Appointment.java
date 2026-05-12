@@ -157,4 +157,17 @@ public class Appointment {
         notes = scanner.nextLine();
        setNotes(notes);
     }
+
+    public void addNotes(String notes, String addedBy){
+        System.out.println("ADDING NOTES");
+        System.out.println("------------------------");
+
+        System.out.println("Please enter the notes: ");
+        notes = scanner.nextLine();
+        setNotes(notes);
+
+        System.out.println("Please enter your name: ");
+        addedBy = scanner.nextLine();
+        System.out.println(addedBy);
+    }
 }
