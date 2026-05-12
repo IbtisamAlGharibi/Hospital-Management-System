@@ -21,7 +21,12 @@ public class AppointmentService implements ManageableInterface, SearchableInterf
     static List<Patient> patients = new ArrayList<>();
     static List<Doctor> doctors = new ArrayList<>();
     static Appointment appointment =new Appointment();
-    static Patient patient = new Patient();
+    public static Patient patient = new Patient() {
+        @Override
+        public Patient addPatient() {
+            return null;
+        }
+    };
     static  Doctor doctor = new Doctor();
 
 

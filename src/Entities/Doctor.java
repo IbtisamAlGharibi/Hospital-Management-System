@@ -19,7 +19,12 @@ public class Doctor extends Person implements DisplayableInterface {
     private List<String > availableSlots = new ArrayList<>();
     private List<String > assignedPatients = new ArrayList<>();
     static Scanner scanner = new Scanner(System.in);
-     static Patient patient =new Patient();
+     static Patient patient = new Patient() {
+         @Override
+         public Patient addPatient() {
+             return null;
+         }
+     };
     static HelperUtils helperUtils = new HelperUtils();
 
 

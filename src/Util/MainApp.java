@@ -12,7 +12,12 @@ public class MainApp {
     static Scanner scanner = new Scanner(System.in);
     static DoctorService doctorService = new DoctorService();
     static PatientService patientService = new PatientService();
-    static Patient patient = new Patient();
+    static Patient patient = new Patient() {
+        @Override
+        public Patient addPatient() {
+            return null;
+        }
+    };
     static Doctor doctor = new Doctor();
 
     public static void main(String[] args){

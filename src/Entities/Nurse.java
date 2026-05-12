@@ -15,7 +15,12 @@ public class Nurse extends Person implements DisplayableInterface {
     private String qualification;
     private List<String > assignedPatients = new ArrayList<>();
     static Scanner scanner = new Scanner(System.in);
-    Patient patient = new Patient();
+    Patient patient = new Patient() {
+        @Override
+        public Patient addPatient() {
+            return null;
+        }
+    };
     static HelperUtils helperUtils = new HelperUtils();
 
     public Nurse(String ID, String firstName, String lastName, LocalDate dateOfBirth, String gender, String phoneNumber, String email, String address, String nurseId, String departmentId, String shift, String qualification, List<String> assignedPatients) {
