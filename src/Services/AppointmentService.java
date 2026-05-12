@@ -133,5 +133,19 @@ public class AppointmentService {
         newTime = scanner.nextLine();
         appointment.setAppointmentTime(newTime);
     }
+
+    public void  rescheduleAppointment(Appointment appointment, LocalDate newDate, String newTime, String reason) {
+        System.out.println("Please enter appointment Date ");
+        newDate = LocalDate.parse(scanner.nextLine());
+        appointment.setAppointmentDate(newDate);
+
+        System.out.println("Please enter appointment time ");
+        newTime = scanner.nextLine();
+        appointment.setAppointmentTime(newTime);
+
+        System.out.println("Please enter reason ");
+        reason = scanner.nextLine();
+        appointment.setReason(reason);
+    }
 }
 
