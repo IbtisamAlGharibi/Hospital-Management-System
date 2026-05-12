@@ -147,5 +147,8 @@ public class AppointmentService {
         reason = scanner.nextLine();
         appointment.setReason(reason);
     }
+    public void displayAppointments(LocalDate date){
+        getAppointmentsByDate();
+    }
 }
 
