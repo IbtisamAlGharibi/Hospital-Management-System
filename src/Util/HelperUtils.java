@@ -149,4 +149,10 @@ public class HelperUtils {
         }
         return false;
     }
+    public  boolean isValidAge(int age) {
+        if (age >= 0 && age <= 150){
+            return true;
+        }
+        return false;
+    }
 }
