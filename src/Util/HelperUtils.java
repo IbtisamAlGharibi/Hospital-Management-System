@@ -1,5 +1,6 @@
 package Util;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
 import java.util.UUID;
@@ -104,5 +105,12 @@ public class HelperUtils {
     }
     public static boolean isPastDate(Date date) {
         return date.compareTo(new Date()) < 0;
+    }
+    public static boolean isToday(Date date) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String inputDate = sdf.format(date);
+        String todayDate = sdf.format(new Date());
+
+        return inputDate.equals(todayDate);
     }
 }
