@@ -1,6 +1,7 @@
 package Entities;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Scanner;
 
 public class Appointment {
@@ -169,5 +170,22 @@ public class Appointment {
         System.out.println("Please enter your name: ");
         addedBy = scanner.nextLine();
         System.out.println(addedBy);
+    }
+
+    public void addNotes(String notes, String addedBy, LocalDateTime timestamp){
+        System.out.println("ADDING NOTES");
+        System.out.println("------------------------");
+
+        System.out.println("Please enter the notes: ");
+        notes = scanner.nextLine();
+        setNotes(notes);
+
+        System.out.println("Please enter your name: ");
+        addedBy = scanner.nextLine();
+        System.out.println(addedBy);
+
+        System.out.println("Please enter the date and time: ");
+        timestamp = LocalDateTime.parse(scanner.nextLine());
+        System.out.println(timestamp);
     }
 }
