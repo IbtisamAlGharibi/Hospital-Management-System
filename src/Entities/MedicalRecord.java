@@ -1,6 +1,7 @@
 package Entities;
 
 import Behaviours.DisplayableInterface;
+import Util.HelperUtils;
 
 import java.time.LocalDate;
 
@@ -13,6 +14,7 @@ public class MedicalRecord implements DisplayableInterface {
     private String prescription;
     private String testResults;
     private String notes;
+    static HelperUtils helperUtils = new HelperUtils();
 
     public MedicalRecord(String recordId, String patientId, String doctorId, LocalDate visitDate, String diagnosis, String prescription, String testResults, String notes) {
         this.recordId = recordId;
@@ -34,7 +36,7 @@ public class MedicalRecord implements DisplayableInterface {
     }
 
     public void setPatientId(String patientId) {
-        this.patientId = patientId;
+        this.patientId = helperUtils.generateId();
     }
 
     public String getRecordId() {
@@ -42,7 +44,7 @@ public class MedicalRecord implements DisplayableInterface {
     }
 
     public void setRecordId(String recordId) {
-        this.recordId = recordId;
+        this.recordId = helperUtils.generateId();
     }
 
     public String getDoctorId() {
@@ -50,7 +52,7 @@ public class MedicalRecord implements DisplayableInterface {
     }
 
     public void setDoctorId(String doctorId) {
-        this.doctorId = doctorId;
+        this.doctorId = helperUtils.generateId();
     }
 
     public LocalDate getVisitDate() {
