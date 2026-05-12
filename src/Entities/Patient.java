@@ -238,4 +238,13 @@ public class Patient extends Person{
              System.out.println("This ID is not found");
          }
     }
+    public void updateContact(String phone){
+        System.out.println("UPDATING CONTACT");
+        System.out.println("---------------------------");
+
+        System.out.println("Please enter the new phone number");
+        phone = scanner.nextLine();
+        setPhoneNumber(phone);
+        System.out.println("Phone number updated successfully");
+    }
 }
