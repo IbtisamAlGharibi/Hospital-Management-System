@@ -1,8 +1,10 @@
 package Entities;
 
+import Behaviours.DisplayableInterface;
+
 import java.time.LocalDate;
 
-public class MedicalRecord {
+public class MedicalRecord implements DisplayableInterface {
     private String recordId;
     private String patientId;
     private String doctorId;
@@ -100,5 +102,10 @@ public class MedicalRecord {
         System.out.println("prescription: " + getPrescription() );
         System.out.println("test Results: " + getTestResults() );
         System.out.println("notes: " + getNotes());
+    }
+
+    @Override
+    public void displaySummary() {
+
     }
 }
