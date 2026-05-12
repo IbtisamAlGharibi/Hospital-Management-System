@@ -1,6 +1,7 @@
 package Entities;
 
 import Behaviours.DisplayableInterface;
+import Util.HelperUtils;
 
 import java.time.LocalDate;
 import java.util.Objects;
@@ -15,6 +16,7 @@ public class Person implements DisplayableInterface {
     private String phoneNumber;
     private String email;
     private String address;
+    static HelperUtils helperUtils = new HelperUtils();
 
     public Person(String ID, String firstName, String lastName, LocalDate dateOfBirth, String gender, String phoneNumber, String email, String address) {
         this.ID = ID;
@@ -36,7 +38,7 @@ public class Person implements DisplayableInterface {
     }
 
     public void setID(String ID) {
-        this.ID = ID;
+        this.ID = helperUtils.generateId();
     }
 
     public String getFirstName() {
