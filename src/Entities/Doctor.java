@@ -164,4 +164,16 @@ public class Doctor extends Person{
         fee= Double.parseDouble(scanner.nextLine());
         setConsultationFee(fee);
     }
+    public void updateFee(double fee, String reason){
+        System.out.println("UPDATING FEE");
+        System.out.println("------------------------");
+
+        System.out.println("Please enter new fee: ");
+        fee= Double.parseDouble(scanner.nextLine());
+        setConsultationFee(fee);
+
+        System.out.println("Please enter the reason: ");
+        reason= scanner.nextLine();
+        System.out.println(reason);
+    }
 }
