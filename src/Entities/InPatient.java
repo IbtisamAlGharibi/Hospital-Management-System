@@ -1,12 +1,13 @@
 package Entities;
 
+import Behaviours.BillableInterface;
 import Behaviours.DisplayableInterface;
 
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.List;
 
-public class InPatient extends  Patient implements DisplayableInterface {
+public class InPatient extends  Patient implements DisplayableInterface, BillableInterface {
     private LocalDate admissionDate;
     private LocalDate dischargeDate;
     private String roomNumber;
@@ -140,5 +141,20 @@ public class InPatient extends  Patient implements DisplayableInterface {
         int totalStay = calculateStayDuration();
         double totalAmount = getDailyCharges() * totalStay;
         System.out.println(totalAmount);
+    }
+
+    @Override
+    public void calculateCharges() {
+
+    }
+
+    @Override
+    public void generateBill() {
+
+    }
+
+    @Override
+    public void processPayment(double amount) {
+
     }
 }
