@@ -113,9 +113,9 @@ public class InPatient extends  Patient{
         System.out.println("CALCULATING STAY DURATION");
         System.out.println("-------------------------------");
 
-        System.out.println("Please  enter admissionDate ");
+        System.out.println("Please  enter admissionDate (Please use this formate 2026-05-12):");
         LocalDate admissionDate = LocalDate.parse(scanner.nextLine());
-        System.out.println("Please  enter dischargeDate ");
+        System.out.println("Please  enter dischargeDate (Please use this formate 2026-05-12) ");
         LocalDate dischargeDate = LocalDate.parse(scanner.nextLine());
 
         Period period = Period.between(admissionDate ,dischargeDate);
