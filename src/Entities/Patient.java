@@ -1,11 +1,13 @@
 package Entities;
 
+import Behaviours.DisplayableInterface;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Patient extends Person{
+public class Patient extends Person implements DisplayableInterface {
     private String patientId;
     private String bloodGroup;
     private List<String> allergies = new ArrayList<>();
@@ -130,6 +132,12 @@ public class Patient extends Person{
         System.out.println("medical Records : " + getMedicalRecords());
         System.out.println("appointments : " + getAppointments());
     }
+
+    @Override
+    public void displaySummary() {
+
+    }
+
     public static String addMedicalRecord(){
         System.out.println("ADDING NEW MEDICAL RECORD");
         System.out.println("----------------------------");
