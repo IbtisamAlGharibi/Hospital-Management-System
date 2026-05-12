@@ -1,6 +1,7 @@
 package Entities;
 
 import Behaviours.DisplayableInterface;
+import Util.HelperUtils;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -18,6 +19,8 @@ public class Patient extends Person implements DisplayableInterface {
     private static List<String > appointments = new ArrayList<>();
     static Scanner scanner = new Scanner(System.in);
      static MedicalRecord medicalRecord = new MedicalRecord();
+    static HelperUtils helperUtils = new HelperUtils();
+
     public Patient() {
         super();
     }
@@ -28,7 +31,7 @@ public class Patient extends Person implements DisplayableInterface {
     }
 
     public void setPatientId(String patientId) {
-        this.patientId = patientId;
+        this.patientId = helperUtils.generateId();
     }
 
     public String getBloodGroup() {
@@ -68,7 +71,7 @@ public class Patient extends Person implements DisplayableInterface {
     }
 
     public void setInsuranceId(String insuranceId) {
-        this.insuranceId = insuranceId;
+        this.insuranceId = helperUtils.generateId();
     }
 
     public List<String> getMedicalRecords() {
