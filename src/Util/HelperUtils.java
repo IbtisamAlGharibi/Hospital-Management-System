@@ -7,4 +7,11 @@ public class HelperUtils {
        }
        return false;
    }
+
+   public boolean isNull(String str){
+       if (str == null && str.isEmpty()){
+           return true;
+       }
+       return false;
+   }
 }
