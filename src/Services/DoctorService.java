@@ -187,4 +187,22 @@ public class DoctorService {
         phone = scanner.nextLine();
         doctor.setPhoneNumber(phone);
     }
+
+    public void  addDoctor(String name, String specialization, String phone, double consultationFee){
+        System.out.println("Please enter Doctor first name: ");
+        name = scanner.nextLine();
+        doctor.setFirstName(name);
+
+        System.out.println("Please enter specialization: ");
+        specialization = scanner.nextLine();
+        doctor.setSpecialization(specialization);
+
+        System.out.println("Please enter phone number: ");
+        phone = scanner.nextLine();
+        doctor.setPhoneNumber(phone);
+
+        System.out.println("Please enter consultation Fee: ");
+        consultationFee = Double.parseDouble(scanner.nextLine());
+        doctor.setConsultationFee(consultationFee);
+    }
 }
