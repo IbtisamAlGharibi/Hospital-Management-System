@@ -107,5 +107,9 @@ public class AppointmentService {
         time = scanner.nextLine();
         appointment.setAppointmentTime(time);
     }
+
+    public void createAppointment(Appointment appointment){
+        patient.addNewAppointment();
+    }
 }
 
