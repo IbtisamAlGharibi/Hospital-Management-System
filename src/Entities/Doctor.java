@@ -2,6 +2,7 @@ package Entities;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -175,5 +176,14 @@ public class Doctor extends Person{
         System.out.println("Please enter the reason: ");
         reason= scanner.nextLine();
         System.out.println(reason);
+    }
+
+    public void addAvailability(String slot){
+        System.out.println("ADDING AVAILABILITY");
+        System.out.println("------------------------");
+
+        System.out.println("Please enter the slot: ");
+        slot= scanner.nextLine();
+        setAvailableSlots(Collections.singletonList(slot));
     }
 }
