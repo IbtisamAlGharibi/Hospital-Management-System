@@ -125,4 +125,10 @@ public class HelperUtils {
         }
         return false;
     }
+    public boolean isPositive(int num){
+       if (num % 2 ==0){
+           return true;
+       }
+       return false;
+    }
 }
