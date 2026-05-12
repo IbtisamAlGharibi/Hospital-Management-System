@@ -262,4 +262,24 @@ public class Patient extends Person{
         setEmail(email);
         System.out.println("Email updated successfully");
     }
+
+    public void updateContact(String phone, String email,String address){
+        System.out.println("UPDATING CONTACT");
+        System.out.println("---------------------------");
+
+        System.out.println("Please enter the new phone number");
+        phone = scanner.nextLine();
+        setPhoneNumber(phone);
+        System.out.println("Phone number updated successfully");
+
+        System.out.println("Please enter the new email");
+        email = scanner.nextLine();
+        setEmail(email);
+        System.out.println("Email updated successfully");
+
+        System.out.println("Please enter the new address");
+        address = scanner.nextLine();
+        setAddress(address);
+        System.out.println("Address updated successfully");
+    }
 }
