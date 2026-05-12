@@ -1,5 +1,6 @@
 package Util;
 
+import java.util.Date;
 import java.util.Random;
 import java.util.UUID;
 
@@ -78,5 +79,11 @@ public class HelperUtils {
 
     public static String generateId(String prefix, String suffix) {
         return prefix + "-" + suffix;
+    }
+    public boolean isValidDate(Date date){
+       if (!(date == null)){
+           return true;
+       }
+       return false;
     }
 }
