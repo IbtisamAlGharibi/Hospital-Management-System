@@ -64,4 +64,15 @@ public class HelperUtils {
         int number = 10000 + random.nextInt(90000);
         return prefix + "-" + number;
     }
+
+    public static String generateId(String prefix, int length) {
+        Random random = new Random();
+        StringBuilder number = new StringBuilder();
+
+        for (int i = 0; i < length; i++) {
+            number.append(random.nextInt(10));
+        }
+
+        return prefix + "-" + number;
+    }
 }
