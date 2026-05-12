@@ -27,4 +27,11 @@ public class HelperUtils {
        }
        return false;
    }
+
+   public boolean isValidString(String str){
+       if (str == null && str.isEmpty()){
+           return true;
+       }
+       return false;
+   }
 }
