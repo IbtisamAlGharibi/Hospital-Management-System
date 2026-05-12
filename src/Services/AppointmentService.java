@@ -1,5 +1,6 @@
 package Services;
 
+import Behaviours.AppointableInterface;
 import Behaviours.ManageableInterface;
 import Behaviours.SearchableInterface;
 import Entities.Appointment;
@@ -12,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class AppointmentService implements ManageableInterface, SearchableInterface {
+public class AppointmentService implements ManageableInterface, SearchableInterface, AppointableInterface {
     static MedicalRecord medicalRecord = new MedicalRecord();
     static PatientService patientService = new PatientService();
     static DoctorService doctorService = new DoctorService();
@@ -113,6 +114,17 @@ public class AppointmentService implements ManageableInterface, SearchableInterf
     public void createAppointment(Appointment appointment){
         patient.addNewAppointment();
     }
+
+    @Override
+    public void scheduleAppointment(Appointment appointment) {
+
+    }
+
+    @Override
+    public void cancelAppointment(String appointmentId) {
+
+    }
+
     public void rescheduleAppointment(String appointmentId, LocalDate newDate){
         System.out.println("Please enter appointment Id ");
         appointmentId = scanner.nextLine();
