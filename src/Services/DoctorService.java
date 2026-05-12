@@ -13,6 +13,7 @@ public class DoctorService {
     static List<Doctor> doctors = new ArrayList<>();
     static Scanner scanner = new Scanner(System.in);
  static MenuMessages menuMessages = new MenuMessages();
+ static PatientService patientService = new PatientService();
     public Doctor addDoctor(){
         System.out.println("ADDING NEW DOCTOR");
         System.out.println("----------------------------");
@@ -223,5 +224,13 @@ public class DoctorService {
 
         doctor.assignPatient();
         System.out.println(patientId + "This patient is assigned to "+ " "+ doctorId);
+    }
+    public void assignPatient(Doctor doctor, Patient patient){
+        patient.getPatientId();
+        doctor.getDoctorId();
+        patientService.getPatientById();
+        getDoctorById(doctor.getDoctorId());
+
+        System.out.println(  patient.getPatientId() + "Assigned to: " + doctor.getDoctorId() );
     }
 }
