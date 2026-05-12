@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Patient extends Person implements DisplayableInterface {
+public abstract class Patient extends Person implements DisplayableInterface {
     private String patientId;
     private String bloodGroup;
     private List<String> allergies = new ArrayList<>();
@@ -293,4 +293,6 @@ public class Patient extends Person implements DisplayableInterface {
         setAddress(address);
         System.out.println("Address updated successfully");
     }
+
+    public abstract Patient addPatient();
 }

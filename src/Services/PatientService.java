@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class PatientService implements ManageableInterface, SearchableInterface {
-    static List<Patient> patients = new ArrayList<>();
+    public static List<Patient> patients = new ArrayList<>();
     static Patient patient = new Patient();
     static Scanner scanner = new Scanner(System.in);
     MenuMessages menuMessages = new MenuMessages();
@@ -152,7 +152,8 @@ public class PatientService implements ManageableInterface, SearchableInterface 
                 patientService.addNewPatient();
             }
             case "1.2" -> {
-
+                System.out.println("Register In Patient");
+                inPatient.
             }
             case "1.3" -> {
 

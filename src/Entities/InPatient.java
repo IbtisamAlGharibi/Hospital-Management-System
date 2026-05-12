@@ -6,7 +6,11 @@ import Util.HelperUtils;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.Collections;
 import java.util.List;
+
+import static Entities.Doctor.patient;
+import static Services.PatientService.patients;
 
 public class InPatient extends  Patient implements DisplayableInterface, BillableInterface {
     private LocalDate admissionDate;
@@ -158,5 +162,81 @@ public class InPatient extends  Patient implements DisplayableInterface, Billabl
     @Override
     public void processPayment(double amount) {
 
+    }
+
+    @Override
+    public Patient addPatient() {
+        System.out.println("ADDING NEW  INPATIENT");
+        System.out.println("----------------------------");
+
+        System.out.println("Please enter patient first name: ");
+        String patientFirstName = scanner.nextLine();
+        setFirstName(patientFirstName);
+
+        System.out.println("Please enter patient last name: ");
+        String patientLastName = scanner.nextLine();
+        setLastName(patientLastName);
+
+        System.out.println("Please enter patient ID: ");
+        String patientID = scanner.nextLine();
+        setPatientId(patientID);
+
+        System.out.println("Please enter blood Group: ");
+        String patientBloodGroup = scanner.nextLine();
+        setBloodGroup(patientBloodGroup);
+
+        System.out.println("Please enter emergency Contact: ");
+        String patientEmergencyContact = scanner.nextLine();
+        setEmergencyContact(patientEmergencyContact);
+
+        System.out.println("Please enter insurance Id: ");
+        String patientInsuranceId = scanner.nextLine();
+        setInsuranceId(patientInsuranceId);
+
+        System.out.println("Please enter allergies: ");
+        String patientAllergies = scanner.nextLine();
+        setAllergies(Collections.singletonList(patientAllergies));
+
+        System.out.println("Please enter registrationDate: ");
+        String patientRegistrationDate = scanner.nextLine();
+        setRegistrationDate(LocalDate.parse(patientRegistrationDate));
+
+        System.out.println("Please enter admission Date: ");
+        String admissionDate = scanner.nextLine();
+       setAdmissionDate(LocalDate.parse(admissionDate));
+
+        System.out.println("Please enter discharge Date: ");
+        String dischargeDate = scanner.nextLine();
+       setDischargeDate(LocalDate.parse(dischargeDate));
+
+        System.out.println("Please enter room Number: ");
+        String roomNumber = scanner.nextLine();
+        setRoomNumber(roomNumber);
+
+        System.out.println("Please enter Bed Number: ");
+        String bedNumber = scanner.nextLine();
+        setBedNumber(bedNumber);
+
+        System.out.println("Please enter admitting Doctor Id: ");
+        String admittingDoctorId = scanner.nextLine();
+        setAdmittingDoctorId(admittingDoctorId);
+
+        System.out.println("Please enter daily Charges: ");
+        String dailyCharges = scanner.nextLine();
+        setDailyCharges(Double.parseDouble(dailyCharges));
+
+        return patient;
+    }
+
+    public void addNewPatient() {
+        boolean flag = true;
+        while (flag) {
+            patients.add(addPatient());
+            System.out.println("Please enter E to Stop");
+            String input = scanner.nextLine();
+            if (input.equalsIgnoreCase("E")) {
+                flag = false;
+            }
+        }
     }
 }
