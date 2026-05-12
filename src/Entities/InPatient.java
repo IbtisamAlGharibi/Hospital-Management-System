@@ -1,10 +1,12 @@
 package Entities;
 
+import Behaviours.DisplayableInterface;
+
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.List;
 
-public class InPatient extends  Patient{
+public class InPatient extends  Patient implements DisplayableInterface {
     private LocalDate admissionDate;
     private LocalDate dischargeDate;
     private String roomNumber;
@@ -109,6 +111,12 @@ public class InPatient extends  Patient{
         System.out.println("dailyCharges : " + getDailyCharges());
 
     }
+
+    @Override
+    public void displaySummary() {
+
+    }
+
     public int calculateStayDuration(){
         System.out.println("CALCULATING STAY DURATION");
         System.out.println("-------------------------------");
