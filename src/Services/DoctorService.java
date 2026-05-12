@@ -233,4 +233,21 @@ public class DoctorService {
 
         System.out.println(  patient.getPatientId() + "Assigned to: " + doctor.getDoctorId() );
     }
+    public void assignPatient(String doctorId, List<String> patientIds){
+        System.out.println("ASSIGNING PATIENTS");
+        System.out.println("--------------------------------");
+
+        System.out.println("Please enter the doctor Id: ");
+        doctorId = scanner.nextLine();
+
+        while (true){
+            System.out.println("Please enter patient Ids (type exit to stop): ");
+            String patientId = scanner.nextLine();
+             if (patientId.equalsIgnoreCase("Exit")){
+                 break;
+             }
+             patientIds.add(patientId);
+        }
+        System.out.println(patientIds+ "are assigned to: " + doctorId);
+    }
 }
