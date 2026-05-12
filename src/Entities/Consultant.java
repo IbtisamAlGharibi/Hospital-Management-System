@@ -8,6 +8,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
+import static Services.DoctorService.doctor;
+import static Services.DoctorService.doctors;
+
 public class Consultant extends Doctor implements DisplayableInterface {
     private List<String > consultationTypes = new ArrayList<>();
     private boolean onlineConsultationAvailable;
@@ -78,10 +81,10 @@ public class Consultant extends Doctor implements DisplayableInterface {
 
     }
 
-    @Override
+    /*@Override
     public Doctor addDoctor() {
         return null;
-    }
+    }*/
 
     public void scheduleConsultation(){
         System.out.println("SCHEDULING CONSULTATION");
@@ -115,6 +118,70 @@ public class Consultant extends Doctor implements DisplayableInterface {
                 setConsultationDuration(Integer.parseInt(consultationDuration));
             }else {
                 System.out.println("Online consultation is not available ");
+            }
+        }
+    }
+
+    @Override
+    public Doctor addDoctor(){
+        System.out.println("ADDING NEW DOCTOR");
+        System.out.println("----------------------------");
+
+        System.out.println("Please enter Doctor first name: ");
+        String doctorFirstName = scanner.nextLine();
+        setFirstName(doctorFirstName);
+
+        System.out.println("Please enter Doctor last name: ");
+        String doctorLastName = scanner.nextLine();
+        setLastName(doctorLastName);
+
+        System.out.println("Please enter Doctor ID: ");
+        String doctorID = scanner.nextLine();
+        setDoctorId(doctorID);
+
+        System.out.println("Please enter qualification: ");
+        String doctorQualification = scanner.nextLine();
+        setQualification(doctorQualification);
+
+        System.out.println("Please enter specialization: ");
+        String doctorSpecialization = scanner.nextLine();
+        setSpecialization(doctorSpecialization);
+
+        System.out.println("Please enter Doctor experience Years: ");
+        String doctorExperienceYears = scanner.nextLine();
+        setExperienceYears(Integer.parseInt(doctorExperienceYears));
+
+        System.out.println("Please enter department Id: ");
+        String departmentId = scanner.nextLine();
+        setDepartmentId(departmentId);
+
+        System.out.println("Please enter consultation Fee: ");
+        String consultationFee = scanner.nextLine();
+        setConsultationFee(Double.parseDouble(consultationFee));
+
+
+        System.out.println("Please enter consultation Duration: ");
+        String consultationDuration = scanner.nextLine();
+        setConsultationDuration(Integer.parseInt(consultationDuration));
+
+        System.out.println("Please enter consultation Types: ");
+        String consultationTypes = scanner.nextLine();
+        setConsultationTypes(Collections.singletonList(consultationTypes));
+
+        System.out.println("Please enter operation online Consultation Available(True/False): ");
+        String onlineConsultationAvailable = scanner.nextLine();
+        setOnlineConsultationAvailable(Boolean.parseBoolean(onlineConsultationAvailable));
+        return doctor;
+    }
+
+    public void addNewDoctor(){
+        boolean flag = true;
+        while (flag){
+            doctors.add(addDoctor());
+            System.out.println("Please enter E to Stop");
+            String input = scanner.nextLine();
+            if (input.equalsIgnoreCase("E")){
+                flag = false;
             }
         }
     }
