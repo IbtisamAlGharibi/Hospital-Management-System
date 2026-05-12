@@ -161,7 +161,8 @@ public class PatientService implements ManageableInterface, SearchableInterface 
                 inPatient.addNewPatient();
             }
             case "1.3" -> {
-
+                System.out.println("Register Out Patient");
+                outPatient.addPatient();
             }
 
             case "1.4" -> {
