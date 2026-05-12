@@ -149,4 +149,12 @@ public class Appointment {
         setStatus("Complete");
         System.out.println("COMPLETED");
     }
+    public void addNotes(String notes){
+        System.out.println("ADDING NOTES");
+        System.out.println("------------------------");
+
+        System.out.println("Please enter the notes: ");
+        notes = scanner.nextLine();
+       setNotes(notes);
+    }
 }
