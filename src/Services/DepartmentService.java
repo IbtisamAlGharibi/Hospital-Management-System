@@ -1,5 +1,7 @@
 package Services;
 
+import Behaviours.ManageableInterface;
+import Behaviours.SearchableInterface;
 import Entities.Department;
 import Entities.Doctor;
 import Entities.Nurse;
@@ -9,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class DepartmentService {
+public class DepartmentService implements ManageableInterface, SearchableInterface {
     static Scanner scanner = new Scanner(System.in);
     static List<Patient> patients = new ArrayList<>();
     static List<Doctor> doctors = new ArrayList<>();
@@ -52,4 +54,28 @@ public class DepartmentService {
         }
     }
 
+    @Override
+    public void add(Object entity) {
+
+    }
+
+    @Override
+    public void remove(String id) {
+
+    }
+
+    @Override
+    public void getAll() {
+
+    }
+
+    @Override
+    public void search(String keyword) {
+
+    }
+
+    @Override
+    public void searchById(String id) {
+
+    }
 }
