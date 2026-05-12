@@ -1,10 +1,12 @@
 package Entities;
 
+import Behaviours.DisplayableInterface;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Scanner;
 
-public class Appointment {
+public class Appointment implements DisplayableInterface {
     private String appointmentId;
     private String patientId;
     private String doctorId;
@@ -102,6 +104,12 @@ public class Appointment {
         System.out.println("reason: " + getReason() );
         System.out.println("notes: " + getNotes());
     }
+
+    @Override
+    public void displaySummary() {
+
+    }
+
     public void reschedule(){
     System.out.println("RESCHEDULING");
         System.out.println("Please enter appointment Id ");
