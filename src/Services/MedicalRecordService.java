@@ -1,5 +1,7 @@
 package Services;
 
+import Behaviours.ManageableInterface;
+import Behaviours.SearchableInterface;
 import Entities.Doctor;
 import Entities.MedicalRecord;
 import Entities.Patient;
@@ -8,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class MedicalRecordService {
+public class MedicalRecordService implements ManageableInterface, SearchableInterface {
     static MedicalRecord medicalRecord = new MedicalRecord();
     static PatientService patientService = new PatientService();
     static DoctorService doctorService = new DoctorService();
@@ -53,5 +55,30 @@ public class MedicalRecordService {
                 System.out.println("NOT FOUND");
             }
         }
+    }
+
+    @Override
+    public void add(Object entity) {
+
+    }
+
+    @Override
+    public void remove(String id) {
+
+    }
+
+    @Override
+    public void getAll() {
+
+    }
+
+    @Override
+    public void search(String keyword) {
+
+    }
+
+    @Override
+    public void searchById(String id) {
+
     }
 }
