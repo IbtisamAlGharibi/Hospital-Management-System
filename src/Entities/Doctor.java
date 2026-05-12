@@ -9,7 +9,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-public class Doctor extends Person implements DisplayableInterface {
+public abstract class Doctor extends Person implements DisplayableInterface {
     private String doctorId;
     private String specialization;
     private String qualification;
@@ -211,4 +211,6 @@ public class Doctor extends Person implements DisplayableInterface {
         String  newSlot= scanner.nextLine();
         slots.add(newSlot);
     }
+
+    public abstract Doctor addDoctor();
 }

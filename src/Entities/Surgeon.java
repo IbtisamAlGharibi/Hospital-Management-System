@@ -4,8 +4,12 @@ import Behaviours.DisplayableInterface;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
+
+import static Services.DoctorService.doctor;
+import static Services.DoctorService.doctors;
 
 public class Surgeon extends Doctor implements DisplayableInterface {
     private int surgeriesPerformed;
@@ -24,6 +28,10 @@ public class Surgeon extends Doctor implements DisplayableInterface {
         this.surgeriesPerformed = surgeriesPerformed;
         this.surgeryTypes = surgeryTypes;
         this.operationTheatreAccess = operationTheatreAccess;
+    }
+
+    public Surgeon() {
+
     }
 
     public int getSurgeriesPerformed() {
@@ -92,5 +100,68 @@ public class Surgeon extends Doctor implements DisplayableInterface {
         System.out.println(surgeryType + " " + "Surgery performed");
         surgeriesPerformed++;
         System.out.println(surgeriesPerformed +" "+ "Surgeries Done");
+    }
+    @Override
+    public Doctor addDoctor(){
+        System.out.println("ADDING NEW DOCTOR");
+        System.out.println("----------------------------");
+
+        System.out.println("Please enter Doctor first name: ");
+        String doctorFirstName = scanner.nextLine();
+        setFirstName(doctorFirstName);
+
+        System.out.println("Please enter Doctor last name: ");
+        String doctorLastName = scanner.nextLine();
+        setLastName(doctorLastName);
+
+        System.out.println("Please enter Doctor ID: ");
+        String doctorID = scanner.nextLine();
+        setDoctorId(doctorID);
+
+        System.out.println("Please enter qualification: ");
+        String doctorQualification = scanner.nextLine();
+        setQualification(doctorQualification);
+
+        System.out.println("Please enter specialization: ");
+        String doctorSpecialization = scanner.nextLine();
+        setSpecialization(doctorSpecialization);
+
+        System.out.println("Please enter Doctor experience Years: ");
+        String doctorExperienceYears = scanner.nextLine();
+       setExperienceYears(Integer.parseInt(doctorExperienceYears));
+
+        System.out.println("Please enter department Id: ");
+        String departmentId = scanner.nextLine();
+        setDepartmentId(departmentId);
+
+        System.out.println("Please enter consultation Fee: ");
+        String consultationFee = scanner.nextLine();
+      setConsultationFee(Double.parseDouble(consultationFee));
+
+
+        System.out.println("Please enter surgeries Performed: ");
+        String surgeriesPerformed = scanner.nextLine();
+        setSurgeriesPerformed(Integer.parseInt(surgeriesPerformed));
+
+        System.out.println("Please enter surgery Types: ");
+        String surgeryTypes = scanner.nextLine();
+        setSurgeryTypes(Collections.singletonList(surgeryTypes));
+
+        System.out.println("Please enter operation Theatre Access(True/False): ");
+        String operationTheatreAccess = scanner.nextLine();
+        setOperationTheatreAccess(Boolean.parseBoolean(operationTheatreAccess));
+        return doctor;
+    }
+
+    public void addNewDoctor(){
+        boolean flag = true;
+        while (flag){
+            doctors.add(addDoctor());
+            System.out.println("Please enter E to Stop");
+            String input = scanner.nextLine();
+            if (input.equalsIgnoreCase("E")){
+                flag = false;
+            }
+        }
     }
 }

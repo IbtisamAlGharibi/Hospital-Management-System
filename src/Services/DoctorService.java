@@ -4,15 +4,23 @@ import Behaviours.ManageableInterface;
 import Behaviours.SearchableInterface;
 import Entities.Doctor;
 import Entities.Patient;
+import Entities.Surgeon;
 import Util.MenuMessages;
 
+import javax.print.Doc;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class DoctorService implements ManageableInterface, SearchableInterface {
-    static Doctor doctor = new Doctor();
-    static List<Doctor> doctors = new ArrayList<>();
+   public static Doctor doctor = new Doctor() {
+       @Override
+       public Doctor addDoctor() {
+           return null;
+       }
+   };
+   static Surgeon surgeon = new Surgeon();
+    public static List<Doctor> doctors = new ArrayList<>();
     static Scanner scanner = new Scanner(System.in);
  static MenuMessages menuMessages = new MenuMessages();
  static PatientService patientService = new PatientService();
