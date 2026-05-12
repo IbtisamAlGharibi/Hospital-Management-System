@@ -1,11 +1,13 @@
 package Entities;
 
+import Behaviours.DisplayableInterface;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Surgeon extends Doctor{
+public class Surgeon extends Doctor implements DisplayableInterface {
     private int surgeriesPerformed;
     private List<String> surgeryTypes = new ArrayList<>();
     private boolean operationTheatreAccess;
