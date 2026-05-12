@@ -1,5 +1,7 @@
 package Util;
 
+import java.util.UUID;
+
 public class HelperUtils {
    public boolean isNull(Object obj){
        if (obj == null){
@@ -52,5 +54,8 @@ public class HelperUtils {
             return true;
         }
         return false;
+    }
+    public String generateId(){
+        return UUID.randomUUID().toString();
     }
 }
