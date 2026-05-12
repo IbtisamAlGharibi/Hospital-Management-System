@@ -119,4 +119,10 @@ public class HelperUtils {
        }
        return false;
    }
+    public boolean isValidNumber(double num, double min, double max){
+        if (num >= min && num <= max){
+            return true;
+        }
+        return false;
+    }
 }
