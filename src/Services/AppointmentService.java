@@ -112,7 +112,13 @@ public class AppointmentService {
         patient.addNewAppointment();
     }
     public void rescheduleAppointment(String appointmentId, LocalDate newDate){
-        appointment.reschedule();
+        System.out.println("Please enter appointment Id ");
+        appointmentId = scanner.nextLine();
+        appointment.setAppointmentId(appointmentId);
+
+        System.out.println("Please enter appointment Date ");
+        newDate = LocalDate.parse(scanner.nextLine());
+        appointment.setAppointmentDate(newDate);
     }
 }
 
