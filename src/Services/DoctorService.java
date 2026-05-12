@@ -250,4 +250,8 @@ public class DoctorService {
         }
         System.out.println(patientIds+ "are assigned to: " + doctorId);
     }
+
+    public void displayDoctors(){
+        displayAllDoctors();
+    }
 }
