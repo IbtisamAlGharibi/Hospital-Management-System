@@ -2,10 +2,7 @@ package Services;
 
 import Behaviours.ManageableInterface;
 import Behaviours.SearchableInterface;
-import Entities.EmergencyPatient;
-import Entities.InPatient;
-import Entities.OutPatient;
-import Entities.Patient;
+import Entities.*;
 import Util.MenuMessages;
 
 import java.time.LocalDate;
@@ -27,7 +24,7 @@ public class PatientService implements ManageableInterface, SearchableInterface 
     static InPatient inPatient = new InPatient();
     static OutPatient outPatient = new OutPatient();
     static EmergencyPatient emergencyPatient = new EmergencyPatient();
-
+    static MedicalRecord medicalRecord = new MedicalRecord();
 
     public Patient addPatient() {
         System.out.println("ADDING NEW PATIENT");
@@ -189,7 +186,7 @@ public class PatientService implements ManageableInterface, SearchableInterface 
                 patientService.removePatient();
             }
             case "1.9" -> {
-
+                medicalRecord.displayInfo();
             }
 
             case "1.10" -> {
