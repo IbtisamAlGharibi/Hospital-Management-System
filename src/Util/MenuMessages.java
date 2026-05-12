@@ -2,7 +2,9 @@ package Util;
 
 public class MenuMessages {
     public static String MAIN_MENU_MESSAGE ="1. Patient Management\n" +
-            "2. Doctor Management \n";
+            "2. Doctor Management \n"+"3. Nurse Management \n" +
+            "4. Appointment Management\n"+"5. Medical Records Management\n"+
+            "6. Department Management\n"+"7. Reports and Statistics\n"+"8. Exit";
 
     public static String PATIENT_MENU_MESSAGE =
             "1.1 Register New Patient \n" +
