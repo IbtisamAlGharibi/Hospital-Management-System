@@ -1,12 +1,14 @@
 package Entities;
 
+import Behaviours.DisplayableInterface;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-public class Doctor extends Person{
+public class Doctor extends Person implements DisplayableInterface {
     private String doctorId;
     private String specialization;
     private String qualification;
@@ -116,6 +118,12 @@ public class Doctor extends Person{
         System.out.println("available Slots : " + getAvailableSlots());
         System.out.println("assigned Patients : " + getAssignedPatients());
     }
+
+    @Override
+    public void displaySummary() {
+
+    }
+
     public void assignPatient(){
         System.out.println("Please enter the patient full name to be assigned");
         String patientNameToAssign = scanner.nextLine();
