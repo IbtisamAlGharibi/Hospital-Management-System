@@ -1,6 +1,8 @@
 package Util;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.Date;
 import java.util.Random;
 import java.util.UUID;
@@ -150,6 +152,15 @@ public class HelperUtils {
         return false;
     }
     public  boolean isValidAge(int age) {
+        if (age >= 0 && age <= 150){
+            return true;
+        }
+        return false;
+    }
+    public  boolean isValidAge(LocalDate dateOfBirth) {
+
+        int age = Period.between(dateOfBirth, LocalDate.now()).getYears();
+
         if (age >= 0 && age <= 150){
             return true;
         }
