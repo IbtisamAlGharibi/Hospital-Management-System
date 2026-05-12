@@ -92,4 +92,10 @@ public class HelperUtils {
         }
         return true;
     }
+    public boolean isValidDate(Date date, Date minDate, Date maxDate) {
+        if (date.compareTo(minDate) >= 0 && date.compareTo(maxDate) <= 0) {
+            return true;
+        }
+        return false;
+    }
 }
