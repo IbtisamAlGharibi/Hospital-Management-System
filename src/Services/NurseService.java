@@ -1,12 +1,14 @@
 package Services;
 
+import Behaviours.ManageableInterface;
+import Behaviours.SearchableInterface;
 import Entities.Nurse;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class NurseService {
+public class NurseService implements ManageableInterface, SearchableInterface {
     static Scanner scanner = new Scanner(System.in);
     static Nurse nurse = new Nurse();
     static List<Nurse> nurses = new ArrayList<>();
@@ -131,5 +133,30 @@ public class NurseService {
                 System.out.println("NOT FOUND");
             }
         }
+    }
+
+    @Override
+    public void add(Object entity) {
+
+    }
+
+    @Override
+    public void remove(String id) {
+
+    }
+
+    @Override
+    public void getAll() {
+
+    }
+
+    @Override
+    public void search(String keyword) {
+
+    }
+
+    @Override
+    public void searchById(String id) {
+
     }
 }
