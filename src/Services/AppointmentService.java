@@ -111,5 +111,8 @@ public class AppointmentService {
     public void createAppointment(Appointment appointment){
         patient.addNewAppointment();
     }
+    public void rescheduleAppointment(String appointmentId, LocalDate newDate){
+        appointment.reschedule();
+    }
 }
 
