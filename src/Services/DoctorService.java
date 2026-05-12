@@ -254,4 +254,7 @@ public class DoctorService {
     public void displayDoctors(){
         displayAllDoctors();
     }
+    public void displayDoctors(String specialization){
+        getDoctorsBySpecialization();
+    }
 }
