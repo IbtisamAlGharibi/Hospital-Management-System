@@ -3,7 +3,11 @@ package Entities;
 import Behaviours.DisplayableInterface;
 
 import java.time.LocalDate;
+import java.util.Collections;
 import java.util.List;
+
+import static Services.DoctorService.doctor;
+import static Services.DoctorService.doctors;
 
 public class GeneralPractitioner extends Doctor implements DisplayableInterface {
     private boolean walkinAvailable;
@@ -66,10 +70,10 @@ public class GeneralPractitioner extends Doctor implements DisplayableInterface 
         System.out.println("assigned Patients : " + getAssignedPatients());
     }
 
-    @Override
+    /*@Override
     public Doctor addDoctor() {
         return null;
-    }
+    }*/
 
     public void scheduleHomeVisit(){
         System.out.println("SCHEDULING HOME VISIT");
@@ -102,6 +106,70 @@ public class GeneralPractitioner extends Doctor implements DisplayableInterface 
             System.out.println("Vaccine " + vaccineName + " administered to patient " + patientId);
         }else {
             System.out.println("NOT Certified");
+        }
+    }
+
+    @Override
+    public Doctor addDoctor(){
+        System.out.println("ADDING NEW DOCTOR");
+        System.out.println("----------------------------");
+
+        System.out.println("Please enter Doctor first name: ");
+        String doctorFirstName = scanner.nextLine();
+        setFirstName(doctorFirstName);
+
+        System.out.println("Please enter Doctor last name: ");
+        String doctorLastName = scanner.nextLine();
+        setLastName(doctorLastName);
+
+        System.out.println("Please enter Doctor ID: ");
+        String doctorID = scanner.nextLine();
+        setDoctorId(doctorID);
+
+        System.out.println("Please enter qualification: ");
+        String doctorQualification = scanner.nextLine();
+        setQualification(doctorQualification);
+
+        System.out.println("Please enter specialization: ");
+        String doctorSpecialization = scanner.nextLine();
+        setSpecialization(doctorSpecialization);
+
+        System.out.println("Please enter Doctor experience Years: ");
+        String doctorExperienceYears = scanner.nextLine();
+        setExperienceYears(Integer.parseInt(doctorExperienceYears));
+
+        System.out.println("Please enter department Id: ");
+        String departmentId = scanner.nextLine();
+        setDepartmentId(departmentId);
+
+        System.out.println("Please enter consultation Fee: ");
+        String consultationFee = scanner.nextLine();
+        setConsultationFee(Double.parseDouble(consultationFee));
+
+
+        System.out.println("Please enter walking Available(True/False): ");
+        String walkinAvailable = scanner.nextLine();
+        setWalkinAvailable(Boolean.parseBoolean(walkinAvailable));
+
+        System.out.println("Please enter home Visit Available(True/False): ");
+        String homeVisitAvailable = scanner.nextLine();
+        setHomeVisitAvailable(Boolean.parseBoolean(homeVisitAvailable));
+
+        System.out.println("Please enter vaccination Certified(True/False): ");
+        String vaccinationCertified = scanner.nextLine();
+        setVaccinationCertified(Boolean.parseBoolean(vaccinationCertified));
+        return doctor;
+    }
+
+    public void addNewDoctor(){
+        boolean flag = true;
+        while (flag){
+            doctors.add(addDoctor());
+            System.out.println("Please enter E to Stop");
+            String input = scanner.nextLine();
+            if (input.equalsIgnoreCase("E")){
+                flag = false;
+            }
         }
     }
 }
