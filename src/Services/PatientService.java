@@ -16,7 +16,12 @@ import java.util.Scanner;
 
 public class PatientService implements ManageableInterface, SearchableInterface {
     public static List<Patient> patients = new ArrayList<>();
-    static Patient patient = new Patient();
+    static Patient patient = new Patient() {
+        @Override
+        public Patient addPatient() {
+            return null;
+        }
+    };
     static Scanner scanner = new Scanner(System.in);
     MenuMessages menuMessages = new MenuMessages();
     static InPatient inPatient = new InPatient();
@@ -153,7 +158,7 @@ public class PatientService implements ManageableInterface, SearchableInterface 
             }
             case "1.2" -> {
                 System.out.println("Register In Patient");
-                inPatient.
+                inPatient.addNewPatient();
             }
             case "1.3" -> {
 
