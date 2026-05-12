@@ -2,6 +2,7 @@ package Entities;
 
 import Behaviours.BillableInterface;
 import Behaviours.DisplayableInterface;
+import Util.HelperUtils;
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -14,6 +15,7 @@ public class InPatient extends  Patient implements DisplayableInterface, Billabl
     private String bedNumber;
     private String admittingDoctorId;
     private double dailyCharges;
+    static HelperUtils helperUtils = new HelperUtils();
 
     public InPatient(LocalDate admissionDate, LocalDate dischargeDate, String roomNumber, String bedNumber, String admittingDoctorId, double dailyCharges) {
         this.admissionDate = admissionDate;
@@ -59,7 +61,7 @@ public class InPatient extends  Patient implements DisplayableInterface, Billabl
     }
 
     public void setRoomNumber(String roomNumber) {
-        this.roomNumber = roomNumber;
+        this.roomNumber = String.valueOf(helperUtils.isPositive(Integer.parseInt(roomNumber)));
     }
 
     public String getBedNumber() {
@@ -67,7 +69,7 @@ public class InPatient extends  Patient implements DisplayableInterface, Billabl
     }
 
     public void setBedNumber(String bedNumber) {
-        this.bedNumber = bedNumber;
+        this.bedNumber = String.valueOf(helperUtils.isPositive(Integer.parseInt(bedNumber)));
     }
 
     public String getAdmittingDoctorId() {
@@ -75,7 +77,7 @@ public class InPatient extends  Patient implements DisplayableInterface, Billabl
     }
 
     public void setAdmittingDoctorId(String admittingDoctorId) {
-        this.admittingDoctorId = admittingDoctorId;
+        this.admittingDoctorId = helperUtils.generateId();
     }
 
     public double getDailyCharges() {
@@ -83,7 +85,7 @@ public class InPatient extends  Patient implements DisplayableInterface, Billabl
     }
 
     public void setDailyCharges(double dailyCharges) {
-        this.dailyCharges = dailyCharges;
+        this.dailyCharges = Double.parseDouble(String.valueOf(helperUtils.isPositive(dailyCharges)));
     }
 
     @Override
