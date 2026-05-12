@@ -174,5 +174,17 @@ public class DoctorService {
         }
         return true;
     }
+    public void  addDoctor(String name, String specialization, String phone){
+        System.out.println("Please enter Doctor first name: ");
+        name = scanner.nextLine();
+        doctor.setFirstName(name);
 
+        System.out.println("Please enter specialization: ");
+         specialization = scanner.nextLine();
+        doctor.setSpecialization(specialization);
+
+        System.out.println("Please enter phone number: ");
+        phone = scanner.nextLine();
+        doctor.setPhoneNumber(phone);
+    }
 }
