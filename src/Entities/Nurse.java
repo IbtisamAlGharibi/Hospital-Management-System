@@ -1,11 +1,13 @@
 package Entities;
 
+import Behaviours.DisplayableInterface;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Nurse extends Person {
+public class Nurse extends Person implements DisplayableInterface {
     private String nurseId;
     private String departmentId;
     private String shift;
@@ -90,6 +92,11 @@ public class Nurse extends Person {
         System.out.println("qualification : " + getQualification() );
         System.out.println("shift: " + getShift() );
         System.out.println("assigned Patients : " + getAssignedPatients());
+    }
+
+    @Override
+    public void displaySummary() {
+
     }
 
     public void assignPatient(){
