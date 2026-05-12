@@ -120,5 +120,18 @@ public class AppointmentService {
         newDate = LocalDate.parse(scanner.nextLine());
         appointment.setAppointmentDate(newDate);
     }
+    public void  rescheduleAppointment(String appointmentId, LocalDate newDate, String newTime){
+        System.out.println("Please enter appointment Id ");
+        appointmentId = scanner.nextLine();
+        appointment.setAppointmentId(appointmentId);
+
+        System.out.println("Please enter appointment Date ");
+        newDate = LocalDate.parse(scanner.nextLine());
+        appointment.setAppointmentDate(newDate);
+
+        System.out.println("Please enter appointment time ");
+        newTime = scanner.nextLine();
+        appointment.setAppointmentTime(newTime);
+    }
 }
 
