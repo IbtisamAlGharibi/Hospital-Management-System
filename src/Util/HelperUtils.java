@@ -86,4 +86,10 @@ public class HelperUtils {
        }
        return false;
     }
+    public static boolean isValidDate(String dateStr) {
+        if (dateStr == null || !dateStr.matches("\\d{4}-\\d{2}-\\d{2}")) {
+            return false;
+        }
+        return true;
+    }
 }
