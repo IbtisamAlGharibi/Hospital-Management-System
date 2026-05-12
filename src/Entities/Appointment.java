@@ -1,12 +1,14 @@
 package Entities;
 
 import Behaviours.DisplayableInterface;
+import Util.HelperUtils;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Scanner;
 
 public class Appointment implements DisplayableInterface {
+    static HelperUtils helperUtils = new HelperUtils();
     private String appointmentId;
     private String patientId;
     private String doctorId;
@@ -36,7 +38,7 @@ public class Appointment implements DisplayableInterface {
     }
 
     public void setAppointmentId(String appointmentId) {
-        this.appointmentId = appointmentId;
+        this.appointmentId = helperUtils.generateId();
     }
 
     public String getPatientId() {
@@ -44,7 +46,7 @@ public class Appointment implements DisplayableInterface {
     }
 
     public void setPatientId(String patientId) {
-        this.patientId = patientId;
+        this.patientId = helperUtils.generateId();
     }
 
     public String getDoctorId() {
@@ -52,7 +54,7 @@ public class Appointment implements DisplayableInterface {
     }
 
     public void setDoctorId(String doctorId) {
-        this.doctorId = doctorId;
+        this.doctorId = helperUtils.generateId();
     }
 
     public LocalDate getAppointmentDate() {
@@ -125,7 +127,7 @@ public class Appointment implements DisplayableInterface {
         setDoctorId(newDoctorID);
 
         System.out.println("Please enter appointment Date ");
-        String newAppointmentDate = scanner.nextLine();
+        String newAppointmentDate = String.valueOf(helperUtils.isValidDate(scanner.nextLine()));
         setAppointmentDate(LocalDate.parse(newAppointmentDate));
 
         System.out.println("Please enter appointment Time ");
