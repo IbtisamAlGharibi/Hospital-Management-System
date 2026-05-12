@@ -143,4 +143,10 @@ public class HelperUtils {
         }
         return false;
     }
+    public boolean isNegative(double num) {
+        if (num < 0){
+            return true;
+        }
+        return false;
+    }
 }
