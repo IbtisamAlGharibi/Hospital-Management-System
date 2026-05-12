@@ -1,11 +1,13 @@
 package Entities;
 
+import Behaviours.DisplayableInterface;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Department {
+public class Department implements DisplayableInterface {
     private String departmentId;
     private String departmentName;
     private String headDoctorId;
@@ -111,6 +113,11 @@ public class Department {
         System.out.println("head Doctor Id: " + getHeadDoctorId() );
         System.out.println("bed Capacity: " + getBedCapacity() );
         System.out.println("available Beds: " + getAvailableBeds());
+    }
+
+    @Override
+    public void displaySummary() {
+
     }
 
     public String addDepartment(){
