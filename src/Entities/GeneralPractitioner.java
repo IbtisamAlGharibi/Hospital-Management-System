@@ -27,6 +27,10 @@ public class GeneralPractitioner extends Doctor implements DisplayableInterface 
         this.vaccinationCertified = vaccinationCertified;
     }
 
+    public GeneralPractitioner() {
+
+    }
+
     public boolean isWalkinAvailable() {
         return walkinAvailable;
     }

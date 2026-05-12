@@ -2,10 +2,7 @@ package Services;
 
 import Behaviours.ManageableInterface;
 import Behaviours.SearchableInterface;
-import Entities.Consultant;
-import Entities.Doctor;
-import Entities.Patient;
-import Entities.Surgeon;
+import Entities.*;
 import Util.MenuMessages;
 
 import javax.print.Doc;
@@ -20,6 +17,7 @@ public class DoctorService implements ManageableInterface, SearchableInterface {
            return null;
        }
    };
+   static GeneralPractitioner generalPractitioner = new GeneralPractitioner();
    static Consultant consultant = new Consultant();
    static Surgeon surgeon = new Surgeon();
     public static List<Doctor> doctors = new ArrayList<>();
@@ -169,7 +167,8 @@ public class DoctorService implements ManageableInterface, SearchableInterface {
             }
 
             case  "2.4" -> {
-
+                System.out.println("ADDING GENERAL PRACTITIONER");
+                generalPractitioner.addNewDoctor();
             }
             case "2.5" -> {
                 doctorService.displayAllDoctors();
