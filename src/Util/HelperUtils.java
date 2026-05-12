@@ -98,4 +98,8 @@ public class HelperUtils {
         }
         return false;
     }
+
+    public static boolean isFutureDate(Date date) {
+        return date.compareTo(new Date()) > 0;
+    }
 }
