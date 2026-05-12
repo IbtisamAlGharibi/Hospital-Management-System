@@ -1,12 +1,14 @@
 package Entities;
 
+import Behaviours.DisplayableInterface;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-public class Consultant extends Doctor{
+public class Consultant extends Doctor implements DisplayableInterface {
     private List<String > consultationTypes = new ArrayList<>();
     private boolean onlineConsultationAvailable;
     private int consultationDuration;
@@ -70,6 +72,12 @@ public class Consultant extends Doctor{
         System.out.println("consultation Types : " + getConsultationTypes());
         System.out.println("consultation Duration : " + getConsultationDuration());
     }
+
+    @Override
+    public void displaySummary() {
+
+    }
+
     public void scheduleConsultation(){
         System.out.println("SCHEDULING CONSULTATION");
         System.out.println("-------------------------------");
