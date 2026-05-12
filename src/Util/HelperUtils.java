@@ -34,4 +34,11 @@ public class HelperUtils {
        }
        return false;
    }
+
+   public boolean isValidString(String str, int minLength){
+       if (str.length() >= minLength){
+           return true;
+       }
+       return false;
+   }
 }
