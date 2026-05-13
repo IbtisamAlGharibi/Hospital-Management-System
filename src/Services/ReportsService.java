@@ -1,5 +1,6 @@
 package Services;
 
+import Entities.Patient;
 import Util.MenuMessages;
 
 import java.util.Scanner;
@@ -7,6 +8,7 @@ import java.util.Scanner;
 public class ReportsService {
     static MenuMessages menuMessages = new MenuMessages();
     static Scanner scanner = new Scanner(System.in);
+    static PatientService patientService = new PatientService();
 
     public boolean HandleReportsMenu(){
         System.out.println(menuMessages.REPORTS_MENU_MESSAGE);
@@ -36,7 +38,8 @@ public class ReportsService {
             }
 
             case  "7.4" -> {
-
+                System.out.println("PATIENT STATISTIC");
+                patientService.displayAllPatients();
             }
             case "7.5" -> {
             }
