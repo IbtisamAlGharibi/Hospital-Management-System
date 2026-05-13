@@ -26,6 +26,7 @@ public class MainApp {
             return null;
         }
     };
+    static ReportsService reportsService = new ReportsService();
 
     public static void main(String[] args){
         System.out.println(MenuMessages.MAIN_MENU_MESSAGE);
@@ -83,6 +84,14 @@ public class MainApp {
                     System.out.println("Enter E to exit");
                     if (scanner.nextLine().equalsIgnoreCase("e")) {
                         six = false;
+                    }
+                }
+                case 7 ->{
+                    boolean seven = true;
+                    reportsService.HandleReportsMenu();
+                    System.out.println("Enter E to exit");
+                    if (scanner.nextLine().equalsIgnoreCase("e")) {
+                        seven = false;
                     }
                 }
             }
