@@ -164,5 +164,15 @@ public class MainApp {
             p.setDailyCharges(150.0);
             patientService.add(p);
         }
+
+        //Entering OutPatient
+        for (int i = 7; i <= 8; i++) {
+            OutPatient p = new OutPatient();
+            p.setPatientId("P00" + i);
+            p.setFirstName("OutPatient" + i);
+            p.setVisitCount(1);
+            p.setLastVisitDate(LocalDate.now());
+            patientService.add(p);
+        }
     }
 }
