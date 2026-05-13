@@ -225,6 +225,8 @@ public class AppointmentService implements ManageableInterface, SearchableInterf
             }
 
             case  "4.4" -> {
+                System.out.println("VIEWING APPOINTMENT BY DOCTOR");
+                getAppointmentsByDoctor();
 
             }
             case "4.5" -> {
