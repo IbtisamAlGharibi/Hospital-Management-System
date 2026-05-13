@@ -121,7 +121,8 @@ public class DepartmentService implements ManageableInterface, SearchableInterfa
                 System.out.println("ASSIGNING NURSE TO DEPARTMENT");
                 assignNurseToDepartment();
             }case "6.6" -> {
-
+                System.out.println("UPDATING DEPARTMENT");
+                department.addDepartment();
 
             }case "6.7"-> {
 
