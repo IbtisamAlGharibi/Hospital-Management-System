@@ -14,7 +14,11 @@ public class ReportsService {
         String reportOption = scanner.nextLine();
         switch (reportOption) {
             case  "7.1" -> {
-
+                System.out.println("DAILY APPOINTMENTS REPORT");
+                System.out.println("---------------------------------");
+                System.out.println("Please enter the report: ");
+                String report = scanner.nextLine();
+                System.out.println(report);
             }
             case "7.2" -> {
 
