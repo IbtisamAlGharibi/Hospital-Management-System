@@ -148,7 +148,8 @@ public class MedicalRecordService implements ManageableInterface, SearchableInte
             case "5.5" -> {
                 updateMedicalRecord();
             }case "5.6" -> {
-
+                System.out.println("DELETING MEDICAL RECORD");
+                deleteMedicalRecord();
 
             }case "5.7"-> {
 
