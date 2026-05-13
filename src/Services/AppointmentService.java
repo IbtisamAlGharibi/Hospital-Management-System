@@ -233,6 +233,8 @@ public class AppointmentService implements ManageableInterface, SearchableInterf
                 System.out.println("VIEWING APPOINTMENT BY DATE");
                 getAppointmentsByDate();
             }case "4.6" -> {
+                System.out.println("RESCHEDULING APPOINTMENT");
+                rescheduleAppointment();
 
             }case "4.7"-> {
 
