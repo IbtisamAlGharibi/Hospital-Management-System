@@ -95,7 +95,7 @@ public class DepartmentService implements ManageableInterface, SearchableInterfa
                 department.addNewDepartment();
             }
             case "6.2" -> {
-
+                displayAllDepartments();
             }
             case "6.3" -> {
 
