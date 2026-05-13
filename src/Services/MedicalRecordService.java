@@ -123,8 +123,8 @@ public class MedicalRecordService implements ManageableInterface, SearchableInte
             }
 
             case  "5.4" -> {
-
-
+                System.out.println("VIEWING RECORD BY DOCTOR");
+                getRecordsByDoctorId();
             }
             case "5.5" -> {
 
