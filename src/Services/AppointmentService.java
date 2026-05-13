@@ -216,7 +216,8 @@ public class AppointmentService implements ManageableInterface, SearchableInterf
                patient.addNewAppointment();
             }
             case "4.2" -> {
-
+                System.out.println("VIEWING ALL APPOINTMENTS");
+                appointment.displayInfo();
             }
             case "4.3" -> {
 
