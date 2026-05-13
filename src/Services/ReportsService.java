@@ -28,7 +28,11 @@ public class ReportsService {
                 System.out.println(report);
             }
             case "7.3" -> {
-
+                System.out.println("DEPARTMENT OCCUPANCY REPORT");
+                System.out.println("---------------------------------");
+                System.out.println("Please enter the report: ");
+                String report = scanner.nextLine();
+                System.out.println(report);
             }
 
             case  "7.4" -> {
