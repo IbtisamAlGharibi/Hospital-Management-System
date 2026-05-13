@@ -243,7 +243,8 @@ public class AppointmentService implements ManageableInterface, SearchableInterf
                 System.out.println("COMPLETING APPOINTMENT");
                 appointment.complete();
             }case "4.9"-> {
-
+                System.out.println("VIEWING UPCOMING APPOINTMENTS");
+                getAppointmentsByDate();
             }
             case "4.10" -> {
                 return false;
