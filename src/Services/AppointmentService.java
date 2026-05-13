@@ -230,7 +230,8 @@ public class AppointmentService implements ManageableInterface, SearchableInterf
 
             }
             case "4.5" -> {
-
+                System.out.println("VIEWING APPOINTMENT BY DATE");
+                getAppointmentsByDate();
             }case "4.6" -> {
 
             }case "4.7"-> {
