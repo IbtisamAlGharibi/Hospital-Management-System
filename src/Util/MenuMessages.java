@@ -61,4 +61,14 @@ public class MenuMessages {
                     "5.6 Delete Medical Record \n" +
                     "5.7 Generate Patient History Report\n" +
                     "5.8 Exit";
+
+    public static String DEPARTMENT_MENU_MESSAGE =
+            "6.1 Add Department \n" +
+                    "6.2 View All Departments\n" +
+                    "6.3 View Department Details   \n" +
+                    "6.4 Assign Doctor to Department\n" +
+                    "6.5 Assign Nurse to Department  \n" +
+                    "6.6 Update Department Information \n" +
+                    "6.7 View Department Statistics\n" +
+                    "6.8 Exit";
 }
