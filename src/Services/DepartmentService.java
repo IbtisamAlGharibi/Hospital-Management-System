@@ -61,6 +61,18 @@ public class DepartmentService implements ManageableInterface, SearchableInterfa
         }
     }
 
+    public void assignNurseToDepartment(){
+        System.out.println("Please enter the Nurse full name to be assigned");
+        String nurseNameToAssign = scanner.nextLine();
+        String nurseFullName = nurse.getFirstName() + " "+nurse.getLastName();
+        if (nurseNameToAssign.equalsIgnoreCase(nurseFullName)){
+            departments.add(nurseNameToAssign);
+            System.out.println(nurseNameToAssign + "Added to department list SUCCESSFULLY");
+        }else {
+            System.out.println("No nurse with this name");
+        }
+    }
+
     @Override
     public void add(Object entity) {
 
