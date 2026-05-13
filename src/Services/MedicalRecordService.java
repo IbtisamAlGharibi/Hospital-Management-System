@@ -104,7 +104,8 @@ public class MedicalRecordService implements ManageableInterface, SearchableInte
                 medicalRecord.displayInfo();
             }
             case "5.3" -> {
-
+                System.out.println("VIEWING RECORD BY PATIENT");
+                getRecordsByPatientId();
             }
 
             case  "5.4" -> {
