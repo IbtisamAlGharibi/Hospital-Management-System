@@ -125,7 +125,8 @@ public class DepartmentService implements ManageableInterface, SearchableInterfa
                 department.addDepartment();
 
             }case "6.7"-> {
-
+                System.out.println("VIEWING DEPARTMENT STATISTICS");
+                getDepartmentById();
             }
             case "6.8" -> {
                 return false;
