@@ -154,5 +154,15 @@ public class MainApp {
             p.setFirstName("Patient" + i);
             patientService.add(p);
         }
+
+        //Entering InPatient
+        for (int i = 4; i <= 6; i++) {
+            InPatient p = new InPatient();
+            p.setPatientId("P00" + i);
+            p.setFirstName("InPatient" + i);
+            p.setAdmissionDate(LocalDate.now());
+            p.setDailyCharges(150.0);
+            patientService.add(p);
+        }
     }
 }
