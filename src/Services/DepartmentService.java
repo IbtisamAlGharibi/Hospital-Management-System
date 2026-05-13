@@ -6,6 +6,7 @@ import Entities.Department;
 import Entities.Doctor;
 import Entities.Nurse;
 import Entities.Patient;
+import Util.MenuMessages;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +17,7 @@ public class DepartmentService implements ManageableInterface, SearchableInterfa
     static List<Patient> patients = new ArrayList<>();
     static List<Doctor> doctors = new ArrayList<>();
     static Nurse nurse = new Nurse();
+    static MenuMessages menuMessages = new MenuMessages();
     static Doctor doctor = new Doctor() {
         @Override
         public Doctor addDoctor() {
@@ -82,5 +84,38 @@ public class DepartmentService implements ManageableInterface, SearchableInterfa
     @Override
     public void searchById(String id) {
 
+    }
+
+    public boolean HandleDepartmentMenu(){
+        System.out.println(menuMessages.DEPARTMENT_MENU_MESSAGE);
+        System.out.println("Please enter number");
+        String departmentOption = scanner.nextLine();
+        switch (departmentOption) {
+            case  "6.1" -> {
+
+            }
+            case "6.2" -> {
+
+            }
+            case "6.3" -> {
+
+            }
+
+            case  "6.4" -> {
+
+            }
+            case "6.5" -> {
+
+            }case "6.6" -> {
+
+
+            }case "6.7"-> {
+
+            }
+            case "6.8" -> {
+                return false;
+            }
+        }
+        return true;
     }
 }
