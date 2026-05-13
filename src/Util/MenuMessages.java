@@ -39,4 +39,16 @@ public class MenuMessages {
                     "3.6 Update Nurse Information\n" +
                     "3.7 Remove Nurse\n" +
                     "3.8 Exit";
+
+    public static String APPOINTMENT_MENU_MESSAGE =
+            "4.1 Schedule New Appointment  \n" +
+                    "4.2 View All Appointments\n" +
+                    "4.3 View Appointments by Patient \n" +
+                    "4.4 View Appointments by Doctor\n" +
+                    "4.5 View Appointments by Date \n" +
+                    "4.6 Reschedule Appointment\n" +
+                    "4.7 Cancel Appointment \n" +
+                    "4.8 Complete Appointment \n" +
+                    "4.9 View Upcoming Appointments\n" +
+                    "4.10 Exit";
 }
