@@ -103,6 +103,25 @@ public class MedicalRecordService implements ManageableInterface, SearchableInte
             }
         }
     }
+    public void deleteMedicalRecord(){
+        System.out.println("Please enter the record Id you want to remove");
+        String recordIdToRemove = scanner.nextLine();
+        for (int i = 0; i < medicalRecords.size(); i++) {
+            String searchedId = String.valueOf(medicalRecords.get(i));
+            if (recordIdToRemove.equalsIgnoreCase(searchedId)) {
+                System.out.println("Are you sure you want to remove?Yes/No");
+                String confirm = scanner.nextLine();
+                if (confirm.equalsIgnoreCase("Yes")) {
+                    medicalRecords.remove(recordIdToRemove);
+                    System.out.println(recordIdToRemove + " REMOVING SUCCESSFULLY");
+                } else {
+                    System.out.println("REMOVING REJECTED");
+                }
+            } else {
+                System.out.println("NOT FOUND");
+            }
+        }
+    }
 
     public boolean HandleMedicalRecordMenu(){
         System.out.println(menuMessages.MEDICALRECORD_MENU_MESSAGE);
