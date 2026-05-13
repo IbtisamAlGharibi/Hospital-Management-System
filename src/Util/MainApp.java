@@ -188,5 +188,14 @@ public class MainApp {
             p.setAdmittedViaER(true);
             patientService.add(p);
         }
+
+        //Entering Appointments
+        for (int i = 1; i <= 15; i++) {
+            Appointment a = new Appointment();
+            a.setAppointmentId("A00" + i);
+            a.setAppointmentDate(LocalDate.now().plusDays(i));
+            a.setStatus("Scheduled");
+            appointmentService.add(a);
+        }
     }
 }
