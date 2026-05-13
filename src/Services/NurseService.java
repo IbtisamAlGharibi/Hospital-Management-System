@@ -188,7 +188,8 @@ public class NurseService implements ManageableInterface, SearchableInterface {
                 System.out.println("ASSIGNING NURSE TO PATIENT ");
                 nurse.assignPatient();
             }case "3.6" -> {
-
+                System.out.println("UPDATING NURSE INFORMATION");
+                editNurse();
             }case "3.7"-> {
 
             }
