@@ -92,7 +92,7 @@ public class DepartmentService implements ManageableInterface, SearchableInterfa
         String departmentOption = scanner.nextLine();
         switch (departmentOption) {
             case  "6.1" -> {
-
+                department.addNewDepartment();
             }
             case "6.2" -> {
 
