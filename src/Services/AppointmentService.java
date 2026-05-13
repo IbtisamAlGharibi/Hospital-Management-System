@@ -240,7 +240,8 @@ public class AppointmentService implements ManageableInterface, SearchableInterf
                 System.out.println("CANCELING APPOINTMENT");
                 cancelAppointment();
             }case "4.8"-> {
-
+                System.out.println("COMPLETING APPOINTMENT");
+                appointment.complete();
             }case "4.9"-> {
 
             }
