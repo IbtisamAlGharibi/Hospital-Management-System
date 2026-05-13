@@ -237,7 +237,8 @@ public class AppointmentService implements ManageableInterface, SearchableInterf
                 rescheduleAppointment();
 
             }case "4.7"-> {
-
+                System.out.println("CANCELING APPOINTMENT");
+                cancelAppointment();
             }case "4.8"-> {
 
             }case "4.9"-> {
