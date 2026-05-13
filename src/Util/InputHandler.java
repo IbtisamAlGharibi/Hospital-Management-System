@@ -29,5 +29,8 @@ public class InputHandler {
             System.out.println("Invalid number. Try again.");
         }
     }
-
+    public void getDoubleInput(String prompt){
+        Scanner scanner = new Scanner(System.in);
+        prompt = String.valueOf(scanner.nextDouble());
+    }
 }
