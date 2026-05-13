@@ -133,5 +133,13 @@ public class MainApp {
             );
             doctorService.add(doctor);
         }
+
+        //Entering 5 nurses
+        for (int i = 1; i <= 5; i++) {
+            Nurse nurse = new Nurse();
+            nurse.setNurseId("N00" + i);
+            nurse.setFirstName("Nurse" + i);
+            nurseService.add(nurse);
+        }
     }
 }
