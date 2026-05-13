@@ -13,6 +13,7 @@ public class MainApp {
     static PatientService patientService = new PatientService();
     static AppointmentService appointmentService = new AppointmentService();
     static MedicalRecordService medicalRecordService = new MedicalRecordService();
+    static DepartmentService departmentService = new DepartmentService();
     static Patient patient = new Patient() {
         @Override
         public Patient addPatient() {
@@ -74,6 +75,14 @@ public class MainApp {
                     System.out.println("Enter E to exit");
                     if (scanner.nextLine().equalsIgnoreCase("e")) {
                         fifth = false;
+                    }
+                }
+                case 6 ->{
+                    boolean six = true;
+                    departmentService.HandleDepartmentMenu();
+                    System.out.println("Enter E to exit");
+                    if (scanner.nextLine().equalsIgnoreCase("e")) {
+                        six = false;
                     }
                 }
             }
