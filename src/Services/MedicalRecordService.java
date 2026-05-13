@@ -19,6 +19,12 @@ public class MedicalRecordService implements ManageableInterface, SearchableInte
     static Scanner scanner = new Scanner(System.in);
     static List<Patient> patients = new ArrayList<>();
     static List<Doctor> doctors = new ArrayList<>();
+    static Patient patient = new Patient() {
+        @Override
+        public Patient addPatient() {
+            return null;
+        }
+    };
 
     public void getRecordsByPatientId(){
         System.out.println("Please enter the patient Id");
@@ -90,7 +96,8 @@ public class MedicalRecordService implements ManageableInterface, SearchableInte
         String medicalRecordOption = scanner.nextLine();
         switch (medicalRecordOption) {
             case  "5.1" -> {
-
+                System.out.println("CREATING MEDICAL RECORD");
+                patient.addNewMedicalRecord();
             }
             case "5.2" -> {
 
