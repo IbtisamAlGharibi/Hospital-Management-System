@@ -176,7 +176,7 @@ public class NurseService implements ManageableInterface, SearchableInterface {
                 displayAllNurses();
             }
             case "3.3" -> {
-                System.out.println("VIEWING NURSE BU DEPARTMENT");
+                System.out.println("VIEWING NURSE BY DEPARTMENT");
                 getNursesByDepartment();
             }
 
