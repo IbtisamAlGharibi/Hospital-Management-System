@@ -127,7 +127,7 @@ public class MedicalRecordService implements ManageableInterface, SearchableInte
                 getRecordsByDoctorId();
             }
             case "5.5" -> {
-
+                updateMedicalRecord();
             }case "5.6" -> {
 
 
