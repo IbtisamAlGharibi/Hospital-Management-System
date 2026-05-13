@@ -191,7 +191,7 @@ public class NurseService implements ManageableInterface, SearchableInterface {
                 System.out.println("UPDATING NURSE INFORMATION");
                 editNurse();
             }case "3.7"-> {
-
+                removeNurse();
             }
             case "3.8" -> {
                 return false;
