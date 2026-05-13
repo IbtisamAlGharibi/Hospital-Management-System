@@ -174,5 +174,19 @@ public class MainApp {
             p.setLastVisitDate(LocalDate.now());
             patientService.add(p);
         }
+
+        //Entering Emergency Patient
+        for (int i = 9; i <= 10; i++) {
+            EmergencyPatient p = new EmergencyPatient();
+            p.setPatientId("P00" + i);
+            p.setFirstName("Emergency" + i);
+            p.setAdmissionDate(LocalDate.now());
+            p.setDailyCharges(300.0);
+            p.setEmergencyType("Accident");
+            p.setArrivalMode("Ambulance");
+            p.setTriageLevel(1);
+            p.setAdmittedViaER(true);
+            patientService.add(p);
+        }
     }
 }
