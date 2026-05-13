@@ -172,7 +172,8 @@ public class NurseService implements ManageableInterface, SearchableInterface {
                 addNewNurse();
             }
             case "3.2" -> {
-
+                System.out.println("VIEWING ALL NURSES");
+                displayAllNurses();
             }
             case "3.3" -> {
 
