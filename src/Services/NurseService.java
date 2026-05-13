@@ -3,6 +3,7 @@ package Services;
 import Behaviours.ManageableInterface;
 import Behaviours.SearchableInterface;
 import Entities.Nurse;
+import Util.MenuMessages;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +13,7 @@ public class NurseService implements ManageableInterface, SearchableInterface {
     static Scanner scanner = new Scanner(System.in);
     static Nurse nurse = new Nurse();
     static List<Nurse> nurses = new ArrayList<>();
+    static MenuMessages menuMessages = new MenuMessages();
 
     public Nurse addNurse(){
         System.out.println("ADDING NEW NURSE");
@@ -158,5 +160,38 @@ public class NurseService implements ManageableInterface, SearchableInterface {
     @Override
     public void searchById(String id) {
 
+    }
+
+    public boolean HandleNurseMenu(){
+        System.out.println(menuMessages.NURSE_MENU_MESSAGE);
+        System.out.println("Please enter number");
+        String nurseOption = scanner.nextLine();
+        switch (nurseOption) {
+            case  "3.1" -> {
+                System.out.println("ADDING NURSE");
+                addNewNurse();
+            }
+            case "3.2" -> {
+
+            }
+            case "3.3" -> {
+
+            }
+
+            case  "3.4" -> {
+
+            }
+            case "3.5" -> {
+
+            }case "3.6" -> {
+
+            }case "3.7"-> {
+
+            }
+            case "3.8" -> {
+                return false;
+            }
+        }
+        return true;
     }
 }
