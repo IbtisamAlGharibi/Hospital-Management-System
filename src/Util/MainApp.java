@@ -2,6 +2,7 @@ package Util;
 
 import Entities.*;
 import Services.*;
+import com.sun.tools.javac.Main;
 
 import java.time.LocalDate;
 import java.util.Scanner;
@@ -30,6 +31,8 @@ public class MainApp {
 
     public static void main(String[] args){
         System.out.println(MenuMessages.MAIN_MENU_MESSAGE);
+        MainApp mainApp =new  MainApp();
+        mainApp.sampleData();
 
         boolean mainMenuContinue = true;
         while (mainMenuContinue) {
