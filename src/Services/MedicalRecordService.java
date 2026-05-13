@@ -19,6 +19,8 @@ public class MedicalRecordService implements ManageableInterface, SearchableInte
     static Scanner scanner = new Scanner(System.in);
     static List<Patient> patients = new ArrayList<>();
     static List<Doctor> doctors = new ArrayList<>();
+    static List<String > medicalRecords = new ArrayList<>();
+
     static Patient patient = new Patient() {
         @Override
         public Patient addPatient() {
@@ -88,6 +90,18 @@ public class MedicalRecordService implements ManageableInterface, SearchableInte
     @Override
     public void searchById(String id) {
 
+    }
+    public void updateMedicalRecord(){
+        System.out.println("UPDATING MEDICAL RECORD");
+        System.out.println("-------------------------------------");
+        System.out.println("Please enter medical record ID you want to update");
+        String medicalRecordIDToSearch = scanner.nextLine();
+        for (int i = 0; i < medicalRecords.size(); i++) {
+            String oldId = String.valueOf(medicalRecords.get(i));
+            if (medicalRecordIDToSearch.equalsIgnoreCase(oldId)) {
+                patient.addNewMedicalRecord();
+            }
+        }
     }
 
     public boolean HandleMedicalRecordMenu(){
