@@ -25,6 +25,7 @@ public class PatientService implements ManageableInterface, SearchableInterface 
     static OutPatient outPatient = new OutPatient();
     static EmergencyPatient emergencyPatient = new EmergencyPatient();
     static MedicalRecord medicalRecord = new MedicalRecord();
+    static MedicalRecordService medicalRecordService = new MedicalRecordService();
 
     public Patient addPatient() {
         System.out.println("ADDING NEW PATIENT");
@@ -186,7 +187,8 @@ public class PatientService implements ManageableInterface, SearchableInterface 
                 patientService.removePatient();
             }
             case "1.9" -> {
-                medicalRecord.displayInfo();
+                System.out.println("Displaying patient medical history");
+                    medicalRecordService.displayPatientHistory();
             }
 
             case "1.10" -> {
