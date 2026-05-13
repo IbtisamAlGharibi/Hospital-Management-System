@@ -71,4 +71,12 @@ public class MenuMessages {
                     "6.6 Update Department Information \n" +
                     "6.7 View Department Statistics\n" +
                     "6.8 Exit";
+
+    public static String REPORTS_MENU_MESSAGE =
+            "7.1 Daily Appointments Report\n" +
+                    "7.2 Doctor Performance Report \n" +
+                    "7.3 Department Occupancy Report  \n" +
+                    "7.4 Patient Statistics \n" +
+                    "7.5 Emergency Cases Report  \n" +
+                    "7.6 Exit";
 }
