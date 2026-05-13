@@ -212,7 +212,8 @@ public class AppointmentService implements ManageableInterface, SearchableInterf
         String appointmentOption = scanner.nextLine();
         switch (appointmentOption) {
             case  "4.1" -> {
-
+                System.out.println("SCHEDULING NEW APPOINTMENT");
+               patient.addNewAppointment();
             }
             case "4.2" -> {
 
