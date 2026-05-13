@@ -220,7 +220,8 @@ public class AppointmentService implements ManageableInterface, SearchableInterf
                 appointment.displayInfo();
             }
             case "4.3" -> {
-
+                System.out.println("VIEWING APPOINTMENT BY PATIENT");
+                getAppointmentsByPatient();
             }
 
             case  "4.4" -> {
