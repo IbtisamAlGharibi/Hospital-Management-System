@@ -100,7 +100,8 @@ public class MedicalRecordService implements ManageableInterface, SearchableInte
                 patient.addNewMedicalRecord();
             }
             case "5.2" -> {
-
+                System.out.println("DISPLAYING ALL RECORDS");
+                medicalRecord.displayInfo();
             }
             case "5.3" -> {
 
