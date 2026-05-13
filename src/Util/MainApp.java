@@ -141,5 +141,18 @@ public class MainApp {
             nurse.setFirstName("Nurse" + i);
             nurseService.add(nurse);
         }
+
+        //entering regular patient
+        for (int i = 1; i <= 3; i++) {
+            Patient p = new Patient() {
+                @Override
+                public Patient addPatient() {
+                    return null;
+                }
+            };
+            p.setPatientId("P00" + i);
+            p.setFirstName("Patient" + i);
+            patientService.add(p);
+        }
     }
 }
