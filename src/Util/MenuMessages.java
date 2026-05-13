@@ -30,4 +30,13 @@ public class MenuMessages {
                     "2.9 Update Doctor Information \n" +
                     "2.10 Remove Doctor\n"+"2.11 Exit";
 
+    public static String NURSE_MENU_MESSAGE =
+            "3.1 Add Nurse \n" +
+                    "3.2 View All Nurses\n" +
+                    "3.3 View Nurses by Department\n" +
+                    "3.4 View Nurses by Shift \n" +
+                    "3.5 Assign Nurse to Patient \n" +
+                    "3.6 Update Nurse Information\n" +
+                    "3.7 Remove Nurse\n" +
+                    "3.8 Exit";
 }
