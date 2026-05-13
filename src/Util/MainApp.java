@@ -197,5 +197,16 @@ public class MainApp {
             a.setStatus("Scheduled");
             appointmentService.add(a);
         }
+
+        //Entering Medical Records
+        for (int i = 1; i <= 12; i++) {
+            MedicalRecord r = new MedicalRecord();
+            r.setRecordId("R00" + i);
+            r.setVisitDate(LocalDate.now());
+            r.setDiagnosis("Diagnosis " + i);
+            medicalRecordService.add(r);
+        }
+
+        System.out.println("Sample data created successfully.");
     }
 }
