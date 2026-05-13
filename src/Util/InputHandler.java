@@ -33,4 +33,8 @@ public class InputHandler {
         Scanner scanner = new Scanner(System.in);
         prompt = String.valueOf(scanner.nextDouble());
     }
+    public void getDateInput(String prompt){
+        Scanner scanner = new Scanner(System.in);
+        prompt = scanner.next();
+    }
 }
