@@ -51,4 +51,14 @@ public class MenuMessages {
                     "4.8 Complete Appointment \n" +
                     "4.9 View Upcoming Appointments\n" +
                     "4.10 Exit";
+
+    public static String MEDICALRECORD_MENU_MESSAGE =
+            "5.1 Create Medical Record\n" +
+                    "5.2 View All Records\n" +
+                    "5.3 View Records by Patient  \n" +
+                    "5.4 View Records by Doctor\n" +
+                    "5.5 Update Medical Record \n" +
+                    "5.6 Delete Medical Record \n" +
+                    "5.7 Generate Patient History Report\n" +
+                    "5.8 Exit";
 }
