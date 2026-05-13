@@ -5,6 +5,7 @@ import Behaviours.SearchableInterface;
 import Entities.Doctor;
 import Entities.MedicalRecord;
 import Entities.Patient;
+import Util.MenuMessages;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +15,7 @@ public class MedicalRecordService implements ManageableInterface, SearchableInte
     static MedicalRecord medicalRecord = new MedicalRecord();
     static PatientService patientService = new PatientService();
     static DoctorService doctorService = new DoctorService();
+    static MenuMessages menuMessages = new MenuMessages();
     static Scanner scanner = new Scanner(System.in);
     static List<Patient> patients = new ArrayList<>();
     static List<Doctor> doctors = new ArrayList<>();
@@ -80,5 +82,39 @@ public class MedicalRecordService implements ManageableInterface, SearchableInte
     @Override
     public void searchById(String id) {
 
+    }
+
+    public boolean HandleMedicalRecordMenu(){
+        System.out.println(menuMessages.MEDICALRECORD_MENU_MESSAGE);
+        System.out.println("Please enter number");
+        String medicalRecordOption = scanner.nextLine();
+        switch (medicalRecordOption) {
+            case  "5.1" -> {
+
+            }
+            case "5.2" -> {
+
+            }
+            case "5.3" -> {
+
+            }
+
+            case  "5.4" -> {
+
+
+            }
+            case "5.5" -> {
+
+            }case "5.6" -> {
+
+
+            }case "5.7"-> {
+
+            }
+            case "5.8" -> {
+                return false;
+            }
+        }
+        return true;
     }
 }
