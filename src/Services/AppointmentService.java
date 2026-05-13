@@ -7,6 +7,7 @@ import Entities.Appointment;
 import Entities.Doctor;
 import Entities.MedicalRecord;
 import Entities.Patient;
+import Util.MenuMessages;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -21,6 +22,7 @@ public class AppointmentService implements ManageableInterface, SearchableInterf
     static List<Patient> patients = new ArrayList<>();
     static List<Doctor> doctors = new ArrayList<>();
     static Appointment appointment =new Appointment();
+    static MenuMessages menuMessages = new MenuMessages();
     public static Patient patient = new Patient() {
         @Override
         public Patient addPatient() {
@@ -202,6 +204,42 @@ public class AppointmentService implements ManageableInterface, SearchableInterf
     @Override
     public void searchById(String id) {
 
+    }
+
+    public boolean HandleAppointmentMenu(){
+        System.out.println(menuMessages.APPOINTMENT_MENU_MESSAGE);
+        System.out.println("Please enter number");
+        String appointmentOption = scanner.nextLine();
+        switch (appointmentOption) {
+            case  "4.1" -> {
+
+            }
+            case "4.2" -> {
+
+            }
+            case "4.3" -> {
+
+            }
+
+            case  "4.4" -> {
+
+            }
+            case "4.5" -> {
+
+            }case "4.6" -> {
+
+            }case "4.7"-> {
+
+            }case "4.8"-> {
+
+            }case "4.9"-> {
+
+            }
+            case "4.10" -> {
+                return false;
+            }
+        }
+        return true;
     }
 }
 
