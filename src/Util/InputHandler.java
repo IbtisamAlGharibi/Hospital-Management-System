@@ -37,4 +37,8 @@ public class InputHandler {
         Scanner scanner = new Scanner(System.in);
         prompt = scanner.next();
     }
+    public void getConfirmation(String prompt){
+        Scanner scanner = new Scanner(System.in);
+        prompt = scanner.nextLine();
+    }
 }
