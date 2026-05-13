@@ -185,7 +185,8 @@ public class NurseService implements ManageableInterface, SearchableInterface {
                 getNursesByShift();
             }
             case "3.5" -> {
-
+                System.out.println("ASSIGNING NURSE TO PATIENT ");
+                nurse.assignPatient();
             }case "3.6" -> {
 
             }case "3.7"-> {
