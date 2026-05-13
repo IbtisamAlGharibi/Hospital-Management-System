@@ -8,7 +8,7 @@ import java.util.Collections;
 import static Entities.Doctor.patient;
 import static Services.PatientService.patients;
 
-public class EmergencyPatient extends Patient implements DisplayableInterface {
+public class EmergencyPatient extends InPatient implements DisplayableInterface {
     private String emergencyType;
     private String arrivalMode;
     private int triageLevel;
