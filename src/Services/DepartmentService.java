@@ -98,7 +98,7 @@ public class DepartmentService implements ManageableInterface, SearchableInterfa
                 displayAllDepartments();
             }
             case "6.3" -> {
-
+                department.displayInfo();
             }
 
             case  "6.4" -> {
