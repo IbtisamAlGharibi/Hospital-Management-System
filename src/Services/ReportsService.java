@@ -42,6 +42,11 @@ public class ReportsService {
                 patientService.displayAllPatients();
             }
             case "7.5" -> {
+                System.out.println("EMERGENCY CASE REPORT");
+                System.out.println("---------------------------------");
+                System.out.println("Please enter the report: ");
+                String report = scanner.nextLine();
+                System.out.println(report);
             }
             case "7.6" -> {
                 return false;
