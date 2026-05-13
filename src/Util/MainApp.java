@@ -97,6 +97,7 @@ public class MainApp {
             }
 
 
+
 }
 }
     public void sampleData() {
@@ -115,5 +116,22 @@ public class MainApp {
         departmentService.add(d1);
         departmentService.add(d2);
         departmentService.add(d3);
+
+        //Entering 8 doctors
+        for (int i = 1; i <= 8; i++) {
+            Doctor doctor = new Doctor() {
+                @Override
+                public Doctor addDoctor() {
+                    return null;
+                }
+            };
+            doctor.setDoctorId("DR00" + i);
+            doctor.setFirstName("Doctor" + i);
+            doctor.setSpecialization(
+                    i % 3 == 0 ? "Surgeon" :
+                            i % 3 == 1 ? "Consultant" : "GP"
+            );
+            doctorService.add(doctor);
+        }
     }
 }

@@ -89,7 +89,7 @@ public class InPatient extends  Patient implements DisplayableInterface, Billabl
     }
 
     public void setDailyCharges(double dailyCharges) {
-        this.dailyCharges = Double.parseDouble(String.valueOf(helperUtils.isPositive(dailyCharges)));
+        this.dailyCharges = dailyCharges;
     }
 
     @Override
