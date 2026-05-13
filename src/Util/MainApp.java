@@ -1,9 +1,9 @@
 package Util;
 
 import Entities.Doctor;
-import Entities.InPatient;
 import Entities.Patient;
 import Services.DoctorService;
+import Services.NurseService;
 import Services.PatientService;
 
 import java.util.Scanner;
@@ -11,6 +11,7 @@ import java.util.Scanner;
 public class MainApp {
     static Scanner scanner = new Scanner(System.in);
     static DoctorService doctorService = new DoctorService();
+    static NurseService nurseService = new NurseService();
     static PatientService patientService = new PatientService();
     static Patient patient = new Patient() {
         @Override
@@ -50,8 +51,16 @@ public class MainApp {
                         if (scanner.nextLine().equalsIgnoreCase("e")) {
                             second = false;
                         }
+                }
+                case 3 ->{
+                    boolean third = true;
+                    nurseService.HandleNurseMenu();
+                    System.out.println("Enter E to exit");
+                    if (scanner.nextLine().equalsIgnoreCase("e")) {
+                        third = false;
                     }
                 }
+            }
 
 
 }
