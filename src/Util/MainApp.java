@@ -165,24 +165,6 @@ public class MainApp {
                 55.0,400,true));
 
 
-
-        //Entering 8 doctors
-        for (int i = 1; i <= 8; i++) {
-            Doctor doctor = new Doctor() {
-                @Override
-                public Doctor addDoctor() {
-                    return null;
-                }
-            };
-            doctor.setDoctorId("DR00" + i);
-            doctor.setFirstName("Doctor" + i);
-            doctor.setSpecialization(
-                    i % 3 == 0 ? "Surgeon" :
-                            i % 3 == 1 ? "Consultant" : "GP"
-            );
-            doctorService.add(doctor);
-        }
-
         //Entering 5 nurses
         for (int i = 1; i <= 5; i++) {
             Nurse nurse = new Nurse();
