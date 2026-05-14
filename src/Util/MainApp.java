@@ -38,7 +38,7 @@ public class MainApp {
 
         boolean mainMenuContinue = true;
         while (mainMenuContinue) {
-            int option = scanner.nextInt();
+            int option = Integer.parseInt(scanner.nextLine());
 
             switch (option){
                 case 1 -> {
