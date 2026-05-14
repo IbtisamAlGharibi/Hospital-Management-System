@@ -248,11 +248,16 @@ public class MainApp {
 
         //Entering Medical Records
         for (int i = 1; i <= 12; i++) {
-            MedicalRecord r = new MedicalRecord();
-            r.setRecordId("R00" + i);
-            r.setVisitDate(LocalDate.now());
-            r.setDiagnosis("Diagnosis " + i);
-            medicalRecordService.add(r);
+            medicalRecordService.add(new MedicalRecord(
+                    "MR00" + i,
+                    "P00" + i,
+                    "D00" + i,
+                    LocalDate.now(),
+                    "Diagnosis " + i,
+                    "Prescription " + i,
+                    "Test Result " + i,
+                    "Notes " + i
+            ));
         }
 
         System.out.println("Sample data created successfully.");
