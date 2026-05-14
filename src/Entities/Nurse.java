@@ -44,6 +44,9 @@ public class Nurse extends Person implements DisplayableInterface {
 
     }
 
+    public Nurse(String n001, String nusaiba, String khalid, LocalDate of, String female, String number, String mail, String nizwa, String s, String morning, String bScNursing) {
+    }
+
     public String getNurseId() {
         return nurseId;
     }
