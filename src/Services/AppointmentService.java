@@ -64,7 +64,7 @@ public class AppointmentService implements ManageableInterface, SearchableInterf
     }
 
     public void getAppointmentsByDate(){
-        System.out.println("Please enter the date:");
+        System.out.println("Please enter the date (Please use formate 2025-05-12):");
         String date = scanner.nextLine();
         for (int i =0; i < doctors.size();i++){
             String searchedDate = String.valueOf(doctors.get(i));
@@ -97,7 +97,7 @@ public class AppointmentService implements ManageableInterface, SearchableInterf
          doctorId = scanner.nextLine();
          doctor.setDoctorId(doctorId);
 
-        System.out.println("Please enter appointment Date ");
+        System.out.println("Please enter appointment Date (Please use formate 2025-05-12)");
         date = LocalDate.parse(scanner.nextLine());
         appointment.setAppointmentDate(date);
     }
@@ -114,7 +114,7 @@ public class AppointmentService implements ManageableInterface, SearchableInterf
         doctorId = scanner.nextLine();
         doctor.setDoctorId(doctorId);
 
-        System.out.println("Please enter appointment Date ");
+        System.out.println("Please enter appointment Date (Please use formate 2025-05-12) ");
         date = LocalDate.parse(scanner.nextLine());
         appointment.setAppointmentDate(date);
 
@@ -142,7 +142,7 @@ public class AppointmentService implements ManageableInterface, SearchableInterf
         appointmentId = scanner.nextLine();
         appointment.setAppointmentId(appointmentId);
 
-        System.out.println("Please enter appointment Date ");
+        System.out.println("Please enter appointment Date (Please use formate 2025-05-12)");
         newDate = LocalDate.parse(scanner.nextLine());
         appointment.setAppointmentDate(newDate);
     }
@@ -151,7 +151,7 @@ public class AppointmentService implements ManageableInterface, SearchableInterf
         appointmentId = scanner.nextLine();
         appointment.setAppointmentId(appointmentId);
 
-        System.out.println("Please enter appointment Date ");
+        System.out.println("Please enter appointment Date (Please use formate 2025-05-12)");
         newDate = LocalDate.parse(scanner.nextLine());
         appointment.setAppointmentDate(newDate);
 
@@ -161,7 +161,7 @@ public class AppointmentService implements ManageableInterface, SearchableInterf
     }
 
     public void  rescheduleAppointment(Appointment appointment, LocalDate newDate, String newTime, String reason) {
-        System.out.println("Please enter appointment Date ");
+        System.out.println("Please enter appointment Date (Please use formate 2025-05-12) ");
         newDate = LocalDate.parse(scanner.nextLine());
         appointment.setAppointmentDate(newDate);
 
