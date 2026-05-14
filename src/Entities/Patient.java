@@ -157,7 +157,7 @@ public abstract class Patient extends Person implements DisplayableInterface {
         String doctorID = scanner.nextLine();
         medicalRecord.setDoctorId(doctorID);
 
-        System.out.println("Please enter visit date: ");
+        System.out.println("Please enter visit date (Please use formate 2025-05-12): ");
         String visitDate = scanner.nextLine();
         medicalRecord.setVisitDate(LocalDate.parse(visitDate));
 
@@ -205,7 +205,7 @@ public abstract class Patient extends Person implements DisplayableInterface {
         String newDoctorID = scanner.nextLine();
         appointment.setDoctorId(newDoctorID);
 
-        System.out.println("Please enter appointment Date ");
+        System.out.println("Please enter appointment Date (Please use formate 2025-05-12)");
         String newAppointmentDate = scanner.nextLine();
         appointment.setAppointmentDate(LocalDate.parse(newAppointmentDate));
 

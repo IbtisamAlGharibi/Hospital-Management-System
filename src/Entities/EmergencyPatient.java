@@ -122,7 +122,7 @@ public class EmergencyPatient extends InPatient implements DisplayableInterface 
         String patientAllergies = scanner.nextLine();
         setAllergies(Collections.singletonList(patientAllergies));
 
-        System.out.println("Please enter registrationDate: ");
+        System.out.println("Please enter registrationDate (Please use formate 2025-05-12): ");
         String patientRegistrationDate = scanner.nextLine();
         setRegistrationDate(LocalDate.parse(patientRegistrationDate));
 

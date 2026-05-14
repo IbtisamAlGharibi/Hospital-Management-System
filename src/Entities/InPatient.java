@@ -197,15 +197,15 @@ public class InPatient extends  Patient implements DisplayableInterface, Billabl
         String patientAllergies = scanner.nextLine();
         setAllergies(Collections.singletonList(patientAllergies));
 
-        System.out.println("Please enter registrationDate: ");
+        System.out.println("Please enter registrationDate (Please use formate 2025-05-12): ");
         String patientRegistrationDate = scanner.nextLine();
         setRegistrationDate(LocalDate.parse(patientRegistrationDate));
 
-        System.out.println("Please enter admission Date: ");
+        System.out.println("Please enter admission Date (Please use formate 2025-05-12): ");
         String admissionDate = scanner.nextLine();
        setAdmissionDate(LocalDate.parse(admissionDate));
 
-        System.out.println("Please enter discharge Date: ");
+        System.out.println("Please enter discharge Date (Please use formate 2025-05-12): ");
         String dischargeDate = scanner.nextLine();
        setDischargeDate(LocalDate.parse(dischargeDate));
 

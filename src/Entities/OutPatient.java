@@ -134,7 +134,7 @@ public class OutPatient extends Patient implements DisplayableInterface {
         String patientAllergies = scanner.nextLine();
         setAllergies(Collections.singletonList(patientAllergies));
 
-        System.out.println("Please enter registrationDate: ");
+        System.out.println("Please enter registrationDate (Please use formate 2025-05-12): ");
         String patientRegistrationDate = scanner.nextLine();
         setRegistrationDate(LocalDate.parse(patientRegistrationDate));
 
@@ -142,7 +142,7 @@ public class OutPatient extends Patient implements DisplayableInterface {
         String visitCount = scanner.nextLine();
        setVisitCount(Integer.parseInt(visitCount));
 
-        System.out.println("Please enter last Visit Date: ");
+        System.out.println("Please enter last Visit Date (Please use formate 2025-05-12): ");
         String lastVisitDate = scanner.nextLine();
         setLastVisitDate(LocalDate.parse(lastVisitDate));
 

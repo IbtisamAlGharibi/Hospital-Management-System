@@ -59,7 +59,7 @@ public class PatientService implements ManageableInterface, SearchableInterface 
         String patientAllergies = scanner.nextLine();
         patient.setAllergies(Collections.singletonList(patientAllergies));
 
-        System.out.println("Please enter registrationDate: ");
+        System.out.println("Please enter registrationDate (Please use formate 2025-05-12): ");
         String patientRegistrationDate = scanner.nextLine();
         patient.setRegistrationDate(LocalDate.parse(patientRegistrationDate));
         return patient;
