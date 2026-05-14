@@ -139,6 +139,32 @@ public class MainApp {
                 60.0,150,true));
 
 
+        doctorService.add(new GeneralPractitioner(
+                "D005","Ali","Saied",LocalDate.of(1985,2,20),
+                "Male","9345675","ali@gmail.com","Muscat",
+                "Family Medicine","MBBS",8,"DEP-002",
+                20.0,true,true,true));
+
+        doctorService.add(new GeneralPractitioner(
+                "D006","Anfal","Rashid",LocalDate.of(2000,8,18),
+                "Female","90000006","noor@hospital.com","Ibra",
+                "General Practice","MBBS",6,"DEP-002",
+                18.0,true,false,true));
+
+        doctorService.add(new Consultant(
+                "D007","Muhammed","Usama",LocalDate.of(1995,6,14),
+                "Male","96677887","muhammed@gmail.com","Seeb",
+                "Pediatrics","MD",14,"DEP-001",
+                28.0,new ArrayList<>(Arrays.asList("Child Consultation")),
+                false,25));
+
+        doctorService.add(new Surgeon(
+                "D008","Nora","Majeed",LocalDate.of(1987,1,1),
+                "Female","9456678","nora@gmail.com","Sur",
+                "General Surgery","PhD",20,"DEP-003",
+                55.0,400,true));
+
+
 
         //Entering 8 doctors
         for (int i = 1; i <= 8; i++) {

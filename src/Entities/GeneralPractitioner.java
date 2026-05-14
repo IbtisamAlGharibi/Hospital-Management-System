@@ -31,6 +31,9 @@ public class GeneralPractitioner extends Doctor implements DisplayableInterface 
 
     }
 
+    public GeneralPractitioner(String d005, String ali, String saied, LocalDate of, String male, String number, String mail, String muscat, String familyMedicine, String mbbs, int i, String s, double v, boolean b, boolean b1, boolean b2) {
+    }
+
     public boolean isWalkinAvailable() {
         return walkinAvailable;
     }
