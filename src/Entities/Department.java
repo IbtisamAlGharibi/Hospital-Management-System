@@ -3,7 +3,6 @@ package Entities;
 import Behaviours.DisplayableInterface;
 import Util.HelperUtils;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -20,7 +19,7 @@ public class Department implements DisplayableInterface {
     static Scanner scanner = new Scanner(System.in);
     static HelperUtils helperUtils = new HelperUtils();
 
-    public Department(String departmentId, String departmentName, String headDoctorId, List<String> doctors, List<String> nurses, int availableBeds, int bedCapacity) {
+    public Department(String departmentId, String departmentName, String headDoctorId, int availableBeds) {
         this.departmentId = departmentId;
         this.departmentName = departmentName;
         this.headDoctorId = headDoctorId;

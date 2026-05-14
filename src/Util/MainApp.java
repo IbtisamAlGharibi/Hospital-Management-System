@@ -104,21 +104,12 @@ public class MainApp {
 }
 }
     public void sampleData() {
-        Department d1 = new Department();
-        d1.setDepartmentId("D001");
-        d1.setDepartmentName("Cardiology");
 
-        Department d2 = new Department();
-        d2.setDepartmentId("D002");
-        d2.setDepartmentName("Emergency");
+        departmentService.add(new Department("DEPT-001", "Cardiology", "D001", 50));
+        departmentService.add(new Department("DEPT-002", "General Medicine", "D002", 66));
+        departmentService.add(new Department("DEPT-003", "Emergency", "D003", 78));
 
-        Department d3 = new Department();
-        d3.setDepartmentId("D003");
-        d3.setDepartmentName("General Medicine");
 
-        departmentService.add(d1);
-        departmentService.add(d2);
-        departmentService.add(d3);
 
         //Entering 8 doctors
         for (int i = 1; i <= 8; i++) {
