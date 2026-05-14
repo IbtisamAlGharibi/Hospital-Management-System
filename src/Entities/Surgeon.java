@@ -34,6 +34,9 @@ public class Surgeon extends Doctor implements DisplayableInterface {
 
     }
 
+    public Surgeon(String d003, String ahmed, String njeem, LocalDate of, String male, String number, String mail, String sohar, String orthopedic, String phD, int i, String s, double v, int i1, boolean b) {
+    }
+
     public int getSurgeriesPerformed() {
         return surgeriesPerformed;
     }

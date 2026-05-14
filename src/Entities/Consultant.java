@@ -35,6 +35,9 @@ public class Consultant extends Doctor implements DisplayableInterface {
 
     }
 
+    public <E> Consultant(String d001, String salim, String nasser, LocalDate of, String male, String number, String mail, String muscat, String cardiology, String mbbs, int i, String s, double v, ArrayList<E> es, boolean b, int i1) {
+    }
+
     public List<String> getConsultationTypes() {
         return consultationTypes;
     }

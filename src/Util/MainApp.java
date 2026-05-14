@@ -5,6 +5,8 @@ import Services.*;
 import com.sun.tools.javac.Main;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MainApp {
@@ -108,6 +110,33 @@ public class MainApp {
         departmentService.add(new Department("DEPT-001", "Cardiology", "D001", 50));
         departmentService.add(new Department("DEPT-002", "General Medicine", "D002", 66));
         departmentService.add(new Department("DEPT-003", "Emergency", "D003", 78));
+
+
+        doctorService.add(new Consultant(
+                "D001","Salim","Nasser",LocalDate.of(1977,5,12),
+                "Male","9345661","salim@gmail.com","Muscat",
+                "Cardiology","MBBS",15,"DEP-001",
+                30.0,new ArrayList<>(Arrays.asList("Heart Check","ECG")),
+                true,30));
+
+        doctorService.add(new Consultant(
+                "D002","Muna","Hussain",LocalDate.of(1988,5,11),
+                "Female","94365782","muna@gmail.com","Nizwa",
+                "General Medicine","MD",10,"DEP-002",
+                25.0,new ArrayList<>(Arrays.asList("General Consultation")),
+                true,20));
+
+        doctorService.add(new Surgeon(
+                "D003","Ahmed","Njeem",LocalDate.of(1990,12,24),
+                "Male","4567683","ahmed@gmail.com","Sohar",
+                "Orthopedic","PhD",18,"DEP-003",
+                50.0,300,true));
+
+        doctorService.add(new Surgeon(
+                "D004","Noor","Ali",LocalDate.of(1999,10,23),
+                "Female","92334404","Noor@gmail.com","Sohar",
+                "Neurosurgery","MD",12,"DEP-003",
+                60.0,150,true));
 
 
 
