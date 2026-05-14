@@ -165,13 +165,30 @@ public class MainApp {
                 55.0,400,true));
 
 
-        //Entering 5 nurses
-        for (int i = 1; i <= 5; i++) {
-            Nurse nurse = new Nurse();
-            nurse.setNurseId("N00" + i);
-            nurse.setFirstName("Nurse" + i);
-            nurseService.add(nurse);
-        }
+        nurseService.add(new Nurse("N001","Nusaiba","Khalid",
+                LocalDate.of(1999,8,22),"Female",
+                "92344441","nusaiba@gmail.com","Nizwa",
+                "DEP-001","Morning","BSc Nursing"));
+
+        nurseService.add(new Nurse("N002","Umr","Kamal",
+                LocalDate.of(1978,5,24),"Male",
+                "92245452","umr@gmail.com","Seeb",
+                "DEP-002","Evening","Diploma Nursing"));
+
+        nurseService.add(new Nurse("N003","Rami","Mansoor",
+                LocalDate.of(1990,11,11),"Male",
+                "9455553","rami@gmail.com","Sohar",
+                "DEP-003","Night","BSc Nursing"));
+
+        nurseService.add(new Nurse("N004","Majeed","Assad",
+                LocalDate.of(1997,9,9),"Male",
+                "967778984","majeed@gmail.com","Ibri",
+                "DEP-001","Morning","MSc Nursing"));
+
+        nurseService.add(new Nurse("N005","Maram","Said",
+                LocalDate.of(2002,12,9),"Female",
+                "99976665","maram@gmail.com","Sur",
+                "DEP-002","Evening","BSc Nursing"));
 
         //entering regular patient
         for (int i = 1; i <= 3; i++) {
